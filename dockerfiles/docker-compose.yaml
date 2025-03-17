@@ -1,0 +1,14 @@
+services: 
+  arcade:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: Arcade
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
+    privileged: true
+    restart: always
