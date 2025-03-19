@@ -5,11 +5,11 @@
 ## Login   <elias-josue.hajjar-llauquen@epitech.eu>
 ##
 ## Started on  Mon Mar 17 15:53:40 2025 Elias Josué HAJJAR LLAUQUEN
-## Last update Tue Mar 17 16:30:12 2025 Elias Josué HAJJAR LLAUQUEN
+## Last update Thu Mar 19 17:39:38 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
 xhost +local:
 
-docker-compose -f dockerfiles/docker-compose-prod.yml up --build --force-recreate
+docker-compose -f dockerfiles/docker-compose.yaml up --build --force-recreate
 
 docker exec Arcade bash
