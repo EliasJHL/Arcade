@@ -11,3 +11,5 @@
 xhost +local:
 
 docker-compose -f dockerfiles/docker-compose-prod.yml up --build --force-recreate
+
+docker exec Arcade bash
