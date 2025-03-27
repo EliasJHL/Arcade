@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 10:02:14 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:53:45 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Thu Mar 26 20:40:40 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef COLOR_HPP_

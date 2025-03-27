@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 15:04:30 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 18:59:31 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 02:24:53 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_NCURSES_HPP_
@@ -17,6 +17,7 @@
 class Ncurses : public ADisplayModule{
     public:
         Ncurses();
+        ~Ncurses();
         void createWindow() override;
         void destroyWindow() override;
         void display() override;

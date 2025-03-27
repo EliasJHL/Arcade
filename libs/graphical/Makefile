@@ -5,17 +5,23 @@
 ## Login   <elias-josue.hajjar-llauquen@epitech.eu>
 ##
 ## Started on  Thu Mar 20 15:23:45 2025 Elias Josué HAJJAR LLAUQUEN
-## Last update Thu Mar 26 18:36:28 2025 Elias Josué HAJJAR LLAUQUEN
+## Last update Fri Mar 27 03:15:15 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
 NCURSES_SRC	=	./src/ncurses/arcade_ncurses.cpp
 SDL2_SRC	=	./src/sdl2/arcade_sdl2.cpp
 SFML_SRC	=	./src/sfml/arcade_sfml.cpp
 
+REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp 
+
+SFML_FLAGS	=	-lsfml-graphics -lsfml-window -lsfml-system
+SDL2_FLAGS	=	-lSDL2 -lSDL2_ttf
+NCURSES_FLAGS	=	-lncurses
+
 all:	$(GRAPHICAL_LIBS)
-	g++ -shared -fPIC $(NCURSES_SRC) -o arcade_ncurses.so -I ../../include
-	g++ -shared -fPIC $(SDL2_SRC) -o arcade_sdl2.so -I ../../include
-	g++ -shared -fPIC $(SFML_SRC) -o arcade_sfml.so -I ../../include
+	g++ -shared -fPIC $(NCURSES_SRC) $(REQUIRED_LIBS) -o arcade_ncurses.so $(NCURSES_FLAGS) -I ../../include
+	g++ -shared -fPIC $(SDL2_SRC) $(REQUIRED_LIBS) -o arcade_sdl2.so $(SDL2_FLAGS) -I ../../include
+#	g++ -shared -fPIC $(SFML_SRC) $(REQUIRED_LIBS) -o arcade_sfml.so $(SFML_FLAGS) -I ../../include
 	mv *.so ../
 
 clean:

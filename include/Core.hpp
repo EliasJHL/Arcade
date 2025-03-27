@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:31:39 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:44:44 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 02:46:55 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef CORE_HPP_
@@ -26,20 +26,21 @@ class Core : public ICore{
     public:
         Core();
         ~Core();
+        void RunCore() override;
+        void LoadLibraries(int ac, char **av) override;
+    protected:
         void ChangeDisplayModule(const std::string &name) override;
         void ChangeGameModule(const std::string &name) override;
         
-        void RunCore() override {};
-        void LoadLibraries(int ac, char **av) override;
+        void HandleEvents() override {};
+        std::string NextGraphicalModule() override;
     private:
-        // std::unique_ptr<IDisplayModule> mDisplayModule;
-        // std::unique_ptr<IGameModule> mGameModule;
         std::vector<std::string> mAvailablesGames;
         std::vector<std::string> mAvailablesGraphics;
-        std::map<std::string, DLLoader<ADisplayModule>> mGraphicLoader;
-        std::map<std::string, DLLoader<ADisplayModule>> mGamesLoader;
-        ADisplayModule *mActiveGraphic;
-        AGameModule *mActiveGame;
+        std::map<std::string, std::unique_ptr<DLLoader<ADisplayModule>>> mGraphicLoader;
+        std::map<std::string, std::unique_ptr<DLLoader<ADisplayModule>>> mGamesLoader;
+        std::unique_ptr<ADisplayModule> mActiveGraphic;
+        std::unique_ptr<AGameModule> mActiveGame;
 };
 
 #endif /* !CORE_HPP_ */

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 12:07:27 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:56:01 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 03:26:24 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Core.hpp"
@@ -29,9 +29,12 @@ Core::~Core()
 
 void Core::ChangeDisplayModule(const std::string &name)
 {
-    //delete mActiveGraphic;
-    mActiveGraphic = mGraphicLoader.at(name).getInstance("createDisplay");
-    std::cout << "[+] Display engine changed" << std::endl;
+    if (mActiveGraphic) {
+        mActiveGraphic->destroyWindow();
+        mActiveGraphic.reset();
+    }
+    mActiveGraphic = std::unique_ptr<ADisplayModule>(mGraphicLoader.at(name)->getInstance("createDisplay"));
+    mActiveGraphic->createWindow();
 }
 
 void Core::ChangeGameModule(const std::string &name)
@@ -40,7 +43,59 @@ void Core::ChangeGameModule(const std::string &name)
     std::cout << "[+] Game changed to /'" << name << "/'" << std::endl;
 }
 
-void Core::LoadLibraries(int ac, char **av) 
+std::string Core::NextGraphicalModule()
+{
+    std::string act = mActiveGraphic->getName();
+
+    if (mAvailablesGraphics.size() <= 1) {
+        std::cout << "[!] Only 1 Graphical library available" << std::endl;
+        return act;
+    }
+
+    for (size_t i = 0; i < mAvailablesGraphics.size(); i++) {
+        if (act == mAvailablesGraphics[i]) {
+            if (i == mAvailablesGraphics.size() - 1) {
+                return mAvailablesGraphics.front();
+            } else {
+                return mAvailablesGraphics[i + 1];
+            }
+        }
+    }
+    return mAvailablesGraphics.front();
+}
+
+void Core::RunCore()
+{
+    std::vector<Event> events;
+    mActiveGraphic->createWindow();
+
+    while(true) {
+        mActiveGraphic->clear();
+        Color color{255,255,255,255};
+        // Text text{0, 0, 20, "basic", "hahaha", color};
+        // mActiveGraphic->drawText(text);
+        // Text text1{0, 50, 20, "basic", "hahaha", color};
+        // mActiveGraphic->drawText(text1);
+        Rect rect{100, 100, 100, 100, color};
+        mActiveGraphic->drawRect(rect);
+        events = mActiveGraphic->getEvents();
+        if (!events.empty()) {
+            for (int i = 0; i < events.size(); i++) {
+                if (events.at(i) == Event::NEXT_LIB) {
+                    ChangeDisplayModule(NextGraphicalModule());
+                    std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
+                }
+                if (events.at(i) == Event::QUIT) {
+                    mActiveGraphic->destroyWindow();
+                    exit(0);
+                }
+            }
+        }
+        mActiveGraphic->display();
+    }
+}
+
+void Core::LoadLibraries(int ac, char **av)
 {
     DIR *dr;
     struct dirent *en;
@@ -54,19 +109,22 @@ void Core::LoadLibraries(int ac, char **av)
         throw std::runtime_error("Usage : ./arcade <path to graphic>");
 
     std::string input(av[1]);
+    
     if (std::regex_search(input, m, e)) {
         if (std::find(graphic_list.begin(), graphic_list.end(), m[1]) != graphic_list.end()) {
             mAvailablesGraphics.push_back(m[1]);
-            mGraphicLoader.emplace(m[1], DLLoader<ADisplayModule>(input));
-            mActiveGraphic = mGraphicLoader.at(m[1]).getInstance("createDisplay");
+            
+            mGraphicLoader.emplace(m[1], std::make_unique<DLLoader<ADisplayModule>>(input));
+            mActiveGraphic = std::unique_ptr<ADisplayModule>(mGraphicLoader.at(m[1])->getInstance("createDisplay"));
+            
             loadedLibraries.insert(m[1]);
             // mActiveGame menu
             std::cout << "[!] OK : " << m[1] << " as graphical library loaded" << std::endl;
         } else {
-            throw std::runtime_error("Error: \'" + input + "\' not a graphical library");
+            throw std::runtime_error("Error: '" + input + "' not a graphical library");
         }
     } else {
-        throw std::runtime_error("Error: \'" + input + "\' not a graphical library");
+        throw std::runtime_error("Error: '" + input + "' not a graphical library");
     }
 
     std::cout << "[+] Loading libraries..." << std::endl;
@@ -81,11 +139,11 @@ void Core::LoadLibraries(int ac, char **av)
                 }
                 if (std::find(graphic_list.begin(), graphic_list.end(), m[1]) != graphic_list.end()) {
                     mAvailablesGraphics.push_back(m[1]);
-                    mGraphicLoader.emplace(m[1], DLLoader<ADisplayModule>("./libs/" + file));
+                    mGraphicLoader.emplace(m[1], std::make_unique<DLLoader<ADisplayModule>>("./libs/" + file));
                     std::cout << "  -> " << m[1] << " loaded" << std::endl;
                 } else if (std::find(games_list.begin(), games_list.end(), m[1]) != games_list.end()) {
                     mAvailablesGames.push_back(m[1]);
-                    mGamesLoader.emplace(m[1], DLLoader<ADisplayModule>("./libs/" + file));
+                    mGamesLoader.emplace(m[1], std::make_unique<DLLoader<ADisplayModule>>("./libs/" + file));
                     std::cout << "  -> " << m[1] << " loaded" << std::endl;
                 } else {
                     std::cout << "Error: Unknown library: " << file << std::endl;

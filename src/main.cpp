@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 20 15:41:14 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:51:43 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 03:25:47 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Core.hpp"
@@ -16,7 +16,7 @@ int main(int ac, char **av)
 
     try {
         arcade_core.LoadLibraries(ac, av);
-        arcade_core.ChangeDisplayModule(std::string("sfml"));
+        arcade_core.RunCore();
     } catch (std::runtime_error &e) {
         std::cerr << e.what() << std::endl;
         return 84;

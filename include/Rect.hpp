@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 10:03:01 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:51:32 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 03:34:46 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef RECT_HPP_
@@ -24,13 +24,12 @@ class Rect {
         int getHeight() const;
         Color getColor() const;
 
-    protected:
-    private:
         int _x;
         int _y;
         int _width;
         int _height;
         Color _color;
+    private:
 };
 
 #endif /* !RECT_HPP_ */

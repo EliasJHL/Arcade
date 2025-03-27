@@ -5,14 +5,22 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:40:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:47:05 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 02:26:11 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_sfml.hpp"
+#include "Text.hpp"
+#include "Color.hpp"
 
 Sfml::Sfml()
 {
-    
+    mName = "sfml";
+    mFont.loadFromFile("./include/fonts/basic.ttf");
+}
+
+Sfml::~Sfml()
+{
+    destroyWindow();
 }
 
 void Sfml::createWindow()
@@ -23,11 +31,8 @@ void Sfml::createWindow()
 
 void Sfml::destroyWindow()
 {
-    if (&mWindow != nullptr) {
-        if (mWindow.isOpen())
-            mWindow.close();
-        delete &mWindow;
-    }
+    if (mWindow.isOpen())
+        mWindow.close();
 }
 
 void Sfml::display()
@@ -37,30 +42,27 @@ void Sfml::display()
 
 void Sfml::clear()
 {
-    mWindow.clear(sf::Color::Black);
+    if (mWindow.isOpen())
+        mWindow.clear(sf::Color::Black);
 }
 
 void Sfml::drawText(const Text &text)
 {
-    if (&mWindow == nullptr || !mWindow.isOpen())
+    if (!mWindow.isOpen())
         return;
+
+    //mFont.loadFromFile("./include/fonts/" + text.getFont() + ".ttf");
     
-    sf::Text message;
-    sf::Font font;
-
-    font.loadFromFile("../../../../include/fonts/" + text.getText() + ".ttf");
-
-    message.setFont(font);
-    message.setString(text.getText());
-    message.setPosition(text.getX(), text.getY());
-    message.setFillColor(sf::Color(text.getColor().getR(), text.getColor().getG(), text.getColor().getB(), text.getColor().getA()));
-
-    mWindow.draw(message);
+    mMessage.setFont(mFont);
+    mMessage.setString(text.getText());
+    mMessage.setPosition(text.getX(), text.getY());
+    mMessage.setFillColor(sf::Color(text.getColor().getR(), text.getColor().getG(), text.getColor().getB(), text.getColor().getA()));
+    mWindow.draw(mMessage);
 }
 
 void Sfml::drawRect(const Rect &rect)
 {
-    if (&mWindow == nullptr || !mWindow.isOpen())
+    if (!mWindow.isOpen())
         return;
     sf::RectangleShape shape(sf::Vector2f(rect.getWidth(), rect.getHeight()));
     shape.setPosition(rect.getX(), rect.getY());
@@ -71,7 +73,17 @@ void Sfml::drawRect(const Rect &rect)
 
 std::vector<Event> Sfml::getEvents()
 {
+    std::vector<Event> events;
+
+    if (!mWindow.isOpen())
+        return events;
     
+    sf::Event event;
+    while (mWindow.pollEvent(event)) {
+        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::T)
+            events.push_back(Event::NEXT_LIB);
+    }
+    return events;
 }
 
 std::string Sfml::getName() const
@@ -80,7 +92,7 @@ std::string Sfml::getName() const
 }
 
 extern "C" {
-    ADisplayModule* createDisplay() {
+    ADisplayModule *createDisplay() {
         return new Sfml();
     }
 }

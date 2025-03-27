@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:39:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 19:26:31 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 02:23:00 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SFML_HPP_
@@ -19,6 +19,7 @@
 class Sfml : public ADisplayModule {
     public:
         Sfml();
+        ~Sfml();
         void createWindow() override;
         void destroyWindow() override;
         void display() override;
@@ -30,6 +31,8 @@ class Sfml : public ADisplayModule {
     private:
         std::string mName;
         sf::RenderWindow mWindow;
+        sf::Font mFont;
+        sf::Text mMessage;
 };
 
 #endif /* !ARCADE_SFML_HPP_ */
