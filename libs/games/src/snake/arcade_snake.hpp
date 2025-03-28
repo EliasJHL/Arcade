@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 27 03:16:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 03:26:16 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 10:49:49 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SNAKE_HPP_
@@ -31,6 +31,7 @@ class Snake : public AGameModule {
         std::string _name;
         std::vector<Rect> _rects;
         std::vector<Text> _texts;
+        Rect _Player;
 };
 
 

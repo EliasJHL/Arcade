@@ -5,18 +5,19 @@
 ## Login   <elias-josue.hajjar-llauquen@epitech.eu>
 ##
 ## Started on  Thu Mar 20 15:23:45 2025 Elias Josué HAJJAR LLAUQUEN
-## Last update Sat Mar 21 15:00:22 2025 Elias Josué HAJJAR LLAUQUEN
+## Last update Fri Mar 27 10:44:55 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
-GAMES_SRC	=	$(wildcard libs/games/src/*.cpp)
+SNAKE_SRC	=	./src/snake/arcade_snake.cpp
 
-GAMES_LIBS := $(GAMES_SRC:.cpp=.so)
+REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp 
 
-all:	$(GAMES_LIBS)
+all:	$(GRAPHICAL_LIBS)
+	g++ -shared -fPIC $(SNAKE_SRC) $(REQUIRED_LIBS) -o arcade_snake.so -I ../../include
 	mv *.so ../
 
 clean:
-	@$(RM) ../*.so
+	@$(RM) *.so
 
 fclean: clean
 	@$(RM) *~

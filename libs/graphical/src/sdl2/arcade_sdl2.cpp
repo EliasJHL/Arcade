@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:37:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 03:08:31 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 15:36:06 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_sdl2.hpp"
@@ -105,6 +105,14 @@ std::vector<Event> Sdl2::getEvents() {
                 if (sdlEvent.key.keysym.sym == SDLK_t) {
                     events.push_back(Event::NEXT_LIB);
                     break;
+                } else if (sdlEvent.key.keysym.sym == SDLK_UP) {
+                    events.push_back(Event::K_UP);
+                } else if (sdlEvent.key.keysym.sym == SDLK_DOWN) {
+                    events.push_back(Event::K_DOWN);
+                } else if (sdlEvent.key.keysym.sym == SDLK_LEFT) {
+                    events.push_back(Event::K_LEFT);
+                } else if (sdlEvent.key.keysym.sym == SDLK_RIGHT) {
+                    events.push_back(Event::K_RIGHT);
                 }
         }
     }

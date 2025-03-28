@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 15:04:30 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 02:24:53 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 14:47:27 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_NCURSES_HPP_

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:31:39 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 02:46:55 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 16:36:30 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef CORE_HPP_
@@ -21,6 +21,7 @@
 #include "ADisplayModule.hpp"
 #include "AGameModule.hpp"
 #include "DLLoader.hpp"
+#include <set>
 
 class Core : public ICore{
     public:
@@ -34,11 +35,16 @@ class Core : public ICore{
         
         void HandleEvents() override {};
         std::string NextGraphicalModule() override;
+        std::string NextGameModule() override;
+
+        void LoadFirstLibrary(const std::string &input) override;
+        void LoadAllLibraries(const std::string &input) override;
     private:
         std::vector<std::string> mAvailablesGames;
         std::vector<std::string> mAvailablesGraphics;
+        std::set<std::string> mLoadedLibraries;
         std::map<std::string, std::unique_ptr<DLLoader<ADisplayModule>>> mGraphicLoader;
-        std::map<std::string, std::unique_ptr<DLLoader<ADisplayModule>>> mGamesLoader;
+        std::map<std::string, std::unique_ptr<DLLoader<AGameModule>>> mGamesLoader;
         std::unique_ptr<ADisplayModule> mActiveGraphic;
         std::unique_ptr<AGameModule> mActiveGame;
 };

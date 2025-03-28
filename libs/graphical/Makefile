@@ -5,7 +5,7 @@
 ## Login   <elias-josue.hajjar-llauquen@epitech.eu>
 ##
 ## Started on  Thu Mar 20 15:23:45 2025 Elias Josué HAJJAR LLAUQUEN
-## Last update Fri Mar 27 03:15:15 2025 Elias Josué HAJJAR LLAUQUEN
+## Last update Fri Mar 27 10:57:45 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
 NCURSES_SRC	=	./src/ncurses/arcade_ncurses.cpp

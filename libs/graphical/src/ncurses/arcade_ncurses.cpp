@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 20 14:47:24 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 02:59:55 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 15:36:12 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_ncurses.hpp"
@@ -28,6 +28,7 @@ void Ncurses::createWindow()
     timeout(100);
     noecho();
     cbreak();
+    keypad(stdscr, TRUE);
 }
 
 void Ncurses::destroyWindow()
@@ -42,6 +43,7 @@ void Ncurses::display()
 
 void Ncurses::clear()
 {
+    ::clear();
 }
 
 void Ncurses::drawText(const Text &text)
@@ -89,6 +91,19 @@ std::vector<Event> Ncurses::getEvents()
         case 't':
         case 'T':
             events.push_back(Event::NEXT_LIB);
+            break;
+        case KEY_UP:
+            events.push_back(Event::K_UP);
+            break;
+        case KEY_DOWN:
+            events.push_back(Event::K_DOWN);
+            break;
+        case KEY_LEFT:
+            events.push_back(Event::K_LEFT);
+            break;
+        case KEY_RIGHT:
+            events.push_back(Event::K_RIGHT);
+            break;
     }
     return events;
 }

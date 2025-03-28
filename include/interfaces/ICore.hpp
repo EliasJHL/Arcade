@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:25:22 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 00:16:29 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 16:17:53 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ICORE_HPP_
@@ -24,6 +24,10 @@ class ICore {
         
         virtual void HandleEvents() = 0;   
         virtual std::string NextGraphicalModule() = 0;   
+        virtual std::string NextGameModule() = 0;
+
+        virtual void LoadFirstLibrary(const std::string &input) = 0;
+        virtual void LoadAllLibraries(const std::string &input) = 0;
 };
 
 #endif /* !ICORE_HPP_ */

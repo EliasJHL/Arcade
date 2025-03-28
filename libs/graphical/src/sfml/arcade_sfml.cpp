@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:40:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 02:26:11 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Fri Mar 27 15:36:00 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_sfml.hpp"
@@ -15,7 +15,6 @@
 Sfml::Sfml()
 {
     mName = "sfml";
-    mFont.loadFromFile("./include/fonts/basic.ttf");
 }
 
 Sfml::~Sfml()
@@ -27,6 +26,7 @@ void Sfml::createWindow()
 {
     sf::VideoMode mode (800, 600, 32);
     mWindow.create(mode, "Aracade", sf::Style::Close);
+    mFont.loadFromFile("./include/fonts/basic.ttf");
 }
 
 void Sfml::destroyWindow()
