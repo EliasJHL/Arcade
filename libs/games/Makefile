@@ -5,15 +5,17 @@
 ## Login   <elias-josue.hajjar-llauquen@epitech.eu>
 ##
 ## Started on  Thu Mar 20 15:23:45 2025 Elias Josué HAJJAR LLAUQUEN
-## Last update Fri Mar 27 10:44:55 2025 Elias Josué HAJJAR LLAUQUEN
+## Last update Sun Mar 29 01:29:49 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
 SNAKE_SRC	=	./src/snake/arcade_snake.cpp
+MENU_SRC	=	./src/menu/arcade_menu.cpp
 
 REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp 
 
 all:	$(GRAPHICAL_LIBS)
 	g++ -shared -fPIC $(SNAKE_SRC) $(REQUIRED_LIBS) -o arcade_snake.so -I ../../include
+#	g++ -shared -fPIC $(MENU_SRC) $(REQUIRED_LIBS) -o arcade_menu.so -I ../../include
 	mv *.so ../
 
 clean:

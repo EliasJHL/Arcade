@@ -5,18 +5,19 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 14:38:19 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 18:37:04 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 01:19:07 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef IDISPLAY_HPP_
 # define IDISPLAY_HPP_
 
-#include "Rect.hpp"
-#include "Text.hpp"
+#include <string>
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include <string>
+#include "Rect.hpp"
+#include "Text.hpp"
+#include "Sprite.hpp"
 #include "../EventEnum.hpp"
 
 class IDisplayModule {
@@ -29,6 +30,7 @@ class IDisplayModule {
         virtual void clear() = 0;
         virtual void drawText(const Text &text) = 0;
         virtual void drawRect(const Rect &rect) = 0;
+        virtual void drawSprite(const Sprite &sprite) = 0;
         virtual std::vector<Event> getEvents() = 0;
 };
 #endif /* !IDISPLAY_HPP_ */

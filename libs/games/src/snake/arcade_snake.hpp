@@ -5,13 +5,29 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 27 03:16:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 10:49:49 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 18:36:04 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SNAKE_HPP_
 # define ARCADE_SNAKE_HPP_
 
 #include "AGameModule.hpp"
+#include <thread>
+
+enum Move {
+    NONE = -1,
+    UP = 0,
+    DOWN = 1,
+    LEFT = 2,
+    RIGHT = 3
+};
+
+enum Type {
+    VOID = 0,
+    HEAD = 1,
+    BODY = 2,
+    APPLE = 3
+};
 
 class Snake : public AGameModule {
     public:
@@ -21,6 +37,7 @@ class Snake : public AGameModule {
         std::string getName() const override;
         std::vector<Rect> getRects() const override;
         std::vector<Text> getTexts() const override;
+        std::vector<Sprite> getSprites() const override;
         
         void update() override;
         void init() override;
@@ -28,10 +45,24 @@ class Snake : public AGameModule {
 
         Event handleEvent(Event event) override;
     protected:
-        std::string _name;
-        std::vector<Rect> _rects;
-        std::vector<Text> _texts;
-        Rect _Player;
+        void HandleMovement();
+        void HandleActions(int x, int y);
+        void generateApple();
+        void updateBody();
+        void Reset();
+        void GameOver();
+        void DisplayMap();
+        void DisplaySnake();
+        void DisplayInfos();
+        int _x;
+        int _y;
+        Move _Direction;
+        bool _GameOver;
+        bool _GameOverScreen;
+        int score;
+        // x, y, prev_x, prev_y
+        std::vector<std::tuple<int, int, int, int>> _snakebody;
+        std::vector<std::vector<Type>> _map;
 };
 
 

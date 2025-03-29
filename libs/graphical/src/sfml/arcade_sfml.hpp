@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:39:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 02:23:00 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sat Mar 28 11:06:27 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SFML_HPP_
@@ -26,6 +26,7 @@ class Sfml : public ADisplayModule {
         void clear() override;
         void drawText(const Text &text) override;
         void drawRect(const Rect &rect) override;
+        void drawSprite(const Sprite &sprite) override;
         std::vector<Event> getEvents() override;
         std::string getName() const override;
     private:

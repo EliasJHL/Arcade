@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 10:05:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 15:32:56 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 01:19:00 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef AGAMEMODULE_HPP_
@@ -23,8 +23,9 @@ class AGameModule : public IGameModule {
         void stop() override = 0;
         std::vector<Rect> getRects() const override { return _rects; };
         std::vector<Text> getTexts() const override { return _texts; };
+        std::vector<Sprite> getSprites() const override {return _sprites;};
         Event handleEvent(Event event) override = 0;
-
+        
         void setGameSwitchCallback(std::function<void(std::string)> callback) override {
             _gameSwitchCallback = callback;
         };
@@ -48,6 +49,7 @@ class AGameModule : public IGameModule {
         std::string _name;
         std::vector<Rect> _rects;
         std::vector<Text> _texts;
+        std::vector<Sprite> _sprites;
         std::function<void(std::string)> _gameSwitchCallback;
         std::function<void()> _libSwitchCallback;
 

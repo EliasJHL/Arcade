@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 12:07:27 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sat Mar 28 10:16:18 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 17:28:27 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Core.hpp"
@@ -90,35 +90,56 @@ std::string Core::NextGameModule()
     return mAvailablesGames.front();
 }
 
-void Core::RunCore()
+void Core::HandleEvents()
 {
     std::vector<Event> events;
+    
+    events = mActiveGraphic->getEvents();
+
+    for (int i = 0; i < events.size(); i++) {
+        mActiveGame->handleEvent(events.at(i));
+        if (events.at(i) == Event::NEXT_LIB) {
+            std::cout << NextGraphicalModule() << std::endl;
+            ChangeDisplayModule(NextGraphicalModule());
+            std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
+        }
+        if (events.at(i) == Event::QUIT) {
+            mActiveGraphic->destroyWindow();
+            exit(0);
+        }
+    }
+}
+
+void Core::DrawElements()
+{
+    std::vector<Rect> rects = mActiveGame->getRects();
+    std::vector<Text> texts = mActiveGame->getTexts();
+    std::vector<Sprite> sprites = mActiveGame->getSprites();
+    
+    if (!rects.empty()) {
+        for (int i = 0; i < rects.size(); i++)
+            mActiveGraphic->drawRect(rects[i]);
+    }
+    if (!texts.empty()) {
+        for (int i = 0; i < texts.size(); i++)
+            mActiveGraphic->drawText(texts[i]);
+    }
+    if (!sprites.empty()) {
+        for (int i = 0; i < sprites.size(); i++)
+            mActiveGraphic->drawSprite(sprites[i]);
+    }
+}
+
+void Core::RunCore()
+{
     mActiveGraphic->createWindow();
     mActiveGame->init();
 
     while(true) {
         mActiveGraphic->clear();
         mActiveGame->update();
-        
-        std::vector<Rect> rects = mActiveGame->getRects();
-        for (int i = 0 ; i < rects.size(); i++) {
-            mActiveGraphic->drawRect(rects[i]);
-        }
-        events = mActiveGraphic->getEvents();
-        if (!events.empty()) {
-            for (int i = 0; i < events.size(); i++) {
-                mActiveGame->handleEvent(events.at(i));
-                if (events.at(i) == Event::NEXT_LIB) {
-                    std::cout << NextGraphicalModule() << std::endl;
-                    ChangeDisplayModule(NextGraphicalModule());
-                    std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
-                }
-                if (events.at(i) == Event::QUIT) {
-                    mActiveGraphic->destroyWindow();
-                    exit(0);
-                }
-            }
-        }
+        DrawElements();
+        HandleEvents();
         mActiveGraphic->display();
     }
 }
@@ -134,7 +155,7 @@ void Core::LoadFirstLibrary(const std::string &input)
             mGraphicLoader.emplace(m[1], std::make_unique<DLLoader<ADisplayModule>>(input));
             mActiveGraphic = std::unique_ptr<ADisplayModule>(mGraphicLoader.at(m[1])->getInstance("createDisplay"));
             mLoadedLibraries.insert(m[1]);
-            std::cout << "[!] OK : " << m[1] << " as graphical library loaded" << std::endl;
+            std::cout << "[+] OK : " << m[1] << " as graphical library loaded" << std::endl;
         }
     } catch (std::runtime_error &e) {
         throw std::runtime_error("[!] Error loading : " + std::string(e.what()));
@@ -177,17 +198,17 @@ void Core::LoadAllLibraries(const std::string &input)
 void Core::LoadLibraries(int ac, char **av)
 {
     std::cout << "[+] Loading libraries..." << std::endl;
-    if (ac < 2)
+    if (ac != 2)
         throw std::runtime_error("Usage : ./arcade <path to graphic>");
 
     std::string input(av[1]);
     
-    Core::LoadFirstLibrary(input);
-    Core::LoadAllLibraries(input);
+    LoadFirstLibrary(input);
+    LoadAllLibraries(input);
 
     if (!mAvailablesGames.empty()) {
-        std::cout << "[!] First Game loaded" << std::endl;
         mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.begin()->second->getInstance("createGame"));
+        std::cout << "[+] First Game loaded" << std::endl;
     }
-    std::cout << "[!] All libraries are loaded" << std::endl;
+    std::cout << "[+] All libraries are loaded" << std::endl;
 }

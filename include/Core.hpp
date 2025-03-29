@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:31:39 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 16:36:30 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sat Mar 28 19:21:16 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef CORE_HPP_
@@ -33,7 +33,8 @@ class Core : public ICore{
         void ChangeDisplayModule(const std::string &name) override;
         void ChangeGameModule(const std::string &name) override;
         
-        void HandleEvents() override {};
+        void HandleEvents() override;
+        void DrawElements() override;
         std::string NextGraphicalModule() override;
         std::string NextGameModule() override;
 

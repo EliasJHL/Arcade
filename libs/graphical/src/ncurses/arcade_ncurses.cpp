@@ -5,10 +5,12 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 20 14:47:24 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 15:36:12 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 19:21:20 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_ncurses.hpp"
+
+static const char ascii_chars[] = " .`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
 
 Ncurses::Ncurses()
 {
@@ -51,7 +53,7 @@ void Ncurses::drawText(const Text &text)
     init_color(8, text.getColor().getR(), text.getColor().getG(), text.getColor().getB());
     init_pair(1, 8, COLOR_BLACK);
     attron(COLOR_PAIR(1));
-    mvprintw(text.getY() / 2, text.getX(), text.getText().c_str());
+    mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, text.getText().c_str());
     attroff(COLOR_PAIR(1));
 }
 

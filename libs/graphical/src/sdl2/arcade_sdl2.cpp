@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:37:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 15:36:06 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 19:07:52 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_sdl2.hpp"
@@ -37,17 +37,16 @@ void Sdl2::destroyWindow()
        SDL_DestroyWindow(mWindow);
     if (mWindowRender)
        SDL_DestroyRenderer(mWindowRender);
-    if (SDL_WasInit(0)) {
+    if (SDL_WasInit(0))
         SDL_Quit();
-    }
-    if (TTF_WasInit()) {
+    if (TTF_WasInit())
         TTF_Quit();
-    }
 }
 
 void Sdl2::display()
 {
     SDL_RenderPresent(mWindowRender);
+    SDL_Delay(128);
 }
 
 void Sdl2::clear()
@@ -56,16 +55,38 @@ void Sdl2::clear()
     SDL_RenderClear(mWindowRender);
 }
 
+void Sdl2::drawSprite(const Sprite &sprite)
+{
+    // SDL_Texture *img = IMG_LoadTexture(mWindowRender, sprite.getPath().c_str());
+    
+    // int w, h;
+    // SDL_QueryTexture(img, NULL, NULL, &w, &h);
+
+    // SDL_Rect texr;
+    // texr.x = sprite.getX();
+    // texr.y = sprite.getY();
+    // texr.w = w;
+    // texr.h = h;
+    
+    // SDL_RendererFlip flip = SDL_FLIP_NONE;
+    // SDL_RenderCopyEx(mWindowRender, img, NULL, &texr, sprite.getRotation(), NULL, flip);
+    // SDL_DestroyTexture(img);
+}
+
 void Sdl2::drawText(const Text &text)
 {
     if(TTF_Init() == -1) {
         printf("[ERROR] TTF_Init() Failed with: %s\n", TTF_GetError());
         return;
     }
-        
-    mFont = TTF_OpenFont(("./include/fonts/" + text.getFont() + ".ttf").c_str(), text.getSize());
+    
+    try {
+        mFont = TTF_OpenFont(("./include/fonts/" + text.getFont() + ".ttf").c_str(), text.getSize());
+    } catch (const std::exception &e) {
+        mFont = TTF_OpenFont("./include/fonts/basic.ttf", text.getSize());
+    }
     SDL_Color color = {(Uint8)text.getColor().getR(), (Uint8)text.getColor().getG(), (Uint8)text.getColor().getB()};
-    SDL_Surface* textSurface = TTF_RenderText_Solid(mFont, text.getText().c_str(), color);
+    SDL_Surface* textSurface = TTF_RenderText_Blended(mFont, text.getText().c_str(), color);
     SDL_Texture *msg = SDL_CreateTextureFromSurface(mWindowRender, textSurface);
     
     SDL_Rect msg_rect;
