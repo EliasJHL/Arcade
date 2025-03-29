@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 20 14:47:24 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 19:21:20 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 19:48:35 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_ncurses.hpp"
@@ -50,16 +50,25 @@ void Ncurses::clear()
 
 void Ncurses::drawText(const Text &text)
 {
-    init_color(8, text.getColor().getR(), text.getColor().getG(), text.getColor().getB());
+    int r = (text.getColor().getR() * 1000) / 255;
+    int g = (text.getColor().getG() * 1000) / 255;
+    int b = (text.getColor().getB() * 1000) / 255;
+    
+    init_color(8, r, g, b);
     init_pair(1, 8, COLOR_BLACK);
     attron(COLOR_PAIR(1));
     mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, text.getText().c_str());
     attroff(COLOR_PAIR(1));
 }
 
+// TO ASK demander couleur
 void Ncurses::drawRect(const Rect &rect)
 {
-    init_color(8, rect.getColor().getR(), rect.getColor().getG(), rect.getColor().getB());
+    int r = (rect.getColor().getR() * 1000) / 255;
+    int g = (rect.getColor().getG() * 1000) / 255;
+    int b = (rect.getColor().getB() * 1000) / 255;
+    
+    init_color(8, r, g, b);
     init_pair(1, 8, COLOR_BLACK);
     attron(COLOR_PAIR(1));
     int x1 = rect.getX() / 10;

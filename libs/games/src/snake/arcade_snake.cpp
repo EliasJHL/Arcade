@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 27 03:15:44 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 19:25:26 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 19:26:23 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_snake.hpp"

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 16:37:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 19:07:52 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 21:11:50 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_sdl2.hpp"
@@ -31,8 +31,6 @@ void Sdl2::createWindow()
 
 void Sdl2::destroyWindow()
 {
-    if (mFont)
-       TTF_CloseFont(mFont);
     if (mWindow)
        SDL_DestroyWindow(mWindow);
     if (mWindowRender)

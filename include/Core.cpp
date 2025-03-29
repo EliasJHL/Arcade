@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 12:07:27 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 17:28:27 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Mar 29 20:17:24 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Core.hpp"
@@ -57,7 +57,7 @@ std::string Core::NextGraphicalModule()
         return act;
     }
 
-    for (size_t i = 0; i < mAvailablesGraphics.size(); i++) {
+    for (int i = 0; i < mAvailablesGraphics.size(); i++) {
         if (act == mAvailablesGraphics[i]) {
             if (i == mAvailablesGraphics.size() - 1) {
                 return mAvailablesGraphics.front();
@@ -99,7 +99,6 @@ void Core::HandleEvents()
     for (int i = 0; i < events.size(); i++) {
         mActiveGame->handleEvent(events.at(i));
         if (events.at(i) == Event::NEXT_LIB) {
-            std::cout << NextGraphicalModule() << std::endl;
             ChangeDisplayModule(NextGraphicalModule());
             std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
         }
@@ -173,6 +172,8 @@ void Core::LoadAllLibraries(const std::string &input)
             bool isGame, isGraphic = false;
             std::string dirPath = std::string(dir.path());
             if (std::regex_search(dirPath, m, e)) {
+                if (std::find(mAvailablesGraphics.begin(), mAvailablesGraphics.end(), m[1]) != mAvailablesGraphics.end())
+                    continue;
                 try {
                     if (std::make_unique<DLLoader<ADisplayModule>>(dirPath)->getInstance("createDisplay") != nullptr) {
                         mAvailablesGraphics.push_back(m[1]);
