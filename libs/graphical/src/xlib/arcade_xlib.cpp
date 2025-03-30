@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:40:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Mon Mar 30 21:14:55 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Mon Mar 30 21:15:51 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_xlib.hpp"
@@ -28,7 +28,7 @@ void Xlib::createWindow()
     mDisplay = XOpenDisplay(getenv("DISPLAY")); // Ouverture d'un display
     mScreen = DefaultScreen(mDisplay);
     if (mDisplay) {
-        mWindow = XCreateSimpleWindow(mDisplay, RootWindow(mDisplay, mScreen), 0, 0, 800, 600, 5, BlackPixel(mDisplay, mScreen), WhitePixel(mDisplay, mScreen));
+        mWindow = XCreateSimpleWindow(mDisplay, RootWindow(mDisplay, mScreen), 0, 0, 800, 600, 5, BlackPixel(mDisplay, mScreen), BlackPixel(mDisplay, mScreen));
     }
     XSelectInput(mDisplay, mWindow, KeyPressMask | ButtonPressMask);
     XMapWindow(mDisplay, mWindow);
