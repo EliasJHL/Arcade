@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 12:07:27 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 20:17:24 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Mon Mar 30 19:32:49 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Core.hpp"
@@ -135,10 +135,10 @@ void Core::RunCore()
     mActiveGame->init();
 
     while(true) {
-        mActiveGraphic->clear();
-        mActiveGame->update();
-        DrawElements();
         HandleEvents();
+        mActiveGame->update();
+        mActiveGraphic->clear();
+        DrawElements();
         mActiveGraphic->display();
     }
 }

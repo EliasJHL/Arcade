@@ -5,12 +5,13 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:40:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 22:33:51 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Mon Mar 30 21:14:55 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_xlib.hpp"
 #include "Text.hpp"
 #include "Color.hpp"
+#include <cstring>
 
 Xlib::Xlib()
 {
@@ -24,67 +25,87 @@ Xlib::~Xlib()
 
 void Xlib::createWindow()
 {
-    mDisplay = XOpenDisplay(0); // Ouverture d'un display
+    mDisplay = XOpenDisplay(getenv("DISPLAY")); // Ouverture d'un display
+    mScreen = DefaultScreen(mDisplay);
     if (mDisplay) {
-        mWindow = XCreateWindow(mDisplay, DefaultRootWindow(mDisplay), 0, 0, 800, 600, CopyFromParent, CopyFromParent, CopyFromParent, 0, 0);
+        mWindow = XCreateSimpleWindow(mDisplay, RootWindow(mDisplay, mScreen), 0, 0, 800, 600, 5, BlackPixel(mDisplay, mScreen), WhitePixel(mDisplay, mScreen));
     }
+    XSelectInput(mDisplay, mWindow, KeyPressMask | ButtonPressMask);
+    XMapWindow(mDisplay, mWindow);
+    mGC = XCreateGC(mDisplay, mWindow, 0, 0);
+    XSetFillStyle(mDisplay, mGC, FillSolid);
+    XSync(mDisplay, False);
+    XSetForeground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
+    XSetBackground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
+    mFont = XLoadQueryFont(mDisplay, "-misc-fixed-medium-r-normal--9-90-75-75-c-60-iso10646-1");
+    XSetFont(mDisplay, mGC, mFont->fid);
+    XSizeHints *size_hints = XAllocSizeHints();
+    size_hints->flags = PMinSize | PMaxSize;
+    size_hints->min_width = size_hints->max_width = 800;
+    size_hints->min_height = size_hints->max_height = 600;
+    XSetWMNormalHints(mDisplay, mWindow, size_hints);
+    XFree(size_hints);
 }
 
 void Xlib::destroyWindow()
 {
-    mWindow.close();
+    XDestroyWindow(mDisplay, mWindow);
+    XCloseDisplay(mDisplay);
 }
 
 void Xlib::display()
 {
-    if (mWindow.isOpen())
-        mWindow.display();
+    XMapWindow(mDisplay, mWindow);
+    XFlush(mDisplay);
+    usleep(128000);
 }
 
 void Xlib::clear()
 {
-    cleanup();
+    XClearWindow(mDisplay, mWindow);
+    XSetForeground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
+    XSetBackground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
 }
 
 void Xlib::drawText(const Text &text)
 {
-    sf::Font font;
-    //sf::Text message;
-    if (!mWindow.isOpen())
-        return;
-
-    font.loadFromFile("./include/fonts/" + text.getFont() + ".ttf");
-    
-    sf::Text message(text.getText(), font);
-    //message.setPosition(text.getX(), text.getY());
-    //message.setFillColor(sf::Color(text.getColor().getR(), text.getColor().getG(), text.getColor().getB(), text.getColor().getA()));
-    //mWindow.draw(message);
+    XSetForeground(mDisplay, mGC, RGB(text.getColor().getR(), text.getColor().getG(), text.getColor().getB()));
+    XDrawString(mDisplay, mWindow, mGC, 15, 20, text.getText().c_str(), text.getText().length());
 }
 
 void Xlib::drawRect(const Rect &rect)
 {
-    // if (!mWindow.isOpen())
-    //     return;
-    // sf::RectangleShape shape(sf::Vector2f(rect.getWidth(), rect.getHeight()));
-    // shape.setPosition(rect.getX(), rect.getY());
-    // shape.setFillColor(sf::Color(rect.getColor().getR(), rect.getColor().getG(), rect.getColor().getB() ,rect.getColor().getA()));
-
-    // mWindow.draw(shape);
+    XSetForeground(mDisplay, mGC, RGB(rect.getColor().getR(), rect.getColor().getG(), rect.getColor().getB()));
+    XFillRectangle(mDisplay, mWindow, mGC, rect.getX(), rect.getY(), rect.getWidth(), rect.getHeight());
 }
 
 std::vector<Event> Xlib::getEvents()
 {
     std::vector<Event> events;
-
-    if (!mWindow.isOpen())
-        return events;
+    char buffer[32];
+    KeySym keysym;
     
-    sf::Event event;
-    while (mWindow.pollEvent(event)) {
-        if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::T)
-            events.push_back(Event::NEXT_LIB);
-        if (event.type == sf::Event::Closed)
-            events.push_back(Event::QUIT);
+    while (XPending(mDisplay)) {
+        XNextEvent(mDisplay, &mEvent);
+        
+        switch (mEvent.type) {
+            case Expose:
+                XFlush(mDisplay);
+                break;
+            case KeyPress: {
+                XLookupString(&mEvent.xkey, NULL, 0, &keysym, nullptr);
+                if (keysym == XK_t || keysym == XK_T)
+                    events.push_back(Event::NEXT_LIB);
+                if (keysym == XK_Up)
+                    events.push_back(Event::K_UP);
+                if (keysym == XK_Down)
+                    events.push_back(Event::K_DOWN);
+                if (keysym == XK_Left)
+                    events.push_back(Event::K_LEFT);
+                if (keysym == XK_Right)
+                    events.push_back(Event::K_RIGHT);
+            }
+        }
     }
     return events;
 }
@@ -92,6 +113,11 @@ std::vector<Event> Xlib::getEvents()
 std::string Xlib::getName() const
 {
     return mName;
+}
+
+unsigned long Xlib::RGB(int r, int g, int b) 
+{
+    return b + (g<<8) + (r<<16);
 }
 
 extern "C" {
