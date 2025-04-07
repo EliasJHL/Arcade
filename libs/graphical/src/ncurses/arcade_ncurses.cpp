@@ -115,6 +115,10 @@ std::vector<Event> Ncurses::getEvents()
         case KEY_RIGHT:
             events.push_back(Event::K_RIGHT);
             break;
+        case 'y':
+        case 'Y':
+            events.push_back(Event::NEXT_GAME);
+            break;
     }
     return events;
 }

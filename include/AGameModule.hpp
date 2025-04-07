@@ -24,6 +24,9 @@ class AGameModule : public IGameModule {
         std::vector<Rect> getRects() const override { return _rects; };
         std::vector<Text> getTexts() const override { return _texts; };
         Event handleEvent(Event event) override = 0;
+
+        // std::string saveState() override;
+        // void loadState(const std::string &state) override;
         
         void setGameSwitchCallback(std::function<void(std::string)> callback) override {
             _gameSwitchCallback = callback;

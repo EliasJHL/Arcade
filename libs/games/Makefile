@@ -9,13 +9,15 @@
 ##
 
 SNAKE_SRC	=	./src/snake/arcade_snake.cpp
+NIBBLER_SRC	=	./src/nibbler/arcade_nibbler.cpp
 MENU_SRC	=	./src/menu/arcade_menu.cpp
 
-REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp 
+REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp
 
 all:	$(GRAPHICAL_LIBS)
 	g++ -shared -fPIC $(SNAKE_SRC) $(REQUIRED_LIBS) -o arcade_snake.so -I ../../include
-#	g++ -shared -fPIC $(MENU_SRC) $(REQUIRED_LIBS) -o arcade_menu.so -I ../../include
+	g++ -shared -fPIC $(NIBBLER_SRC) $(REQUIRED_LIBS) -o arcade_nibbler.so -I ../../include
+	g++ -shared -fPIC $(MENU_SRC) $(REQUIRED_LIBS) -o arcade_menu.so -I ../../include
 	mv *.so ../
 
 clean:

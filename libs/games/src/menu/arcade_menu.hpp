@@ -21,13 +21,14 @@ class Menu : public AGameModule {
         std::string getName() const override;
         std::vector<Rect> getRects() const override;
         std::vector<Text> getTexts() const override;
-        std::vector<Sprite> getSprites() const override;
         
         void update() override;
         void init() override;
         void stop() override;
 
         Event handleEvent(Event event) override;
+    private:
+        std::vector<std::string> mGames;
 };
 
 

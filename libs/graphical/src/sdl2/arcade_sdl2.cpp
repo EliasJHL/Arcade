@@ -195,7 +195,7 @@ std::vector<Event> Sdl2::getEvents() {
                         events.push_back(Event::KEY_X);
                         break;
                     case SDLK_y:
-                        events.push_back(Event::KEY_Y);
+                        events.push_back(Event::NEXT_GAME);
                         break;
                     case SDLK_z:
                         events.push_back(Event::KEY_Z);
@@ -251,4 +251,3 @@ extern "C" {
         return new Sdl2();
     }
 }
-

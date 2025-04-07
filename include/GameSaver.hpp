@@ -8,19 +8,50 @@
 ** Last update Fri Mar 27 14:25:56 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
-// Basé sur le design pattern Momento
+// Basé sur le design pattern Memento
 // https://refactoring.guru/design-patterns/memento/
 
-#ifndef GAMESAVER_HPP_
-# define GAMESAVER_HPP_
+// #ifndef GAMESAVER_HPP_
+// #define GAMESAVER_HPP_
 
-class GameSaver {
-    public:
-        GameSaver();
-        ~GameSaver();
+// #include <string>
+// #include <ctime>
 
-    protected:
-    private:
-};
+// class Memento {
+//     public:
+//         virtual ~Memento() {};
+//         virtual std::string GetName() const = 0;
+//         virtual std::string date() const = 0;
+//         virtual std::string state() const = 0;
+// };
 
-#endif /* !GAMESAVER_HPP_ */
+// class ConcreteMemento : public Memento {
+//     public:
+//         ConcreteMemento(std::string state);
+//         std::string state() const override;
+//         std::string GetName() const override;
+//         std::string date() const override;
+//     private:
+//         std::string mState;
+//         std::string mDate;
+// };
+
+// // dU COUP LE JEU
+// // class Originator {
+// //     public:
+// //         Originator(std::string state);
+// //         void 
+// //     private:
+// //         std::string mState;
+// // }
+
+// class GameSaver {
+//     public:
+//         GameSaver();
+//         ~GameSaver();
+
+//     protected:
+//     private:
+// };
+
+// #endif /* !GAMESAVER_HPP_ */

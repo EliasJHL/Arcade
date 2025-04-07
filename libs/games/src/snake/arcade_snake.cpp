@@ -53,6 +53,11 @@ void Snake::init()
     score = 0;
 }
 
+// std::string Snake::saveState()
+// {
+    
+// }
+
 void Snake::Reset()
 {
     _GameOver = false;

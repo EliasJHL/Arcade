@@ -102,6 +102,8 @@ std::vector<Event> Xlib::getEvents()
                     events.push_back(Event::K_LEFT);
                 if (keysym == XK_Right)
                     events.push_back(Event::K_RIGHT);
+                if (keysym == XK_y || keysym == XK_Y)
+                    events.push_back(Event::NEXT_GAME);
             }
         }
     }

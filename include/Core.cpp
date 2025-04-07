@@ -42,7 +42,6 @@ void Core::ChangeGameModule(const std::string &name)
     }
     mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.at(name)->getInstance("createGame"));
     mActiveGame->init();
-    std::cout << "[+] Game changed to /'" << name << "/'" << std::endl;
 }
 
 std::string Core::NextGraphicalModule()
@@ -98,6 +97,10 @@ void Core::HandleEvents()
         if (events.at(i) == Event::NEXT_LIB) {
             ChangeDisplayModule(NextGraphicalModule());
             std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
+        }
+        if (events.at(i) == Event::NEXT_GAME) {
+            ChangeGameModule(NextGameModule());
+            std::cout << "[+] Game changed to '" << mActiveGame->getName() << "'" << std::endl;
         }
         if (events.at(i) == Event::QUIT) {
             mActiveGraphic->destroyWindow();
@@ -200,7 +203,7 @@ void Core::LoadLibraries(int ac, char **av)
     LoadAllLibraries(input);
 
     if (!mAvailablesGames.empty()) {
-        mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.begin()->second->getInstance("createGame"));
+        mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.find("menu")->second->getInstance("createGame"));
         std::cout << "[+] First Game loaded" << std::endl;
     }
     std::cout << "[+] All libraries are loaded" << std::endl;

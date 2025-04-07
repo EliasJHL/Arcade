@@ -29,6 +29,9 @@ class IGameModule {
         virtual std::vector<Rect> getRects() const = 0;
         virtual std::vector<Text> getTexts() const = 0;
 
+        // virtual std::string saveState() = 0;
+        // virtual void loadState(const std::string &state) = 0;
+
         virtual Event handleEvent(Event event) = 0;
         virtual void setGameSwitchCallback(std::function<void(std::string)> callback) = 0;
         virtual void setLibSwitchCallback(std::function<void()> callback) = 0;

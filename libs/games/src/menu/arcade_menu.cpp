@@ -9,14 +9,37 @@
 */
 
 #include "arcade_menu.hpp"
+#include "DLLoader.hpp"
+#include <iostream>
+#include <filesystem>
+#include <regex>
+#include <dlfcn.h>
 
 Menu::Menu(std::string name)
 {
+    std::filesystem::path libraries{"libs"};
+    std::regex const e{"arcade_([A-Za-z0-9\\+]+)\\.so"};
+    std::smatch m;
+    void *handler;
+
     _name = name;
+
+    for (auto const& dir : std::filesystem::directory_iterator{libraries}) {
+        std::string dirPath = std::string(dir.path());
+        if (std::regex_search(dirPath, m, e)) {
+            if (m[1] != "menu") {
+                handler = dlopen(dirPath.c_str(), RTLD_LAZY);
+                if (dlsym(handler, "createGame") != nullptr) {
+                    mGames.push_back(m[1]);
+                }
+            }
+        }
+    }
 }
 
 Menu::~Menu()
 {
+
 }
 
 std::string Menu::getName() const
@@ -34,11 +57,6 @@ std::vector<Text> Menu::getTexts() const
     return _texts;
 }
 
-std::vector<Sprite> Menu::getSprites() const
-{
-    return _sprites;
-}
-
 void Menu::init()
 {
     // a voir
@@ -48,26 +66,23 @@ void Menu::update()
 {
     _rects.clear();
     _texts.clear();
-    _sprites.clear();
-    
-    _rects.push_back(Rect{800, 100, 0, 0, Color{50, 50, 50, 255}});
-    _texts.push_back(Text{305, 40, 70, "basic", "ARCADE", Color{255, 255, 255, 255}});
+    int y = 225;
 
-    _rects.push_back(Rect{260, 0, 270, 600, Color{70, 70, 70, 255}});
-    
-    _texts.push_back(Text{350, 225, 40, "basic", "SNAKE", Color{200, 200, 200, 255}});
-    _texts.push_back(Text{340, 325, 40, "basic", "PACMAN", Color{200, 200, 200, 255}});
-    _texts.push_back(Text{360, 425, 40, "basic", "EXIT", Color{200, 200, 200, 255}});
+    _texts.push_back(Text{305, 40, 70, "assets/basic.ttf", "ARCADE", Color{255, 255, 255, 255}});
+
+    for (int i = 0; i < mGames.size(); i++) {
+        _texts.push_back(Text{10, y, 30, "assets/basic.ttf", mGames.at(i), Color{200, 200, 200, 255}});
+        y += 50;
+    }
 }
 
 void Menu::stop()
 {
-    _rects.clear();
-    _sprites.clear();
 }
 
 Event Menu::handleEvent(Event event)
 {
+    return Event::NONE;
 }
 
 extern "C" {

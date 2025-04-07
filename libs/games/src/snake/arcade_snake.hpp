@@ -42,6 +42,9 @@ class Snake : public AGameModule {
         void init() override;
         void stop() override;
 
+        // std::string saveState() override {};
+        // void loadState(const std::string &state) override {};
+
         Event handleEvent(Event event) override;
     protected:
         void HandleMovement();
