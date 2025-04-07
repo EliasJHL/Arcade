@@ -5,18 +5,19 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 19:11:53 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Fri Mar 27 03:33:53 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:31:35 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "Rect.hpp"
 
-Rect::Rect(int x, int y, int width, int height, Color color = Color(255, 255, 255, 255))
+Rect::Rect(int x, int y, int width, int height, Color color, std::string path)
 {
     _x = x;
     _y = y;
     _width = width;
     _height = height;
     _color = color;
+    _spritePath = path;
 }
 
 Rect::~Rect()
@@ -46,4 +47,9 @@ int Rect::getHeight() const
 Color Rect::getColor() const
 {
     return _color;
+}
+
+const std::string &Rect::getSpritePath() const
+{
+    return _spritePath;
 }

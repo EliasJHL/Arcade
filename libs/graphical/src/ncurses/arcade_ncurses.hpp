@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 15:04:30 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 21:11:38 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:41:31 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_NCURSES_HPP_
@@ -35,7 +35,6 @@ class Ncurses : public ADisplayModule{
         void clear() override;
         void drawText(const Text &text) override;
         void drawRect(const Rect &rect) override;
-        void drawSprite(const Sprite &sprite) override {};
         std::vector<Event> getEvents() override;
         std::string getName() const override;
     private:

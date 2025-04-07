@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 14:38:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 17:45:52 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:32:03 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef IGAME_HPP_
@@ -15,7 +15,6 @@
 #include "IDisplay.hpp"
 #include "../Rect.hpp"
 #include "../Text.hpp"
-#include "../Sprite.hpp"
 #include <vector>
 #include <functional>
 #include <cstdlib>
@@ -29,7 +28,6 @@ class IGameModule {
         virtual void stop() = 0;
         virtual std::vector<Rect> getRects() const = 0;
         virtual std::vector<Text> getTexts() const = 0;
-        virtual std::vector<Sprite> getSprites() const = 0;
 
         virtual Event handleEvent(Event event) = 0;
         virtual void setGameSwitchCallback(std::function<void(std::string)> callback) = 0;

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:37:22 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 21:11:52 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:41:49 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SDL2_HPP_
@@ -27,7 +27,6 @@ class Sdl2 : public ADisplayModule{
         void clear() override;
         void drawText(const Text &text) override;
         void drawRect(const Rect &rect) override;
-        void drawSprite(const Sprite &sprite) override;
         std::vector<Event> getEvents() override;
         std::string getName() const override;
     private:

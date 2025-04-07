@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 27 03:16:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 18:36:04 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 16:03:27 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_SNAKE_HPP_
@@ -37,7 +37,6 @@ class Snake : public AGameModule {
         std::string getName() const override;
         std::vector<Rect> getRects() const override;
         std::vector<Text> getTexts() const override;
-        std::vector<Sprite> getSprites() const override;
         
         void update() override;
         void init() override;

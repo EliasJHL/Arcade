@@ -5,13 +5,14 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Thu Mar 27 03:15:44 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 19:26:23 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 21:11:38 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_snake.hpp"
 
 Snake::Snake(std::string name)
 {
+    _name = name;
     _Direction = Move::NONE;
 }
 
@@ -32,11 +33,6 @@ std::vector<Rect> Snake::getRects() const
 std::vector<Text> Snake::getTexts() const
 {
     return _texts;
-}
-
-std::vector<Sprite> Snake::getSprites() const
-{
-    return _sprites;
 }
 
 void Snake::init()
@@ -153,9 +149,9 @@ void Snake::DisplayMap()
     for (int y = 0; y < 30; y++) {
         for (int x = 0; x < 40; x++) {
             if (_map[y][x] == Type::APPLE) {
-                _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{255, 0, 0, 255}});
+                _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{255, 0, 0, 255}, ""});
             } else if (_map[y][x] == Type::HEAD) {
-                _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{0, 255, 0, 255}});
+                _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{0, 255, 0, 255}, ""});
             }
         }
     }
@@ -164,17 +160,17 @@ void Snake::DisplayMap()
 void Snake::DisplaySnake()
 {
     for (int i = 0; i < _snakebody.size(); i++)
-            _rects.push_back(Rect{std::get<0>(_snakebody.at(i)) * 20, std::get<1>(_snakebody.at(i)) * 20, 20, 20, Color{0, 200, 0, 255}});
+            _rects.push_back(Rect{std::get<0>(_snakebody.at(i)) * 20, std::get<1>(_snakebody.at(i)) * 20, 20, 20, Color{0, 200, 0, 255}, ""});
 }
 
 void Snake::DisplayInfos()
 {
     // Universel
-    _rects.push_back(Rect{0, 0, 800, 40, Color{50, 50, 50, 255}});
-    _rects.push_back(Rect{0, 580, 800, 20, Color{50, 50, 50, 255}});
-    _texts.push_back(Text{320, 0, 50, "snake", "Snake Game", Color{0, 102, 51, 255}});
-    _texts.push_back(Text{0, 580, 25, "basic", std::string("Score : " + std::to_string(score)), Color{255, 255, 255, 255}});
-    _texts.push_back(Text{730, 580, 25, "basic", "Arcade", Color{255, 255, 255, 255}});
+    _rects.push_back(Rect{0, 0, 800, 40, Color{50, 50, 50, 255}, ""});
+    _rects.push_back(Rect{0, 580, 800, 20, Color{50, 50, 50, 255}, ""});
+    _texts.push_back(Text{320, 0, 50, "assets/snake.ttf", "Snake Game", Color{0, 102, 51, 255}});
+    _texts.push_back(Text{0, 580, 25, "assets/basic.ttf", std::string("Score : " + std::to_string(score)), Color{255, 255, 255, 255}});
+    _texts.push_back(Text{730, 580, 25, "assets/basic.ttf", "Arcade", Color{255, 255, 255, 255}});
 }
 
 void Snake::update()
@@ -187,15 +183,14 @@ void Snake::update()
         DisplaySnake();
         DisplayInfos();
     } else {
-        _texts.push_back(Text{300, 250, 50, "basic", "GAME OVER", Color{255,0,0,255}});
-        _texts.push_back(Text{250, 300, 30, "basic", "Press any key to restart", Color{255,255,255,255}});
+        _texts.push_back(Text{300, 250, 50, "assets/basic.ttf", "GAME OVER", Color{255,0,0,255}});
+        _texts.push_back(Text{250, 300, 30, "assets/basic.ttf", "Press any key to restart", Color{255,255,255,255}});
     }
 }
 
 void Snake::stop()
 {
     _rects.clear();
-    _sprites.clear();
 }
 
 Event Snake::handleEvent(Event event)

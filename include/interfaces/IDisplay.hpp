@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Fri Mar 21 14:38:19 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 01:19:07 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:32:10 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef IDISPLAY_HPP_
@@ -17,7 +17,6 @@
 #include <vector>
 #include "Rect.hpp"
 #include "Text.hpp"
-#include "Sprite.hpp"
 #include "../EventEnum.hpp"
 
 class IDisplayModule {
@@ -30,7 +29,6 @@ class IDisplayModule {
         virtual void clear() = 0;
         virtual void drawText(const Text &text) = 0;
         virtual void drawRect(const Rect &rect) = 0;
-        virtual void drawSprite(const Sprite &sprite) = 0;
         virtual std::vector<Event> getEvents() = 0;
 };
 #endif /* !IDISPLAY_HPP_ */

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 10:08:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sat Mar 28 19:07:57 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:41:01 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ADISPLAYMODULE_HPP_
@@ -23,7 +23,6 @@ class ADisplayModule : public IDisplayModule {
         void clear() override = 0;
         void drawText(const Text &text) override = 0;
         void drawRect(const Rect &rect) override = 0;
-        void drawSprite(const Sprite &sprite) override = 0;
         std::vector<Event> getEvents() override = 0;
         std::string getName() const override { return _name; };
     protected:

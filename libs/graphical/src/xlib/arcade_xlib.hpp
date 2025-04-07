@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:39:09 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Mon Mar 30 21:06:12 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Sun Apr 5 15:42:23 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #ifndef ARCADE_Xlib_HPP_
@@ -26,7 +26,6 @@ class Xlib : public ADisplayModule {
         void clear() override;
         void drawText(const Text &text) override;
         void drawRect(const Rect &rect) override;
-        void drawSprite(const Sprite &sprite) override {};
         std::vector<Event> getEvents() override;
         std::string getName() const override;
     private:

@@ -1,11 +1,8 @@
 /*
-** Core.cpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Wed Mar 26 12:07:27 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Mon Mar 30 19:32:49 2025 Elias Josué HAJJAR LLAUQUEN
+** EPITECH PROJECT, 2025
+** B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen
+** File description:
+** Core
 */
 
 #include "Core.hpp"
@@ -113,7 +110,6 @@ void Core::DrawElements()
 {
     std::vector<Rect> rects = mActiveGame->getRects();
     std::vector<Text> texts = mActiveGame->getTexts();
-    std::vector<Sprite> sprites = mActiveGame->getSprites();
     
     if (!rects.empty()) {
         for (int i = 0; i < rects.size(); i++)
@@ -122,10 +118,6 @@ void Core::DrawElements()
     if (!texts.empty()) {
         for (int i = 0; i < texts.size(); i++)
             mActiveGraphic->drawText(texts[i]);
-    }
-    if (!sprites.empty()) {
-        for (int i = 0; i < sprites.size(); i++)
-            mActiveGraphic->drawSprite(sprites[i]);
     }
 }
 

@@ -5,7 +5,7 @@
 ** Login   <elias-josue.hajjar-llauquen@epitech.eu>
 **
 ** Started on  Wed Mar 26 18:40:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Mon Mar 30 21:15:51 2025 Elias Josué HAJJAR LLAUQUEN
+** Last update Wed Apr 1 16:21:26 2025 Elias Josué HAJJAR LLAUQUEN
 */
 
 #include "arcade_xlib.hpp"
@@ -20,7 +20,6 @@ Xlib::Xlib()
 
 Xlib::~Xlib()
 {
-    destroyWindow();
 }
 
 void Xlib::createWindow()
@@ -49,7 +48,6 @@ void Xlib::createWindow()
 
 void Xlib::destroyWindow()
 {
-    XDestroyWindow(mDisplay, mWindow);
     XCloseDisplay(mDisplay);
 }
 
@@ -70,7 +68,7 @@ void Xlib::clear()
 void Xlib::drawText(const Text &text)
 {
     XSetForeground(mDisplay, mGC, RGB(text.getColor().getR(), text.getColor().getG(), text.getColor().getB()));
-    XDrawString(mDisplay, mWindow, mGC, 15, 20, text.getText().c_str(), text.getText().length());
+    XDrawString(mDisplay, mWindow, mGC, text.getX(), text.getY(), text.getText().c_str(), text.getText().length());
 }
 
 void Xlib::drawRect(const Rect &rect)

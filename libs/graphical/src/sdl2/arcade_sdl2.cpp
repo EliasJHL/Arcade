@@ -1,11 +1,8 @@
 /*
-** arcade_sdl2.cpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/libs/graphical/src/sdl2
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Fri Mar 21 16:37:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 21:11:50 2025 Elias Josué HAJJAR LLAUQUEN
+** EPITECH PROJECT, 2025
+** B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen
+** File description:
+** arcade_sdl2
 */
 
 #include "arcade_sdl2.hpp"
@@ -53,24 +50,6 @@ void Sdl2::clear()
     SDL_RenderClear(mWindowRender);
 }
 
-void Sdl2::drawSprite(const Sprite &sprite)
-{
-    // SDL_Texture *img = IMG_LoadTexture(mWindowRender, sprite.getPath().c_str());
-    
-    // int w, h;
-    // SDL_QueryTexture(img, NULL, NULL, &w, &h);
-
-    // SDL_Rect texr;
-    // texr.x = sprite.getX();
-    // texr.y = sprite.getY();
-    // texr.w = w;
-    // texr.h = h;
-    
-    // SDL_RendererFlip flip = SDL_FLIP_NONE;
-    // SDL_RenderCopyEx(mWindowRender, img, NULL, &texr, sprite.getRotation(), NULL, flip);
-    // SDL_DestroyTexture(img);
-}
-
 void Sdl2::drawText(const Text &text)
 {
     if(TTF_Init() == -1) {
@@ -79,9 +58,9 @@ void Sdl2::drawText(const Text &text)
     }
     
     try {
-        mFont = TTF_OpenFont(("./include/fonts/" + text.getFont() + ".ttf").c_str(), text.getSize());
+        mFont = TTF_OpenFont(text.getFont().c_str(), text.getSize());
     } catch (const std::exception &e) {
-        mFont = TTF_OpenFont("./include/fonts/basic.ttf", text.getSize());
+        mFont = TTF_OpenFont("./assets/basic.ttf", text.getSize());
     }
     SDL_Color color = {(Uint8)text.getColor().getR(), (Uint8)text.getColor().getG(), (Uint8)text.getColor().getB()};
     SDL_Surface* textSurface = TTF_RenderText_Blended(mFont, text.getText().c_str(), color);
