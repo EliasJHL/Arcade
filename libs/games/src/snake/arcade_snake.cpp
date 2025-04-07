@@ -56,6 +56,7 @@ void Snake::init()
 void Snake::Reset()
 {
     _GameOver = false;
+    _Direction = NONE;
     _map.clear();
     _snakebody.clear();
     _rects.clear();
