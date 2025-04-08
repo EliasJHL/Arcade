@@ -29,6 +29,7 @@ class Menu : public AGameModule {
         Event handleEvent(Event event) override;
     private:
         std::vector<std::string> mGames;
+        std::vector<std::string> mGraphic;
 };
 
 

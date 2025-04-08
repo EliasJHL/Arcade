@@ -35,6 +35,17 @@ Menu::Menu(std::string name)
             }
         }
     }
+    for (auto const& dir : std::filesystem::directory_iterator{libraries}) {
+        std::string dirPath = std::string(dir.path());
+        if (std::regex_search(dirPath, m, e)) {
+            if (m[1] != "menu") {
+                handler = dlopen(dirPath.c_str(), RTLD_LAZY);
+                if (dlsym(handler, "createDisplay") != nullptr) {
+                    mGraphic.push_back(m[1]);
+                }
+            }
+        }
+    }
 }
 
 Menu::~Menu()
@@ -70,10 +81,20 @@ void Menu::update()
 
     _texts.push_back(Text{305, 40, 70, "assets/basic.ttf", "ARCADE", Color{255, 255, 255, 255}});
 
+    _texts.push_back(Text{10, 175, 30, "assets/basic.ttf", "Available games :", Color{255, 255, 255, 255}});
     for (int i = 0; i < mGames.size(); i++) {
         _texts.push_back(Text{10, y, 30, "assets/basic.ttf", mGames.at(i), Color{200, 200, 200, 255}});
         y += 50;
     }
+    y = 225;
+    _texts.push_back(Text{400, 175, 30, "assets/basic.ttf", "Available graphic :", Color{255, 255, 255, 255}});
+    for (int i = 0; i < mGames.size(); i++) {
+        _texts.push_back(Text{400, y, 30, "assets/basic.ttf", mGraphic.at(i), Color{200, 200, 200, 255}});
+        y += 50;
+    }
+    _texts.push_back(Text{300, 425, 20, "assets/basic.ttf", "Core Keybinds :", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{300, 475, 20, "assets/basic.ttf", "'T' Change graphical library", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{300, 525, 20, "assets/basic.ttf", "'Y' Change Game library", Color{255, 255, 255, 255}});
 }
 
 void Menu::stop()
