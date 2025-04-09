@@ -23,7 +23,8 @@ enum Type {
     VOID = 0,
     HEAD = 1,
     BODY = 2,
-    APPLE = 3
+    APPLE = 3,
+    WALL = 4
 };
 
 class Nibbler : public AGameModule {
@@ -53,12 +54,14 @@ class Nibbler : public AGameModule {
         void DisplayMap();
         void DisplayNibbler();
         void DisplayInfos();
+        void Map(int nb);
         int _x;
         int _y;
         Move _Direction;
         bool _GameOver;
         bool _GameOverScreen;
         int score;
+        int _NumMap;
         // x, y, prev_x, prev_y
         std::vector<std::tuple<int, int, int, int>> _Nibblerbody;
         std::vector<std::vector<Type>> _map;
