@@ -38,6 +38,8 @@ class Core : public ICore{
         std::string NextGraphicalModule() override;
         std::string NextGameModule() override;
 
+        void drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts) override;
+
         void LoadFirstLibrary(const std::string &input) override;
         void LoadAllLibraries(const std::string &input) override;
     private:

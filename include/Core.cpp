@@ -74,7 +74,7 @@ std::string Core::NextGameModule()
         return act;
     }
 
-    for (size_t i = 0; i < mAvailablesGames.size(); i++) {
+    for (int i = 0; i < mAvailablesGames.size(); i++) {
         if (act == mAvailablesGames[i]) {
             if (i == mAvailablesGames.size() - 1) {
                 return mAvailablesGames.front();
@@ -113,6 +113,8 @@ void Core::DrawElements()
 {
     std::vector<Rect> rects = mActiveGame->getRects();
     std::vector<Text> texts = mActiveGame->getTexts();
+
+    drawInteractiveMenu(&rects, &texts);
     
     if (!rects.empty()) {
         for (int i = 0; i < rects.size(); i++)
@@ -122,6 +124,11 @@ void Core::DrawElements()
         for (int i = 0; i < texts.size(); i++)
             mActiveGraphic->drawText(texts[i]);
     }
+}
+
+void Core::drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts)
+{
+    return;
 }
 
 void Core::RunCore()
@@ -158,7 +165,7 @@ void Core::LoadFirstLibrary(const std::string &input)
 
 void Core::LoadAllLibraries(const std::string &input)
 {
-    const std::filesystem::path libraries{"libs"};
+    const std::filesystem::path libraries{"lib"};
     std::regex const e{"arcade_([A-Za-z0-9\\+]+)\\.so"};
     std::smatch m;
 
@@ -204,6 +211,12 @@ void Core::LoadLibraries(int ac, char **av)
 
     if (!mAvailablesGames.empty()) {
         mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.find("menu")->second->getInstance("createGame"));
+        mActiveGame->setGameSwitchCallback([this](const std::string &gameName) {
+            this->ChangeGameModule(gameName);
+        });
+        mActiveGame->setGraphicSwitchCallback([this](const std::string &graphicName) {
+            this->ChangeDisplayModule(graphicName);
+        });
         std::cout << "[+] First Game loaded" << std::endl;
     }
     std::cout << "[+] All libraries are loaded" << std::endl;

@@ -31,6 +31,9 @@ class AGameModule : public IGameModule {
         void setGameSwitchCallback(std::function<void(std::string)> callback) override {
             _gameSwitchCallback = callback;
         };
+        void setGraphicSwitchCallback(std::function<void(std::string)> callback) override {
+            _graphicSwitchCallback = callback;
+        };
         void setLibSwitchCallback(std::function<void()> callback) override {
             _libSwitchCallback = callback;
         };
@@ -53,6 +56,7 @@ class AGameModule : public IGameModule {
         std::vector<Text> _texts;
         std::function<void(std::string)> _gameSwitchCallback;
         std::function<void()> _libSwitchCallback;
+        std::function<void(std::string)> _graphicSwitchCallback;
 
         void switchToNextGame(const std::string& gameName = "") {
             if (_gameSwitchCallback) {
