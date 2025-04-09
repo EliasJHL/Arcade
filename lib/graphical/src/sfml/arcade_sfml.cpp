@@ -10,6 +10,51 @@
 Sfml::Sfml()
 {
     mName = "sfml";
+    mEvents = {
+        {sf::Keyboard::Up, Event::K_UP},
+        {sf::Keyboard::Down, Event::K_DOWN},
+        {sf::Keyboard::Left, Event::K_LEFT},
+        {sf::Keyboard::Right, Event::K_RIGHT},
+        {sf::Keyboard::Escape, Event::K_ESCAPE},
+        {sf::Keyboard::Return, Event::K_RETURN},
+        {sf::Keyboard::Space, Event::K_SPACE},
+        {sf::Keyboard::A, Event::KEY_A},
+        {sf::Keyboard::B, Event::KEY_B},
+        {sf::Keyboard::C, Event::KEY_C},
+        {sf::Keyboard::D, Event::KEY_D},
+        {sf::Keyboard::E, Event::KEY_E},
+        {sf::Keyboard::F, Event::KEY_F},
+        {sf::Keyboard::G, Event::KEY_G},
+        {sf::Keyboard::H, Event::KEY_H},
+        {sf::Keyboard::I, Event::KEY_I},
+        {sf::Keyboard::J, Event::KEY_J},
+        {sf::Keyboard::K, Event::KEY_K},
+        {sf::Keyboard::L, Event::KEY_L},
+        {sf::Keyboard::M, Event::KEY_M},
+        {sf::Keyboard::N, Event::KEY_N},
+        {sf::Keyboard::O, Event::KEY_O},
+        {sf::Keyboard::P, Event::KEY_P},
+        {sf::Keyboard::Q, Event::KEY_Q},
+        {sf::Keyboard::R, Event::KEY_R},
+        {sf::Keyboard::S, Event::KEY_S},
+        {sf::Keyboard::T, Event::NEXT_LIB},
+        {sf::Keyboard::U, Event::KEY_U},
+        {sf::Keyboard::V, Event::KEY_V},
+        {sf::Keyboard::W, Event::KEY_W},
+        {sf::Keyboard::X, Event::KEY_X},
+        {sf::Keyboard::Y, Event::NEXT_GAME},
+        {sf::Keyboard::Z, Event::KEY_Z},
+        {sf::Keyboard::Num1, Event::KEY_1},
+        {sf::Keyboard::Num2, Event::KEY_2},
+        {sf::Keyboard::Num3, Event::KEY_3},
+        {sf::Keyboard::Num4, Event::KEY_4},
+        {sf::Keyboard::Num5, Event::KEY_5},
+        {sf::Keyboard::Num6, Event::KEY_6},
+        {sf::Keyboard::Num7, Event::KEY_7},
+        {sf::Keyboard::Num8, Event::KEY_8},
+        {sf::Keyboard::Num9, Event::KEY_9},
+        {sf::Keyboard::Num0, Event::KEY_0}
+    };
 }
 
 Sfml::~Sfml()
@@ -74,139 +119,8 @@ std::vector<Event> Sfml::getEvents() {
                 events.push_back(Event::QUIT);
                 return events;
             case sf::Event::KeyPressed:
-                switch (sfEvent.key.code) {
-                    case sf::Keyboard::Up:
-                        events.push_back(Event::K_UP);
-                        break;
-                    case sf::Keyboard::Down:
-                        events.push_back(Event::K_DOWN);
-                        break;
-                    case sf::Keyboard::Left:
-                        events.push_back(Event::K_LEFT);
-                        break;
-                    case sf::Keyboard::Right:
-                        events.push_back(Event::K_RIGHT);
-                        break;
-                    case sf::Keyboard::Escape:
-                        events.push_back(Event::K_ESCAPE);
-                        break;
-                    case sf::Keyboard::Enter:
-                        events.push_back(Event::K_RETURN);
-                        break;
-                    case sf::Keyboard::Space:
-                        events.push_back(Event::K_SPACE);
-                        break;
-                    case sf::Keyboard::A:
-                        events.push_back(Event::KEY_A);
-                        break;
-                    case sf::Keyboard::B:
-                        events.push_back(Event::KEY_B);
-                        break;
-                    case sf::Keyboard::C:
-                        events.push_back(Event::KEY_C);
-                        break;
-                    case sf::Keyboard::D:
-                        events.push_back(Event::KEY_D);
-                        break;
-                    case sf::Keyboard::E:
-                        events.push_back(Event::KEY_E);
-                        break;
-                    case sf::Keyboard::F:
-                        events.push_back(Event::KEY_F);
-                        break;
-                    case sf::Keyboard::G:
-                        events.push_back(Event::KEY_G);
-                        break;
-                    case sf::Keyboard::H:
-                        events.push_back(Event::KEY_H);
-                        break;
-                    case sf::Keyboard::I:
-                        events.push_back(Event::KEY_I);
-                        break;
-                    case sf::Keyboard::J:
-                        events.push_back(Event::KEY_J);
-                        break;
-                    case sf::Keyboard::K:
-                        events.push_back(Event::KEY_K);
-                        break;
-                    case sf::Keyboard::L:
-                        events.push_back(Event::KEY_L);
-                        break;
-                    case sf::Keyboard::M:
-                        events.push_back(Event::KEY_M);
-                        break;
-                    case sf::Keyboard::N:
-                        events.push_back(Event::KEY_N);
-                        break;
-                    case sf::Keyboard::O:
-                        events.push_back(Event::KEY_O);
-                        break;
-                    case sf::Keyboard::P:
-                        events.push_back(Event::KEY_P);
-                        break;
-                    case sf::Keyboard::Q:
-                        events.push_back(Event::KEY_Q);
-                        break;
-                    case sf::Keyboard::R:
-                        events.push_back(Event::KEY_R);
-                        break;
-                    case sf::Keyboard::S:
-                        events.push_back(Event::KEY_S);
-                        break;
-                    case sf::Keyboard::T:
-                        events.push_back(Event::NEXT_LIB);
-                        break;
-                    case sf::Keyboard::U:
-                        events.push_back(Event::KEY_U);
-                        break;
-                    case sf::Keyboard::V:
-                        events.push_back(Event::KEY_V);
-                        break;
-                    case sf::Keyboard::W:
-                        events.push_back(Event::KEY_W);
-                        break;
-                    case sf::Keyboard::X:
-                        events.push_back(Event::KEY_X);
-                        break;
-                    case sf::Keyboard::Y:
-                        events.push_back(Event::NEXT_GAME);
-                        break;
-                    case sf::Keyboard::Z:
-                        events.push_back(Event::KEY_Z);
-                        break;
-                    case sf::Keyboard::Num1:
-                        events.push_back(Event::KEY_1);
-                        break;
-                    case sf::Keyboard::Num2:
-                        events.push_back(Event::KEY_2);
-                        break;
-                    case sf::Keyboard::Num3:
-                        events.push_back(Event::KEY_3);
-                        break;
-                    case sf::Keyboard::Num4:
-                        events.push_back(Event::KEY_4);
-                        break;
-                    case sf::Keyboard::Num5:
-                        events.push_back(Event::KEY_5);
-                        break;
-                    case sf::Keyboard::Num6:
-                        events.push_back(Event::KEY_6);
-                        break;
-                    case sf::Keyboard::Num7:
-                        events.push_back(Event::KEY_7);
-                        break;
-                    case sf::Keyboard::Num8:
-                        events.push_back(Event::KEY_8);
-                        break;
-                    case sf::Keyboard::Num9:
-                        events.push_back(Event::KEY_9);
-                        break;
-                    case sf::Keyboard::Num0:
-                        events.push_back(Event::KEY_0);
-                        break;
-                    default:
-                        break;
-                }
+                if (mEvents.find(sfEvent.key.code) != mEvents.end())
+                    events.push_back(mEvents[sfEvent.key.code]);
                 break;
             default:
                 break;

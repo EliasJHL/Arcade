@@ -29,6 +29,7 @@ class Sfml : public ADisplayModule{
         std::string mName;
         sf::RenderWindow mWindow;
         sf::Font mFont;
+        std::unordered_map<sf::Keyboard::Key, Event> mEvents;
 };
 
 #endif /* !ARCADE_SFML_HPP_ */
