@@ -18,6 +18,7 @@ Sfml::Sfml()
         {sf::Keyboard::Escape, Event::K_ESCAPE},
         {sf::Keyboard::Return, Event::K_RETURN},
         {sf::Keyboard::Space, Event::K_SPACE},
+        {sf::Keyboard::F1, Event::K_F1},
         {sf::Keyboard::A, Event::KEY_A},
         {sf::Keyboard::B, Event::KEY_B},
         {sf::Keyboard::C, Event::KEY_C},

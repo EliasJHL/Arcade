@@ -26,6 +26,7 @@ Xlib::Xlib()
         {XK_Escape, Event::K_ESCAPE},
         {XK_Return, Event::K_RETURN},
         {XK_space, Event::K_SPACE},
+        {XK_F1, Event::K_F1},
         {XK_a, Event::KEY_A},
         {XK_b, Event::KEY_B},
         {XK_c, Event::KEY_C},

@@ -19,6 +19,7 @@ Ncurses::Ncurses()
         {KEY_DOWN, Event::K_DOWN},
         {KEY_LEFT, Event::K_LEFT},
         {KEY_RIGHT, Event::K_RIGHT},
+        {KEY_F(1), Event::K_F1},
         {'y', Event::NEXT_GAME},
         {'Y', Event::NEXT_GAME},
         {'a', Event::KEY_A},

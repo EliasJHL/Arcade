@@ -18,6 +18,7 @@ Sdl2::Sdl2() : mWindow(nullptr), mWindowRender(nullptr), mFont(nullptr)
         {SDLK_ESCAPE, Event::K_ESCAPE},
         {SDLK_RETURN, Event::K_RETURN},
         {SDLK_SPACE, Event::K_SPACE},
+        {SDLK_F1, Event::K_F1},
         {SDLK_a, Event::KEY_A},
         {SDLK_b, Event::KEY_B},
         {SDLK_c, Event::KEY_C},
