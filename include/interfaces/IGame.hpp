@@ -34,6 +34,7 @@ class IGameModule {
 
         virtual Event handleEvent(Event event) = 0;
         virtual void setGameSwitchCallback(std::function<void(std::string)> callback) = 0;
+        virtual void setGraphicSwitchCallback(std::function<void(std::string)> callback) = 0;
         virtual void setLibSwitchCallback(std::function<void()> callback) = 0;
         virtual Event handleEventGeneric(Event event) = 0;
 };

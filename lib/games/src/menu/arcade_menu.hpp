@@ -30,7 +30,9 @@ class Menu : public AGameModule {
     private:
         std::vector<std::string> mGames;
         std::vector<std::string> mGraphic;
+        std::string selected_game;
+        std::string selected_graph;
+        bool isGameSelected;
 };
-
 
 #endif /* !ARCADE_MENU_HPP_ */

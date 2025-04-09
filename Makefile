@@ -12,9 +12,9 @@ NAME	=	arcade
 
 CORE_SRC	=	$(wildcard src/*.cpp) $(wildcard include/*.cpp)
 
-GRAPHICAL_SRC	=	$(wildcard libs/graphical/src/*.cpp)
+GRAPHICAL_SRC	=	$(wildcard lib/graphical/src/*.cpp)
 
-GAMES_SRC	=	$(wildcard libs/games/src/*.cpp)
+GAMES_SRC	=	$(wildcard lib/games/src/*.cpp)
 
 all: core graphical games
 
@@ -23,11 +23,11 @@ core:
 	@echo "\033[32m= = = = =  CORE COMPILATION COMPLETED  = = = = =\033[0m"
 
 games:
-	@$(MAKE) -C libs/games/
+	@$(MAKE) -C lib/games/
 	@echo "\033[32m= = = = =  GAMES COMPILATION COMPLETED  = = = = =\033[0m"
 
 graphical:
-	@$(MAKE) -C libs/graphical/
+	@$(MAKE) -C lib/graphical/
 	@echo "\033[32m= = = =  GRAPHICAL COMPILATION COMPLETED  = = = =\033[0m"
 
 clean:
@@ -37,8 +37,8 @@ clean:
 fclean: clean
 	@$(RM) $(NAME)
 	@$(RM) *~
-	@$(MAKE) -C libs/games/ clean
-	@$(MAKE) -C libs/graphical/ clean
+	@$(MAKE) -C lib/games/ clean
+	@$(MAKE) -C lib/graphical/ clean
 	@echo "\033[31m= = = = = =   CLEAR COMPLETED   = = = = = =\033[0m"
 
 re: fclean all

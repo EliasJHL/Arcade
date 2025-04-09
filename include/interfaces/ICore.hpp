@@ -27,6 +27,8 @@ class ICore {
         virtual std::string NextGraphicalModule() = 0;
         virtual std::string NextGameModule() = 0;
 
+        virtual void drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts) = 0;
+
         virtual void LoadFirstLibrary(const std::string &input) = 0;
         virtual void LoadAllLibraries(const std::string &input) = 0;
 };

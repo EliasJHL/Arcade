@@ -122,14 +122,11 @@ void Snake::HandleActions(int new_x, int new_y)
     }
     if (_map[new_y][new_x] == Type::BODY)
         _GameOver = true;
-    if (_y <= 2 && _Direction == Move::UP)
-        new_y = 28;
-    if (_y >= 28 && _Direction == Move::DOWN)
-        new_y = 3;
-    if (_x <= 0 && _Direction == Move::LEFT)
-        new_x = 39;
-    if (_x >= 39 && _Direction == Move::RIGHT)
-        new_x = 0;
+    if ((_y <= 2 && _Direction == Move::UP) || (_y >= 28 && _Direction == Move::DOWN) ||
+        (_x <= 0 && _Direction == Move::LEFT) || (_x >= 39 && _Direction == Move::RIGHT)) {
+        _GameOver = true;
+        return;
+    }
     _map[_y][_x] =  Type::VOID;
     updateBody();
     _y = new_y;
