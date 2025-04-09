@@ -10,8 +10,6 @@
 
 #include "arcade_ncurses.hpp"
 
-static const char ascii_chars[] = " .`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-
 Ncurses::Ncurses()
 {
     mName = "ncurses";
@@ -31,6 +29,10 @@ void Ncurses::createWindow()
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
+    init_pair(1, COLOR_RED, COLOR_BLACK);
+    init_pair(2, COLOR_GREEN, COLOR_BLACK);
+    init_pair(3, COLOR_BLUE, COLOR_BLACK);
+    init_pair(4, COLOR_WHITE, COLOR_BLACK);
 }
 
 void Ncurses::destroyWindow()
@@ -54,11 +56,17 @@ void Ncurses::drawText(const Text &text)
     int g = (text.getColor().getG() * 1000) / 255;
     int b = (text.getColor().getB() * 1000) / 255;
     
-    init_color(8, r, g, b);
-    init_pair(1, 8, COLOR_BLACK);
-    attron(COLOR_PAIR(1));
+    if (r > 500 && g < 200 && b < 200) {
+        attron(COLOR_PAIR(1));
+    } else if (g > 500 && r < 200 && b < 200) {
+        attron(COLOR_PAIR(2));
+    } else if (b > 500 && r < 200 && g < 200) {
+        attron(COLOR_PAIR(3));
+    } else {
+        attron(COLOR_PAIR(4));
+    }
     mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, "%s", text.getText().c_str());
-    attroff(COLOR_PAIR(1));
+    attroff(COLOR_PAIR(1) | COLOR_PAIR(2) | COLOR_PAIR(3) | COLOR_PAIR(4));
 }
 
 // TO ASK demander couleur
@@ -68,9 +76,15 @@ void Ncurses::drawRect(const Rect &rect)
     int g = (rect.getColor().getG() * 1000) / 255;
     int b = (rect.getColor().getB() * 1000) / 255;
     
-    init_color(8, r, g, b);
-    init_pair(1, 8, COLOR_BLACK);
-    attron(COLOR_PAIR(1));
+    if (r > 500 && g < 200 && b < 200) {
+        attron(COLOR_PAIR(1));
+    } else if (g > 500 && r < 200 && b < 200) {
+        attron(COLOR_PAIR(2));
+    } else if (b > 500 && r < 200 && g < 200) {
+        attron(COLOR_PAIR(3));
+    } else {
+        attron(COLOR_PAIR(4));
+    }
     int x1 = rect.getX() / 10;
     int x2 = rect.getX() / 10 + rect.getWidth() / 10;
     int y1 = rect.getY() / 20;
@@ -90,7 +104,7 @@ void Ncurses::drawRect(const Rect &rect)
     mvaddch(y1, x2, ACS_URCORNER);
     mvaddch(y2, x2, ACS_LRCORNER);
     mvaddch(y2, x1, ACS_LLCORNER);
-    attroff(COLOR_PAIR(1));
+    attroff(COLOR_PAIR(1) | COLOR_PAIR(2) | COLOR_PAIR(3) | COLOR_PAIR(4));
 }
 
 std::vector<Event> Ncurses::getEvents()
