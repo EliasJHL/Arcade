@@ -129,7 +129,6 @@ void Core::DrawElements()
 void Core::drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts)
 {
     return;
-    return;
 }
 
 void Core::RunCore()
