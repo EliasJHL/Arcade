@@ -314,7 +314,7 @@ void Nibbler::DisplayInfos()
     // Universel
     _rects.push_back(Rect{0, 0, 800, 40, Color{50, 50, 50, 255}, ""});
     _rects.push_back(Rect{0, 580, 800, 20, Color{50, 50, 50, 255}, ""});
-    _texts.push_back(Text{320, 0, 50, "assets/basic.ttf", "Nibbler Game", false, true, Color{0, 102, 51, 255}});
+    _texts.push_back(Text{320, 0, 50, "assets/basic.ttf", "Nibbler Game", false, false, Color{0, 102, 51, 255}});
     _texts.push_back(Text{0, 580, 25, "assets/basic.ttf", std::string("Score : " + std::to_string(score)), false, false, Color{255, 255, 255, 255}});
     _texts.push_back(Text{730, 580, 25, "assets/basic.ttf", "Arcade", false, false, Color{255, 255, 255, 255}});
 }

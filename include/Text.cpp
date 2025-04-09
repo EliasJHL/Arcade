@@ -51,6 +51,16 @@ std::string Text::getText() const
     return _text;
 }
 
+bool Text::isCenteredX() const
+{
+    return _centeredX;
+}
+
+bool Text::isCenteredY() const
+{
+    return _centeredY;
+}
+
 Color Text::getColor() const
 {
     return _color;
