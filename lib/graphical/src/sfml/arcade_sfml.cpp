@@ -48,18 +48,18 @@ void Sfml::drawText(const Text &text)
     SfText.setFont(mFont);
     SfText.setString(text.getText());
     SfText.setCharacterSize(text.getSize() - 1);
-    SfText.setFillColor({text.getColor().getR(), text.getColor().getG(), text.getColor().getB(), text.getColor().getA()});
-    SfText.setPosition({text.getX(), text.getY() - 7});
+    SfText.setFillColor({(sf::Uint8)text.getColor().getR(), (sf::Uint8)text.getColor().getG(), (sf::Uint8)text.getColor().getB(), (sf::Uint8)text.getColor().getA()});
+    SfText.setPosition({(float)text.getX(), (float)text.getY() - 7});
     mWindow.draw(SfText);
 }
 
 void Sfml::drawRect(const Rect &rect) { 
     sf::RectangleShape rec;
     
-    rec.setSize({rect.getWidth(), rect.getHeight()});
-    rec.setPosition({rect.getX(), rect.getY()});
+    rec.setSize({(float)rect.getWidth(), (float)rect.getHeight()});
+    rec.setPosition({(float)rect.getX(), (float)rect.getY()});
 
-    rec.setFillColor({rect.getColor().getR(), rect.getColor().getG(), rect.getColor().getB(), rect.getColor().getA()});
+    rec.setFillColor({(sf::Uint8)rect.getColor().getR(), (sf::Uint8)rect.getColor().getG(), (sf::Uint8)rect.getColor().getB(), (sf::Uint8)rect.getColor().getA()});
     
     mWindow.draw(rec);
 }

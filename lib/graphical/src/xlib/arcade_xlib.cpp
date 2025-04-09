@@ -36,7 +36,7 @@ void Xlib::createWindow()
     XSync(mDisplay, False);
     XSetForeground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
     XSetBackground(mDisplay, mGC, BlackPixel(mDisplay, mScreen));
-    mFont = XLoadQueryFont(mDisplay, "-misc-fixed-medium-r-normal--9-90-75-75-c-60-iso10646-1");
+    mFont = XLoadQueryFont(mDisplay, "-misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1");
     XSetFont(mDisplay, mGC, mFont->fid);
     XSizeHints *size_hints = XAllocSizeHints();
     size_hints->flags = PMinSize | PMaxSize;
@@ -68,7 +68,7 @@ void Xlib::clear()
 void Xlib::drawText(const Text &text)
 {
     XSetForeground(mDisplay, mGC, RGB(text.getColor().getR(), text.getColor().getG(), text.getColor().getB()));
-    XDrawString(mDisplay, mWindow, mGC, text.getX(), text.getY(), text.getText().c_str(), text.getText().length());
+    XDrawString(mDisplay, mWindow, mGC, text.getX(), text.getY() + 15, text.getText().c_str(), text.getText().length());
 }
 
 void Xlib::drawRect(const Rect &rect)

@@ -57,7 +57,7 @@ void Ncurses::drawText(const Text &text)
     init_color(8, r, g, b);
     init_pair(1, 8, COLOR_BLACK);
     attron(COLOR_PAIR(1));
-    mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, text.getText().c_str());
+    mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, "%s", text.getText().c_str());
     attroff(COLOR_PAIR(1));
 }
 
