@@ -79,28 +79,28 @@ void Menu::update()
     _texts.clear();
     int y = 225;
 
-    _texts.push_back(Text{305, 40, 70, "assets/basic.ttf", "ARCADE", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{305, 40, 70, "assets/basic.ttf", "ARCADE", false, false, Color{255, 255, 255, 255}});
 
-    _texts.push_back(Text{10, 175, 30, "assets/basic.ttf", "Available games :", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{10, 175, 30, "assets/basic.ttf", "Available games :", false, false, Color{255, 255, 255, 255}});
     for (int i = 0; i < mGames.size(); i++) {
         if (mGames.at(i) == selected_game)
-            _texts.push_back(Text{10, y, 30, "assets/basic.ttf", std::string("*" + mGames.at(i)), Color{0, 200, 200, 255}});
+            _texts.push_back(Text{10, y, 30, "assets/basic.ttf", std::string("*" + mGames.at(i)), false, false, Color{0, 200, 200, 255}});
         else
-            _texts.push_back(Text{10, y, 30, "assets/basic.ttf", mGames.at(i), Color{200, 200, 200, 255}});
+            _texts.push_back(Text{10, y, 30, "assets/basic.ttf", mGames.at(i), false, false, Color{200, 200, 200, 255}});
         y += 50;
     }
     y = 225;
-    _texts.push_back(Text{400, 175, 30, "assets/basic.ttf", "Available graphic :", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{400, 175, 30, "assets/basic.ttf", "Available graphic :", false, false, Color{255, 255, 255, 255}});
     for (int i = 0; i < mGraphic.size(); i++) {
         if (mGraphic.at(i) == selected_graph && isGameSelected)
-            _texts.push_back(Text{400, y, 30, "assets/basic.ttf", std::string("*" + mGraphic.at(i)), Color{0, 200, 200, 255}});
+            _texts.push_back(Text{400, y, 30, "assets/basic.ttf", std::string("*" + mGraphic.at(i)), false, false, Color{0, 200, 200, 255}});
         else    
-            _texts.push_back(Text{400, y, 30, "assets/basic.ttf", mGraphic.at(i), Color{200, 200, 200, 255}});
+            _texts.push_back(Text{400, y, 30, "assets/basic.ttf", mGraphic.at(i), false, false, Color{200, 200, 200, 255}});
         y += 50;
     }
-    _texts.push_back(Text{10, 505, 20, "assets/basic.ttf", "Core Keybinds :", Color{255, 255, 255, 255}});
-    _texts.push_back(Text{10, 535, 20, "assets/basic.ttf", "'T' Change graphical library", Color{255, 255, 255, 255}});
-    _texts.push_back(Text{10, 565, 20, "assets/basic.ttf", "'Y' Change Game library", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{10, 505, 20, "assets/basic.ttf", "Core Keybinds :", false, false, Color{255, 255, 255, 255}});
+    _texts.push_back(Text{10, 535, 20, "assets/basic.ttf", "'T' Change graphical library", false, false, Color{255, 255, 255, 255}});
+    _texts.push_back(Text{10, 565, 20, "assets/basic.ttf", "'Y' Change Game library", false, false, Color{255, 255, 255, 255}});
 }
 
 void Menu::stop()

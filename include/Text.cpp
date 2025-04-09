@@ -10,10 +10,12 @@
 
 #include "Text.hpp"
 
-Text::Text(int x, int y, int size, const std::string &font, const std::string &text, Color color = Color(255, 255, 255, 255))
+Text::Text(int x, int y, int size, const std::string &font, const std::string &text, bool centeredX, bool centeredY, Color color = Color(255, 255, 255, 255))
 {
     _x = x;
     _y = y;
+    _centeredX = centeredX;
+    _centeredY = centeredY;
     _size = size;
     _font = font;
     _text = text;

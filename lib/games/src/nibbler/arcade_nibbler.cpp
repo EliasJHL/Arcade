@@ -314,9 +314,9 @@ void Nibbler::DisplayInfos()
     // Universel
     _rects.push_back(Rect{0, 0, 800, 40, Color{50, 50, 50, 255}, ""});
     _rects.push_back(Rect{0, 580, 800, 20, Color{50, 50, 50, 255}, ""});
-    _texts.push_back(Text{320, 0, 50, "assets/basic.ttf", "Nibbler Game", Color{0, 102, 51, 255}});
-    _texts.push_back(Text{0, 580, 25, "assets/basic.ttf", std::string("Score : " + std::to_string(score)), Color{255, 255, 255, 255}});
-    _texts.push_back(Text{730, 580, 25, "assets/basic.ttf", "Arcade", Color{255, 255, 255, 255}});
+    _texts.push_back(Text{320, 0, 50, "assets/basic.ttf", "Nibbler Game", false, true, Color{0, 102, 51, 255}});
+    _texts.push_back(Text{0, 580, 25, "assets/basic.ttf", std::string("Score : " + std::to_string(score)), false, false, Color{255, 255, 255, 255}});
+    _texts.push_back(Text{730, 580, 25, "assets/basic.ttf", "Arcade", false, false, Color{255, 255, 255, 255}});
 }
 
 void Nibbler::update()
@@ -329,8 +329,8 @@ void Nibbler::update()
         DisplayNibbler();
         DisplayInfos();
     } else {
-        _texts.push_back(Text{300, 250, 50, "assets/basic.ttf", "GAME OVER", Color{255,0,0,255}});
-        _texts.push_back(Text{250, 300, 30, "assets/basic.ttf", "Press any key to restart", Color{255,255,255,255}});
+        _texts.push_back(Text{300, 250, 50, "assets/basic.ttf", "GAME OVER", false, false, Color{255,0,0,255}});
+        _texts.push_back(Text{250, 300, 30, "assets/basic.ttf", "Press any key to restart", false, false, Color{255,255,255,255}});
     }
 }
 
