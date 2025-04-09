@@ -15,7 +15,7 @@
 
 Xlib::Xlib()
 {
-    mName = "Xlib";
+    mName = "xlib";
     mEvents = {
         {XK_Up, Event::K_UP},
         {XK_Down, Event::K_DOWN},
