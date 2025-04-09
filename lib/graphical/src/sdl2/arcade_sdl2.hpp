@@ -35,6 +35,6 @@ class Sdl2 : public ADisplayModule{
         TTF_Font *mFont;
         SDL_Surface *mWindowSurface;
         SDL_Renderer *mWindowRender;
-};;
+};
 
 #endif /* !ARCADE_SDL2_HPP_ */
