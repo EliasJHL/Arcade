@@ -36,22 +36,6 @@ std::vector<Text> Nibbler::getTexts() const
     return _texts;
 }
 
-
-void Nibbler::createWall(int x, int y, Type type) {
-    _map[x - 1][y - 1] = type;
-    _map[x - 1][y] = type;
-    _map[x - 1][y + 1] =  = type;
-    _map[x][y - 1] =  = type;
-    _map[x][y] = type;
-    _map[x][y + 1] =  = type;
-    _map[x][y - 1] = type;
-    _map[x][y + 1] = type;
-    _map[x + 1][y - 1] = type;
-    _map[x + 1][y] = type;
-    _map[x + 1][y + 1] = type;
-}
-
-
 void Nibbler::Map(int nb)
 {
     if (nb == 0) {

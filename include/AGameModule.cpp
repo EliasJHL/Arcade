@@ -54,7 +54,7 @@ Event AGameModule::handleEventGeneric(Event event)
     return Event::NONE;
 }
 
-void AGameModule::switchToNextGame(const std::string& gameName = "")
+void AGameModule::switchToNextGame(const std::string &gameName)
 {
     if (_gameSwitchCallback) {
         _gameSwitchCallback(gameName);

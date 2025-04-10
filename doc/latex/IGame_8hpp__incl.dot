@@ -16,9 +16,9 @@ digraph "include/interfaces/IGame.hpp"
   Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node6 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
-  Node7 [label="Rect.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Rect_8hpp_source.html",tooltip=" "];
+  Node7 [label="Rect.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Rect_8hpp.html",tooltip="Classe pour contenir les informations d'un rectangle."];
   Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
-  Node8 [label="Color.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Color_8hpp_source.html",tooltip=" "];
+  Node8 [label="Color.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Color_8hpp.html",tooltip="Classe pour contenir une couleur."];
   Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
   Node9 [label="Text.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Text_8hpp_source.html",tooltip=" "];

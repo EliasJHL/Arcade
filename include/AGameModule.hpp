@@ -44,7 +44,7 @@ class AGameModule : public IGameModule {
         std::function<void()> _libSwitchCallback;
         std::function<void(std::string)> _graphicSwitchCallback;
 
-        void switchToNextGame(const std::string& gameName);
+        void switchToNextGame(const std::string &gameName = "");
         void switchToNextLib();
 };
 

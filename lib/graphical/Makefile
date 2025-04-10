@@ -13,7 +13,7 @@ SDL2_SRC	=	./src/sdl2/arcade_sdl2.cpp
 XLIB_SRC	=	./src/xlib/arcade_xlib.cpp
 SFML_SRC	=	./src/sfml/arcade_sfml.cpp
 
-REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp
+REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp ../../include/ADisplayModule.cpp
 
 XLIB_FLAGS	=	-L/usr/X11R6/lib -lX11
 SDL2_FLAGS	=	-lSDL2 -lSDL2_ttf -lSDL2_image
