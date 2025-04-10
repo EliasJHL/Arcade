@@ -14,7 +14,7 @@ Nibbler::Nibbler(std::string name)
 {
     _name = name;
     _Direction = Move::NONE;
-    _NumMap = 0;
+    _NumMap = 1;
 }
 
 Nibbler::~Nibbler()
@@ -36,17 +36,41 @@ std::vector<Text> Nibbler::getTexts() const
     return _texts;
 }
 
+void Nibbler::addWall(int sX, int eX, int sY, int eY)
+{
+    for (int y = sY; y < eY; y++) {
+        for (int x = sX; x < eX; x++) {
+            _map[y][x] = Type::WALL;
+        }
+    }
+}
+
+void Nibbler::parseMap(const std::string &filename)
+{
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error: Unable to open file " << filename << std::endl;
+        return;
+    }
+    std::vector<std::string> lines;
+    std::string line;
+    while (std::getline(file, line)) {
+        lines.push_back(line);
+    }
+    file.close();
+    for (int y = 0; y < 15 && y + 7 < 30; y++) {
+        for (int x = 0; x < 15 && x + 12 < 40; x++) {
+            if (lines[y][x] == '#') {
+                _map[y + 7][x + 12] = Type::WALL;
+            }
+        }
+    }
+}
+
 void Nibbler::Map(int nb)
 {
-    if (nb == 0) {
-        for (int x = 0; x < 40; x++) {
-            _map[2][x] = Type::WALL;
-            _map[28][x] = Type::WALL;
-        }
-        for (int y = 2; y < 29; y++) {
-            _map[y][0] = Type::WALL;
-            _map[y][39] = Type::WALL;
-        }
+    if (nb == 1) {
+        parseMap("lib/games/src/nibbler/map_1");
     }
 }
 
@@ -62,6 +86,13 @@ void Nibbler::init()
     _x = 10;
     _y = 15;
     _map[_y][_x] = Type::HEAD;
+    _Nibblerbody.push_back({_x - 1, _y, _x - 1, _y});
+    _Nibblerbody.push_back({_x - 2, _y, _x - 2, _y});
+    _Nibblerbody.push_back({_x - 3, _y, _x - 3, _y});
+    _map[_y][_x - 1] = Type::BODY;
+    _map[_y][_x - 2] = Type::BODY;
+    _map[_y][_x - 3] = Type::BODY;
+
     _map[25][35] = Type::APPLE;
     Map(_NumMap);
     _GameOver = false;

@@ -10,6 +10,7 @@
 
 #include "AGameModule.hpp"
 #include <thread>
+#include <fstream>
 
 enum Move {
     NONE = -1,
@@ -55,6 +56,8 @@ class Nibbler : public AGameModule {
         void DisplayNibbler();
         void DisplayInfos();
         void Map(int nb);
+        void addWall(int startX, int endX, int startY, int endY);
+        void parseMap(const std::string &filename);
         int _x;
         int _y;
         Move _Direction;
