@@ -1,54 +1,40 @@
-/*
-** AGameModule.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Wed Mar 26 10:05:12 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Apr 5 15:32:21 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file AGameModule.hpp
+ * @brief Classe abstraite pour les modules des jeux
+ * @author Elias H. <elias-josue.hajjar-llauquen@epitech.eu> & Enzo C. <enzo.lobato-couthino@epitech.eu>
+ *
+ * Ce fichier définit la classe de base abstraite pour les modules des jeux.
+ */
 
 #ifndef AGAMEMODULE_HPP_
 # define AGAMEMODULE_HPP_
 
 #include "./interfaces/IGame.hpp"
 
+/**
+ * @class AGameModule
+ * @brief Classe abstraite pour les libraries de jeux.
+ *
+ * Utilisé pour l'ouverture / utilisation des Jeux.
+ * Elle hérite de IGameModule
+ */
 class AGameModule : public IGameModule {
     public:
-        AGameModule(std::string name = "") : _name(name) {};
+        AGameModule(std::string name = "");
         virtual ~AGameModule() = default;
-        std::string getName() const override { return _name; };
+        std::string getName() const override;
         void update() override = 0;
         void init() override = 0;
         void stop() override = 0;
-        std::vector<Rect> getRects() const override { return _rects; };
-        std::vector<Text> getTexts() const override { return _texts; };
+        std::vector<Rect> getRects() const override;;
+        std::vector<Text> getTexts() const override;
         Event handleEvent(Event event) override = 0;
 
-        // std::string saveState() override;
-        // void loadState(const std::string &state) override;
-        
-        void setGameSwitchCallback(std::function<void(std::string)> callback) override {
-            _gameSwitchCallback = callback;
-        };
-        void setGraphicSwitchCallback(std::function<void(std::string)> callback) override {
-            _graphicSwitchCallback = callback;
-        };
-        void setLibSwitchCallback(std::function<void()> callback) override {
-            _libSwitchCallback = callback;
-        };
+        void setGameSwitchCallback(std::function<void(std::string)> callback) override;
+        void setGraphicSwitchCallback(std::function<void(std::string)> callback) override;
+        void setLibSwitchCallback(std::function<void()> callback) override;
 
-        Event handleEventGeneric(Event event) override {
-            if (event == Event::K_ESCAPE || event == Event::QUIT)
-                return Event::QUIT;
-            if (event == Event::NEXT_LIB) {
-                switchToNextLib();
-            }
-            if (event == Event::NEXT_GAME) {
-                switchToNextGame();
-            }
-            return Event::NONE;
-        }
+        Event handleEventGeneric(Event event) override;
 
     protected:
         std::string _name;
@@ -58,16 +44,8 @@ class AGameModule : public IGameModule {
         std::function<void()> _libSwitchCallback;
         std::function<void(std::string)> _graphicSwitchCallback;
 
-        void switchToNextGame(const std::string& gameName = "") {
-            if (_gameSwitchCallback) {
-                _gameSwitchCallback(gameName);
-            }
-        }
-        void switchToNextLib() {
-            if (_libSwitchCallback) {
-                _libSwitchCallback();
-            }
-        }
+        void switchToNextGame(const std::string& gameName);
+        void switchToNextLib();
 };
 
 #endif /* !AGAMEMODULE_HPP_ */

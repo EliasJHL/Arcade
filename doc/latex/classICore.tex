@@ -1,0 +1,152 @@
+\hypertarget{classICore}{}\doxysection{Référence de la classe ICore}
+\label{classICore}\index{ICore@{ICore}}
+
+
+Interface pour le \mbox{\hyperlink{classCore}{Core}}.  
+
+
+
+
+{\ttfamily \#include $<$ICore.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de ICore\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classICore_a0e08b19686e745d4e1877fe6c6235a6c}{Load\+Libraries}} (int ac, char $\ast$$\ast$av)=0
+\begin{DoxyCompactList}\small\item\em Initialise les libraries. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classICore_af2b718dc69a68ff960c49fb32e5b9831}\label{classICore_af2b718dc69a68ff960c49fb32e5b9831}} 
+virtual void \mbox{\hyperlink{classICore_af2b718dc69a68ff960c49fb32e5b9831}{Run\+Core}} ()=0
+\begin{DoxyCompactList}\small\item\em Lance les modules graphiques et le menu lorsque tout a été correctement initialisé \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classICore_aa853495e36e491e147013e37a2bcc70a}{Change\+Display\+Module}} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classICore_ae2bcb3a1be2f376fe69963e046f9962e}{Change\+Game\+Module}} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classICore_af3c7a7606c17c124e5108943ab39a4c2}\label{classICore_af3c7a7606c17c124e5108943ab39a4c2}} 
+virtual void \mbox{\hyperlink{classICore_af3c7a7606c17c124e5108943ab39a4c2}{Handle\+Events}} ()=0
+\begin{DoxyCompactList}\small\item\em Gestion \& Envoi des events récuperés du module graphique au jeu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classICore_a78c01b6949c99589a935a97bc8e41678}\label{classICore_a78c01b6949c99589a935a97bc8e41678}} 
+virtual void \mbox{\hyperlink{classICore_a78c01b6949c99589a935a97bc8e41678}{Draw\+Elements}} ()=0
+\begin{DoxyCompactList}\small\item\em Affichage des elements graphiques sur le module graphique. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classICore_ab80d172ca80481b5f599f5f4a916948b}{Next\+Graphical\+Module}} ()=0
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classICore_a7105b0bf40a572ece256a9a902d3a917}{Next\+Game\+Module}} ()=0
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classICore_af9380036b075f4d523bb880a637403e0}\label{classICore_af9380036b075f4d523bb880a637403e0}} 
+virtual void \mbox{\hyperlink{classICore_af9380036b075f4d523bb880a637403e0}{Load\+First\+Library}} (const std\+::string \&input)=0
+\begin{DoxyCompactList}\small\item\em Permet de charger la librarie graphique donnée en argument lors du lancement de l\textquotesingle{}Arcade. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classICore_a3ea545c70d4add029bad7625860f1be0}\label{classICore_a3ea545c70d4add029bad7625860f1be0}} 
+virtual void \mbox{\hyperlink{classICore_a3ea545c70d4add029bad7625860f1be0}{Load\+All\+Libraries}} (const std\+::string \&input)=0
+\begin{DoxyCompactList}\small\item\em Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Interface pour le \mbox{\hyperlink{classCore}{Core}}. 
+
+Utilisé pour la gestion des libraries, des events et de l\textquotesingle{}orchestration du Jeu et du Graphique dans le projet Arcade. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classICore_aa853495e36e491e147013e37a2bcc70a}\label{classICore_aa853495e36e491e147013e37a2bcc70a}} 
+\index{ICore@{ICore}!ChangeDisplayModule@{ChangeDisplayModule}}
+\index{ChangeDisplayModule@{ChangeDisplayModule}!ICore@{ICore}}
+\doxysubsubsection{\texorpdfstring{ChangeDisplayModule()}{ChangeDisplayModule()}}
+{\footnotesize\ttfamily virtual void ICore\+::\+Change\+Display\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Initialise le module de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em name} & Nom du module graphique souhaité \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \mbox{\hyperlink{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}{Core}}.
+
+\mbox{\Hypertarget{classICore_ae2bcb3a1be2f376fe69963e046f9962e}\label{classICore_ae2bcb3a1be2f376fe69963e046f9962e}} 
+\index{ICore@{ICore}!ChangeGameModule@{ChangeGameModule}}
+\index{ChangeGameModule@{ChangeGameModule}!ICore@{ICore}}
+\doxysubsubsection{\texorpdfstring{ChangeGameModule()}{ChangeGameModule()}}
+{\footnotesize\ttfamily virtual void ICore\+::\+Change\+Game\+Module (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Initialise le module de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em name} & Nom du jeu souhaité \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \mbox{\hyperlink{classCore_ab4912c34f74a2bd61e21101300607af8}{Core}}.
+
+\mbox{\Hypertarget{classICore_a0e08b19686e745d4e1877fe6c6235a6c}\label{classICore_a0e08b19686e745d4e1877fe6c6235a6c}} 
+\index{ICore@{ICore}!LoadLibraries@{LoadLibraries}}
+\index{LoadLibraries@{LoadLibraries}!ICore@{ICore}}
+\doxysubsubsection{\texorpdfstring{LoadLibraries()}{LoadLibraries()}}
+{\footnotesize\ttfamily virtual void ICore\+::\+Load\+Libraries (\begin{DoxyParamCaption}\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialise les libraries. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ac} & Nombre d\textquotesingle{}arguments \\
+\hline
+{\em av} & Tableau des arguments \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \mbox{\hyperlink{classCore_acd5d06d7cb010985a4f299791bbd72cf}{Core}}.
+
+\mbox{\Hypertarget{classICore_a7105b0bf40a572ece256a9a902d3a917}\label{classICore_a7105b0bf40a572ece256a9a902d3a917}} 
+\index{ICore@{ICore}!NextGameModule@{NextGameModule}}
+\index{NextGameModule@{NextGameModule}!ICore@{ICore}}
+\doxysubsubsection{\texorpdfstring{NextGameModule()}{NextGameModule()}}
+{\footnotesize\ttfamily virtual std\+::string ICore\+::\+Next\+Game\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Permet d\textquotesingle{}ouvrir le prochain module graphique. 
+
+\begin{DoxyReturn}{Renvoie}
+Renvoie le nom du prochain jeu de la liste des jeux disponibles 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{classCore_a475b433f04f55b52e31e92b315e97deb}{Core}}.
+
+\mbox{\Hypertarget{classICore_ab80d172ca80481b5f599f5f4a916948b}\label{classICore_ab80d172ca80481b5f599f5f4a916948b}} 
+\index{ICore@{ICore}!NextGraphicalModule@{NextGraphicalModule}}
+\index{NextGraphicalModule@{NextGraphicalModule}!ICore@{ICore}}
+\doxysubsubsection{\texorpdfstring{NextGraphicalModule()}{NextGraphicalModule()}}
+{\footnotesize\ttfamily virtual std\+::string ICore\+::\+Next\+Graphical\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Permet d\textquotesingle{}ouvrir le prochain module graphique. 
+
+\begin{DoxyReturn}{Renvoie}
+Renvoie le nom du prochain module graphique de la liste des modules graphiques disponibles 
+\end{DoxyReturn}
+
+
+Implémenté dans \mbox{\hyperlink{classCore_a3e50fc8e86dd463870e5d20b033a7347}{Core}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+include/interfaces/\mbox{\hyperlink{ICore_8hpp}{ICore.\+hpp}}\end{DoxyCompactItemize}

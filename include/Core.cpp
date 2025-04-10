@@ -142,12 +142,6 @@ void Core::DrawElements()
     }
 }
 
-void Core::drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts)
-{
-    // test issues
-    return;
-}
-
 void Core::RunCore()
 {
     mActiveGraphic->createWindow();

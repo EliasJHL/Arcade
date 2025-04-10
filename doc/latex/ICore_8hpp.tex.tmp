@@ -1,0 +1,26 @@
+\hypertarget{ICore_8hpp}{}\doxysection{Référence du fichier include/interfaces/\+ICore.hpp}
+\label{ICore_8hpp}\index{include/interfaces/ICore.hpp@{include/interfaces/ICore.hpp}}
+
+
+Interface du \mbox{\hyperlink{classCore}{Core}}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+Graphe des dépendances par inclusion de ICore.\+hpp\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classICore}{ICore}}
+\begin{DoxyCompactList}\small\item\em Interface pour le \mbox{\hyperlink{classCore}{Core}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Interface du \mbox{\hyperlink{classCore}{Core}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Elias H. \& Enzo C.
+\end{DoxyAuthor}
+Interface du \mbox{\hyperlink{classCore}{Core}} de l\textquotesingle{}Arcade 

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arcade:  Fichier source de include/interfaces/IGame.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b6a1b25c97174b03ee33ad89b32089b9.html">interfaces</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">IGame.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="IGame_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef IGAME_HPP_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"># define IGAME_HPP_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IDisplay_8hpp.html">IDisplay.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../Rect.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../Text.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classIGameModule.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIGameModule.html">IGameModule</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classIGameModule.html">IGameModule</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classIGameModule.html#a5288be4fc9ddc1ee24dcaf15e5f81664">   34</a></span>&#160;        <span class="keyword">virtual</span> std::string <a class="code" href="classIGameModule.html#a5288be4fc9ddc1ee24dcaf15e5f81664">getName</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classIGameModule.html#a4a0d6a656458dccfadb3d1d850bb6629">   39</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#a4a0d6a656458dccfadb3d1d850bb6629">update</a>() = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classIGameModule.html#a80f6aabacbc80014a6f9031bf28f0bee">   44</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#a80f6aabacbc80014a6f9031bf28f0bee">init</a>() = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classIGameModule.html#a0cd402c728effe51c4be7e2617ea9503">   49</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#a0cd402c728effe51c4be7e2617ea9503">stop</a>() = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classIGameModule.html#a6eb3919dce633baae07f819c4e43bc63">   55</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Rect&gt; <a class="code" href="classIGameModule.html#a6eb3919dce633baae07f819c4e43bc63">getRects</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classIGameModule.html#a7f9e33989ca5bef24de714b646e87ecc">   61</a></span>&#160;        <span class="keyword">virtual</span> std::vector&lt;Text&gt; <a class="code" href="classIGameModule.html#a7f9e33989ca5bef24de714b646e87ecc">getTexts</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classIGameModule.html#a612cfe7f0a1a34d800169ee3b4971c48">   67</a></span>&#160;        <span class="keyword">virtual</span> Event <a class="code" href="classIGameModule.html#a612cfe7f0a1a34d800169ee3b4971c48">handleEvent</a>(Event event) = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classIGameModule.html#a3067fd1334d5eadf104d9c3ee1af7651">   74</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#a3067fd1334d5eadf104d9c3ee1af7651">setGameSwitchCallback</a>(std::function&lt;<span class="keywordtype">void</span>(std::string)&gt; callback) = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classIGameModule.html#aa81db978f5e5f13e8b98bdf75f8bfb7f">   81</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#aa81db978f5e5f13e8b98bdf75f8bfb7f">setGraphicSwitchCallback</a>(std::function&lt;<span class="keywordtype">void</span>(std::string)&gt; callback) = 0;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classIGameModule.html#ab390d7115ae4d756d5c3bd397ef5d360">   88</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classIGameModule.html#ab390d7115ae4d756d5c3bd397ef5d360">setLibSwitchCallback</a>(std::function&lt;<span class="keywordtype">void</span>()&gt; callback) = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classIGameModule.html#ac2963a674b3278fd2b7192fd68a6be98">   95</a></span>&#160;        <span class="keyword">virtual</span> Event <a class="code" href="classIGameModule.html#ac2963a674b3278fd2b7192fd68a6be98">handleEventGeneric</a>(Event event) = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !IGAME_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aIDisplay_8hpp_html"><div class="ttname"><a href="IDisplay_8hpp.html">IDisplay.hpp</a></div><div class="ttdoc">Interface pour la classe abstraite ADisplayModule.</div></div>
+<div class="ttc" id="aclassIGameModule_html"><div class="ttname"><a href="classIGameModule.html">IGameModule</a></div><div class="ttdoc">Interface pour AGameModule.</div><div class="ttdef"><b>Definition:</b> IGame.hpp:27</div></div>
+<div class="ttc" id="aclassIGameModule_html_a0cd402c728effe51c4be7e2617ea9503"><div class="ttname"><a href="classIGameModule.html#a0cd402c728effe51c4be7e2617ea9503">IGameModule::stop</a></div><div class="ttdeci">virtual void stop()=0</div><div class="ttdoc">Arrête le jeu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a3067fd1334d5eadf104d9c3ee1af7651"><div class="ttname"><a href="classIGameModule.html#a3067fd1334d5eadf104d9c3ee1af7651">IGameModule::setGameSwitchCallback</a></div><div class="ttdeci">virtual void setGameSwitchCallback(std::function&lt; void(std::string)&gt; callback)=0</div><div class="ttdoc">Permet de selectionner un jeu précis dans le menu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a4a0d6a656458dccfadb3d1d850bb6629"><div class="ttname"><a href="classIGameModule.html#a4a0d6a656458dccfadb3d1d850bb6629">IGameModule::update</a></div><div class="ttdeci">virtual void update()=0</div><div class="ttdoc">Permet d'appeller l'action suivante après l'affichage.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a5288be4fc9ddc1ee24dcaf15e5f81664"><div class="ttname"><a href="classIGameModule.html#a5288be4fc9ddc1ee24dcaf15e5f81664">IGameModule::getName</a></div><div class="ttdeci">virtual std::string getName() const =0</div><div class="ttdoc">Permet de récupérer le nom du jeu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a612cfe7f0a1a34d800169ee3b4971c48"><div class="ttname"><a href="classIGameModule.html#a612cfe7f0a1a34d800169ee3b4971c48">IGameModule::handleEvent</a></div><div class="ttdeci">virtual Event handleEvent(Event event)=0</div><div class="ttdoc">Permet de gérer les events capturés par la librarie graphique et d'appliquer une action sur le jeu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a6eb3919dce633baae07f819c4e43bc63"><div class="ttname"><a href="classIGameModule.html#a6eb3919dce633baae07f819c4e43bc63">IGameModule::getRects</a></div><div class="ttdeci">virtual std::vector&lt; Rect &gt; getRects() const =0</div><div class="ttdoc">Permet de récupérer tous les rectangles que le jeu veut render.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a7f9e33989ca5bef24de714b646e87ecc"><div class="ttname"><a href="classIGameModule.html#a7f9e33989ca5bef24de714b646e87ecc">IGameModule::getTexts</a></div><div class="ttdeci">virtual std::vector&lt; Text &gt; getTexts() const =0</div><div class="ttdoc">Permet de récupérer tous les textes que le jeu veut render.</div></div>
+<div class="ttc" id="aclassIGameModule_html_a80f6aabacbc80014a6f9031bf28f0bee"><div class="ttname"><a href="classIGameModule.html#a80f6aabacbc80014a6f9031bf28f0bee">IGameModule::init</a></div><div class="ttdeci">virtual void init()=0</div><div class="ttdoc">Permet d'initialiser tous les éléments nécessaires au jeu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_aa81db978f5e5f13e8b98bdf75f8bfb7f"><div class="ttname"><a href="classIGameModule.html#aa81db978f5e5f13e8b98bdf75f8bfb7f">IGameModule::setGraphicSwitchCallback</a></div><div class="ttdeci">virtual void setGraphicSwitchCallback(std::function&lt; void(std::string)&gt; callback)=0</div><div class="ttdoc">Permet de selectionner une librarie graphique précise dans le menu.</div></div>
+<div class="ttc" id="aclassIGameModule_html_ab390d7115ae4d756d5c3bd397ef5d360"><div class="ttname"><a href="classIGameModule.html#ab390d7115ae4d756d5c3bd397ef5d360">IGameModule::setLibSwitchCallback</a></div><div class="ttdeci">virtual void setLibSwitchCallback(std::function&lt; void()&gt; callback)=0</div><div class="ttdoc">Permet de selectionner . . .</div></div>
+<div class="ttc" id="aclassIGameModule_html_ac2963a674b3278fd2b7192fd68a6be98"><div class="ttname"><a href="classIGameModule.html#ac2963a674b3278fd2b7192fd68a6be98">IGameModule::handleEventGeneric</a></div><div class="ttdeci">virtual Event handleEventGeneric(Event event)=0</div><div class="ttdoc">Permet de gérer les events génériques comme le changement de jeu.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

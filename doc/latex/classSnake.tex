@@ -1,0 +1,153 @@
+\hypertarget{classSnake}{}\doxysection{Référence de la classe Snake}
+\label{classSnake}\index{Snake@{Snake}}
+
+
+Graphe d\textquotesingle{}héritage de Snake\+:
+% FIG 0
+
+
+Graphe de collaboration de Snake\+:
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSnake_a0337435dd65189e6572500ae42a1e386}\label{classSnake_a0337435dd65189e6572500ae42a1e386}} 
+{\bfseries Snake} (std\+::string name=\char`\"{}snake\char`\"{})
+\item 
+\mbox{\Hypertarget{classSnake_a91dc97652908bf94ab1baf3b4aecae6b}\label{classSnake_a91dc97652908bf94ab1baf3b4aecae6b}} 
+std\+::string \mbox{\hyperlink{classSnake_a91dc97652908bf94ab1baf3b4aecae6b}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Permet de récupérer le nom du jeu. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ \mbox{\hyperlink{classSnake_ae43288c1b9f4a3949a7300cd36e28c21}{get\+Rects}} () const override
+\begin{DoxyCompactList}\small\item\em Permet de récupérer tous les rectangles que le jeu veut render. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ \mbox{\hyperlink{classSnake_a40408dc380ef481a0330b7cee84ced88}{get\+Texts}} () const override
+\begin{DoxyCompactList}\small\item\em Permet de récupérer tous les textes que le jeu veut render. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSnake_a196e869afd2334fcde712e31539742a8}\label{classSnake_a196e869afd2334fcde712e31539742a8}} 
+void \mbox{\hyperlink{classSnake_a196e869afd2334fcde712e31539742a8}{update}} () override
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}appeller l\textquotesingle{}action suivante après l\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSnake_af62b5fdc7ecc9fe5f27b122b7b197d14}\label{classSnake_af62b5fdc7ecc9fe5f27b122b7b197d14}} 
+void \mbox{\hyperlink{classSnake_af62b5fdc7ecc9fe5f27b122b7b197d14}{init}} () override
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser tous les éléments nécessaires au jeu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSnake_a35a7a4894f467c275be6310ecdac1cb4}\label{classSnake_a35a7a4894f467c275be6310ecdac1cb4}} 
+void \mbox{\hyperlink{classSnake_a35a7a4894f467c275be6310ecdac1cb4}{stop}} () override
+\begin{DoxyCompactList}\small\item\em Arrête le jeu. \end{DoxyCompactList}\item 
+Event \mbox{\hyperlink{classSnake_a0aa57ee90cf1e69a321e6dd4a4670c49}{handle\+Event}} (Event event) override
+\begin{DoxyCompactList}\small\item\em Permet de gérer les events capturés par la librarie graphique et d\textquotesingle{}appliquer une action sur le jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSnake_a5a0e09f74c134bbab1842f21679e7b67}\label{classSnake_a5a0e09f74c134bbab1842f21679e7b67}} 
+void {\bfseries Handle\+Movement} ()
+\item 
+\mbox{\Hypertarget{classSnake_a48777de5c398445e6334076bdd954631}\label{classSnake_a48777de5c398445e6334076bdd954631}} 
+void {\bfseries Handle\+Actions} (int x, int y)
+\item 
+\mbox{\Hypertarget{classSnake_aeb6079270aa7bc6810f3ae05f3cf187e}\label{classSnake_aeb6079270aa7bc6810f3ae05f3cf187e}} 
+void {\bfseries generate\+Apple} ()
+\item 
+\mbox{\Hypertarget{classSnake_aa02b5f4900947afb624b42e85e42bf16}\label{classSnake_aa02b5f4900947afb624b42e85e42bf16}} 
+void {\bfseries update\+Body} ()
+\item 
+\mbox{\Hypertarget{classSnake_a6b9db1469501a1910dbf205d21505feb}\label{classSnake_a6b9db1469501a1910dbf205d21505feb}} 
+void {\bfseries Reset} ()
+\item 
+\mbox{\Hypertarget{classSnake_a75262c638321ab19dc260d5fb8f236bd}\label{classSnake_a75262c638321ab19dc260d5fb8f236bd}} 
+void {\bfseries Game\+Over} ()
+\item 
+\mbox{\Hypertarget{classSnake_a97d9dcc7d8839322da7b1ed8d730caae}\label{classSnake_a97d9dcc7d8839322da7b1ed8d730caae}} 
+void {\bfseries Display\+Map} ()
+\item 
+\mbox{\Hypertarget{classSnake_ad53041dabf166a8112eb314cab954989}\label{classSnake_ad53041dabf166a8112eb314cab954989}} 
+void {\bfseries Display\+Snake} ()
+\item 
+\mbox{\Hypertarget{classSnake_aa8d6de050050ab595929dcda13ec308c}\label{classSnake_aa8d6de050050ab595929dcda13ec308c}} 
+void {\bfseries Display\+Infos} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSnake_a0ee247cb7fc58ae8d0cf74ad73239286}\label{classSnake_a0ee247cb7fc58ae8d0cf74ad73239286}} 
+int {\bfseries \+\_\+x}
+\item 
+\mbox{\Hypertarget{classSnake_ab0705b403f19654259b4e1060b2ef4ad}\label{classSnake_ab0705b403f19654259b4e1060b2ef4ad}} 
+int {\bfseries \+\_\+y}
+\item 
+\mbox{\Hypertarget{classSnake_aed9c4948aa814ae56a97ccbc35dddd54}\label{classSnake_aed9c4948aa814ae56a97ccbc35dddd54}} 
+Move {\bfseries \+\_\+\+Direction}
+\item 
+\mbox{\Hypertarget{classSnake_a5bbf992ac2c4659887d653f0d56ad5be}\label{classSnake_a5bbf992ac2c4659887d653f0d56ad5be}} 
+bool {\bfseries \+\_\+\+Game\+Over}
+\item 
+\mbox{\Hypertarget{classSnake_a74d447378bec795e5923cc7aa4849694}\label{classSnake_a74d447378bec795e5923cc7aa4849694}} 
+bool {\bfseries \+\_\+\+Game\+Over\+Screen}
+\item 
+\mbox{\Hypertarget{classSnake_ae5b13aadb0092ce8c45e04de9024444f}\label{classSnake_ae5b13aadb0092ce8c45e04de9024444f}} 
+int {\bfseries score}
+\item 
+\mbox{\Hypertarget{classSnake_ad9e71d4a77ce2c7cc945fda2f6c0044e}\label{classSnake_ad9e71d4a77ce2c7cc945fda2f6c0044e}} 
+std\+::vector$<$ std\+::tuple$<$ int, int, int, int $>$ $>$ {\bfseries \+\_\+snakebody}
+\item 
+\mbox{\Hypertarget{classSnake_a1a415e4de40085d13d11de82ff3904ff}\label{classSnake_a1a415e4de40085d13d11de82ff3904ff}} 
+std\+::vector$<$ std\+::vector$<$ Type $>$ $>$ {\bfseries \+\_\+map}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classSnake_ae43288c1b9f4a3949a7300cd36e28c21}\label{classSnake_ae43288c1b9f4a3949a7300cd36e28c21}} 
+\index{Snake@{Snake}!getRects@{getRects}}
+\index{getRects@{getRects}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getRects()}{getRects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ Snake\+::get\+Rects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de récupérer tous les rectangles que le jeu veut render. 
+
+\begin{DoxyReturn}{Renvoie}
+Un vector contenant tous les formes à afficher 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{classAGameModule_a78e2b2cebbed49c870322614025b7b9d}{AGame\+Module}}.
+
+\mbox{\Hypertarget{classSnake_a40408dc380ef481a0330b7cee84ced88}\label{classSnake_a40408dc380ef481a0330b7cee84ced88}} 
+\index{Snake@{Snake}!getTexts@{getTexts}}
+\index{getTexts@{getTexts}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{getTexts()}{getTexts()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ Snake\+::get\+Texts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de récupérer tous les textes que le jeu veut render. 
+
+\begin{DoxyReturn}{Renvoie}
+Un vector contenant tous les textes à afficher 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{classAGameModule_a5b5caf83fad27f8574ef744e6b275d27}{AGame\+Module}}.
+
+\mbox{\Hypertarget{classSnake_a0aa57ee90cf1e69a321e6dd4a4670c49}\label{classSnake_a0aa57ee90cf1e69a321e6dd4a4670c49}} 
+\index{Snake@{Snake}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily Event Snake\+::handle\+Event (\begin{DoxyParamCaption}\item[{Event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de gérer les events capturés par la librarie graphique et d\textquotesingle{}appliquer une action sur le jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em L\textquotesingle{}event} & qui s\textquotesingle{}est déroulé dans la librarie graphique \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b346419}{AGame\+Module}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+lib/games/src/snake/arcade\+\_\+snake.\+hpp\item 
+lib/games/src/snake/arcade\+\_\+snake.\+cpp\end{DoxyCompactItemize}
