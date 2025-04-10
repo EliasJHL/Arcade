@@ -162,13 +162,18 @@ void Nibbler::updateBody()
 
 void Nibbler::HandleActions(int new_x, int new_y)
 {
+    if (_map[new_y][new_x] == Type::WALL) {
+        return;
+    }
     if (_map[new_y][new_x] == Type::APPLE) {
         _Nibblerbody.push_back({0, 0, _x, _y});
         generateApple();
         score++;
     }
-    if (_map[new_y][new_x] == Type::BODY)
+    if (_map[new_y][new_x] == Type::BODY) {
         _GameOver = true;
+        return;
+    }
     if (_y <= 2 && _Direction == Move::UP)
         new_y = 28;
     if (_y >= 28 && _Direction == Move::DOWN)
@@ -177,11 +182,12 @@ void Nibbler::HandleActions(int new_x, int new_y)
         new_x = 39;
     if (_x >= 39 && _Direction == Move::RIGHT)
         new_x = 0;
-    _map[_y][_x] =  Type::VOID;
+
+    _map[_y][_x] = Type::VOID;
     updateBody();
     _y = new_y;
     _x = new_x;
-    _map[_y][_x] =  Type::HEAD;
+    _map[_y][_x] = Type::HEAD;
 }
 
 void Nibbler::HandleMovement() 
