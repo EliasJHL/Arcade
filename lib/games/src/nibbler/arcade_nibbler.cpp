@@ -51,9 +51,10 @@ void Nibbler::parseMap(const std::string &filename)
     file.close();
     for (int y = 0; y < 15 && y + 7 < 30; y++) {
         for (int x = 0; x < 15 && x + 12 < 40; x++) {
-            if (lines[y][x] == '#') {
+            if (lines[y][x] == '#')
                 _map[y + 7][x + 12] = Type::WALL;
-            }
+            if (lines[y][x] == 'A')
+                _map[y + 7][x + 12] = Type::APPLE;
         }
     }
 }
@@ -84,7 +85,6 @@ void Nibbler::init()
     _map[_y][_x - 2] = Type::BODY;
     _map[_y][_x - 3] = Type::BODY;
 
-    _map[25][35] = Type::APPLE;
     Map(_NumMap);
     _GameOver = false;
     _GameOverScreen = false;
@@ -104,18 +104,6 @@ void Nibbler::Reset()
     _Nibblerbody.clear();
     _rects.clear();
     init();
-}
-
-void Nibbler::generateApple()
-{
-    int x =  rand() % 39;
-    int y = 2 + (rand() % 25);
-        
-    while (_map[y][x] != Type::VOID) {
-        x =  rand() % 39;
-        y = 2 + (rand() % 25);
-    }
-    _map[y][x] = Type::APPLE;
 }
 
 void Nibbler::updateBody()
@@ -185,7 +173,6 @@ void Nibbler::HandleActions(int new_x, int new_y)
     }
     if (_map[new_y][new_x] == Type::APPLE) {
         _Nibblerbody.push_back({0, 0, _x, _y});
-        generateApple();
         score++;
     }
     if (_map[new_y][new_x] == Type::BODY) {
@@ -226,7 +213,7 @@ void Nibbler::DisplayMap()
     for (int y = 0; y < 30; y++) {
         for (int x = 0; x < 40; x++) {
             if (_map[y][x] == Type::APPLE) {
-                _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{255, 255, 255, 255}, ""});
+                _rects.push_back(Rect{x * 20 + 5, y * 20 + 5, 10, 10, Color{255, 105, 180, 255}, ""});
             } else if (_map[y][x] == Type::HEAD) {
                 _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{255, 0, 0, 255}, ""});
             } else if (_map[y][x] == Type::WALL) {
