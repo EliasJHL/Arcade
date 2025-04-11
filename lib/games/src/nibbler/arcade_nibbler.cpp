@@ -83,8 +83,8 @@ void Nibbler::init()
             _map[y][x] = Type::VOID;
         }
     }
-    _x = 10;
-    _y = 15;
+    _x = 20;
+    _y = 20;
     _map[_y][_x] = Type::HEAD;
     _Nibblerbody.push_back({_x - 1, _y, _x - 1, _y});
     _Nibblerbody.push_back({_x - 2, _y, _x - 2, _y});
@@ -259,13 +259,13 @@ Event Nibbler::handleEvent(Event event)
     bool ResetKeys = (event != Event::K_DOWN && event != Event::K_UP && event != Event::K_LEFT && event != Event::K_RIGHT);
     if (event != Event::NONE && ResetKeys && _GameOver)
         Reset();
-    if (event == Event::K_UP && _Direction != Move::DOWN)
+    if (event == Event::K_UP && _Direction != Move::DOWN && _map[_y - 1][_x] != Type::WALL)
         _Direction = Move::UP;
-    if (event == Event::K_DOWN && _Direction != Move::UP)
+    if (event == Event::K_DOWN && _Direction != Move::UP && _map[_y + 1][_x] != Type::WALL)
         _Direction = Move::DOWN;
-    if (event == Event::K_LEFT && _Direction != Move::RIGHT)
+    if (event == Event::K_LEFT && _Direction != Move::RIGHT && _map[_y][_x - 1] != Type::WALL)
         _Direction = Move::LEFT;
-    if (event == Event::K_RIGHT && _Direction != Move::LEFT)
+    if (event == Event::K_RIGHT && _Direction != Move::LEFT && _map[_y][_x + 1] != Type::WALL)
         _Direction = Move::RIGHT;
     return Event::NONE;
 }
