@@ -35,6 +35,7 @@ class Sdl2 : public ADisplayModule{
         TTF_Font *mFont;
         SDL_Surface *mWindowSurface;
         SDL_Renderer *mWindowRender;
-};;
+        std::unordered_map<SDL_Keycode, Event> mEvents;
+};
 
 #endif /* !ARCADE_SDL2_HPP_ */

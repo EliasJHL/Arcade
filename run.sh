@@ -8,8 +8,4 @@
 ## Last update Fri Mar 20 11:12:35 2025 Elias Josué HAJJAR LLAUQUEN
 ##
 
-xhost +local:
-
-docker-compose -f dockerfiles/docker-compose.yaml up --build --force-recreate -d
-
-docker exec -it Arcade bash
+doxygen Doxyfile

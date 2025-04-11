@@ -16,7 +16,7 @@
 
 class Text {
     public:
-        Text(int, int, int, const std::string &, const std::string &, Color color);
+        Text(int x, int y, int size, const std::string &font, const std::string &text, bool centeredX, bool centeredY, Color color);
         ~Text();
 
         int getX() const;
@@ -25,10 +25,14 @@ class Text {
         std::string getFont() const;
         std::string getText() const;
         Color getColor() const;
+        bool isCenteredX() const;
+        bool isCenteredY() const;
 
     private:
         int _x;
         int _y;
+        bool _centeredX;
+        bool _centeredY;
         int _size;
         std::string _font;
         std::string _text;

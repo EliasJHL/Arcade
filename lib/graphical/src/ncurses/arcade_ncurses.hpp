@@ -42,6 +42,7 @@ class Ncurses : public ADisplayModule{
         std::string mName;
         WINDOW *mWindow;
         std::map<std::string, SpriteCache> mSpriteCache;
+        std::unordered_map<int, Event> mEvents;
 };
 
 #endif /* !ARCADE_NCURSES_HPP_ */

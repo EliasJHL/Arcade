@@ -31,6 +31,12 @@ void Core::ChangeDisplayModule(const std::string &name)
         mActiveGraphic.reset();
     }
     mActiveGraphic = std::unique_ptr<ADisplayModule>(mGraphicLoader.at(name)->getInstance("createDisplay"));
+    mActiveGame->setGameSwitchCallback([this](const std::string &gameName) {
+        this->ChangeGameModule(gameName);
+    });
+    mActiveGame->setGraphicSwitchCallback([this](const std::string &graphicName) {
+        this->ChangeDisplayModule(graphicName);
+    });
     mActiveGraphic->createWindow();
 }
 
@@ -41,6 +47,12 @@ void Core::ChangeGameModule(const std::string &name)
         mActiveGame.reset();
     }
     mActiveGame = std::unique_ptr<AGameModule>(mGamesLoader.at(name)->getInstance("createGame"));
+    mActiveGame->setGameSwitchCallback([this](const std::string &gameName) {
+        this->ChangeGameModule(gameName);
+    });
+    mActiveGame->setGraphicSwitchCallback([this](const std::string &graphicName) {
+        this->ChangeDisplayModule(graphicName);
+    });
     mActiveGame->init();
 }
 
@@ -98,6 +110,10 @@ void Core::HandleEvents()
             ChangeDisplayModule(NextGraphicalModule());
             std::cout << "[i] Display engine changed to '" << mActiveGraphic->getName() << "'" << std::endl;
         }
+        if (events.at(i) == Event::K_F1) {
+            ChangeGameModule("menu");
+            std::cout << "[i] Go back to Menu" << std::endl;
+        }
         if (events.at(i) == Event::NEXT_GAME) {
             ChangeGameModule(NextGameModule());
             std::cout << "[+] Game changed to '" << mActiveGame->getName() << "'" << std::endl;
@@ -114,7 +130,7 @@ void Core::DrawElements()
     std::vector<Rect> rects = mActiveGame->getRects();
     std::vector<Text> texts = mActiveGame->getTexts();
 
-    drawInteractiveMenu(&rects, &texts);
+    //drawInteractiveMenu(&rects, &texts);
     
     if (!rects.empty()) {
         for (int i = 0; i < rects.size(); i++)
@@ -124,12 +140,6 @@ void Core::DrawElements()
         for (int i = 0; i < texts.size(); i++)
             mActiveGraphic->drawText(texts[i]);
     }
-}
-
-void Core::drawInteractiveMenu(std::vector<Rect> *rects, std::vector<Text> *texts)
-{
-    // test issues
-    return;
 }
 
 void Core::RunCore()

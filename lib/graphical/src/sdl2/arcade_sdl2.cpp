@@ -10,6 +10,52 @@
 Sdl2::Sdl2() : mWindow(nullptr), mWindowRender(nullptr), mFont(nullptr)
 {
     mName = "sdl2";
+    mEvents = {
+        {SDLK_UP, Event::K_UP},
+        {SDLK_DOWN, Event::K_DOWN},
+        {SDLK_LEFT, Event::K_LEFT},
+        {SDLK_RIGHT, Event::K_RIGHT},
+        {SDLK_ESCAPE, Event::K_ESCAPE},
+        {SDLK_RETURN, Event::K_RETURN},
+        {SDLK_SPACE, Event::K_SPACE},
+        {SDLK_F1, Event::K_F1},
+        {SDLK_a, Event::KEY_A},
+        {SDLK_b, Event::KEY_B},
+        {SDLK_c, Event::KEY_C},
+        {SDLK_d, Event::KEY_D},
+        {SDLK_e, Event::KEY_E},
+        {SDLK_f, Event::KEY_F},
+        {SDLK_g, Event::KEY_G},
+        {SDLK_h, Event::KEY_H},
+        {SDLK_i, Event::KEY_I},
+        {SDLK_j, Event::KEY_J},
+        {SDLK_k, Event::KEY_K},
+        {SDLK_l, Event::KEY_L},
+        {SDLK_m, Event::KEY_M},
+        {SDLK_n, Event::KEY_N},
+        {SDLK_o, Event::KEY_O},
+        {SDLK_p, Event::KEY_P},
+        {SDLK_q, Event::KEY_Q},
+        {SDLK_r, Event::KEY_R},
+        {SDLK_s, Event::KEY_S},
+        {SDLK_t, Event::NEXT_LIB},
+        {SDLK_u, Event::KEY_U},
+        {SDLK_v, Event::KEY_V},
+        {SDLK_w, Event::KEY_W},
+        {SDLK_x, Event::KEY_X},
+        {SDLK_y, Event::NEXT_GAME},
+        {SDLK_z, Event::KEY_Z},
+        {SDLK_1, Event::KEY_1},
+        {SDLK_2, Event::KEY_2},
+        {SDLK_3, Event::KEY_3},
+        {SDLK_4, Event::KEY_4},
+        {SDLK_5, Event::KEY_5},
+        {SDLK_6, Event::KEY_6},
+        {SDLK_7, Event::KEY_7},
+        {SDLK_8, Event::KEY_8},
+        {SDLK_9, Event::KEY_9},
+        {SDLK_0, Event::KEY_0}
+    };
 }
 
 Sdl2::~Sdl2()
@@ -100,138 +146,8 @@ std::vector<Event> Sdl2::getEvents() {
                 events.push_back(Event::QUIT);
                 break;
             case SDL_KEYDOWN:
-                switch (sdlEvent.key.keysym.sym) {
-                    case SDLK_UP:
-                        events.push_back(Event::K_UP);
-                        break;
-                    case SDLK_DOWN:
-                        events.push_back(Event::K_DOWN);
-                        break;
-                    case SDLK_LEFT:
-                        events.push_back(Event::K_LEFT);
-                        break;
-                    case SDLK_RIGHT:
-                        events.push_back(Event::K_RIGHT);
-                        break;
-                    case SDLK_ESCAPE:
-                        events.push_back(Event::K_ESCAPE);
-                        break;
-                    case SDLK_RETURN:
-                        events.push_back(Event::K_RETURN);
-                        break;
-                    case SDLK_SPACE:
-                        events.push_back(Event::K_SPACE);
-                        break;
-                    case SDLK_a:
-                        events.push_back(Event::KEY_A);
-                        break;
-                    case SDLK_b:
-                        events.push_back(Event::KEY_B);
-                        break;
-                    case SDLK_c:
-                        events.push_back(Event::KEY_C);
-                        break;
-                    case SDLK_d:
-                        events.push_back(Event::KEY_D);
-                        break;
-                    case SDLK_e:
-                        events.push_back(Event::KEY_E);
-                        break;
-                    case SDLK_f:
-                        events.push_back(Event::KEY_F);
-                        break;
-                    case SDLK_g:
-                        events.push_back(Event::KEY_G);
-                        break;
-                    case SDLK_h:
-                        events.push_back(Event::KEY_H);
-                        break;
-                    case SDLK_i:
-                        events.push_back(Event::KEY_I);
-                        break;
-                    case SDLK_j:
-                        events.push_back(Event::KEY_J);
-                        break;
-                    case SDLK_k:
-                        events.push_back(Event::KEY_K);
-                        break;
-                    case SDLK_l:
-                        events.push_back(Event::KEY_L);
-                        break;
-                    case SDLK_m:
-                        events.push_back(Event::KEY_M);
-                        break;
-                    case SDLK_n:
-                        events.push_back(Event::KEY_N);
-                        break;
-                    case SDLK_o:
-                        events.push_back(Event::KEY_O);
-                        break;
-                    case SDLK_p:
-                        events.push_back(Event::KEY_P);
-                        break;
-                    case SDLK_q:
-                        events.push_back(Event::KEY_Q);
-                        break;
-                    case SDLK_r:
-                        events.push_back(Event::KEY_R);
-                        break;
-                    case SDLK_s:
-                        events.push_back(Event::KEY_S);
-                        break;
-                    case SDLK_t:
-                        events.push_back(Event::NEXT_LIB);
-                        break;
-                    case SDLK_u:
-                        events.push_back(Event::KEY_U);
-                        break;
-                    case SDLK_v:
-                        events.push_back(Event::KEY_V);
-                        break;
-                    case SDLK_w:
-                        events.push_back(Event::KEY_W);
-                        break;
-                    case SDLK_x:
-                        events.push_back(Event::KEY_X);
-                        break;
-                    case SDLK_y:
-                        events.push_back(Event::NEXT_GAME);
-                        break;
-                    case SDLK_z:
-                        events.push_back(Event::KEY_Z);
-                        break;
-                    case SDLK_1:
-                        events.push_back(Event::KEY_1);
-                        break;
-                    case SDLK_2:
-                        events.push_back(Event::KEY_2);
-                        break;
-                    case SDLK_3:
-                        events.push_back(Event::KEY_3);
-                        break;
-                    case SDLK_4:
-                        events.push_back(Event::KEY_4);
-                        break;
-                    case SDLK_5:
-                        events.push_back(Event::KEY_5);
-                        break;
-                    case SDLK_6:
-                        events.push_back(Event::KEY_6);
-                        break;
-                    case SDLK_7:
-                        events.push_back(Event::KEY_7);
-                        break;
-                    case SDLK_8:
-                        events.push_back(Event::KEY_8);
-                        break;
-                    case SDLK_9:
-                        events.push_back(Event::KEY_9);
-                        break;
-                    case SDLK_0:
-                        events.push_back(Event::KEY_0);
-                        break;
-                    default:
-                        break;
+                if (mEvents.find(sdlEvent.key.keysym.sym) != mEvents.end()) {
+                    events.push_back(mEvents[sdlEvent.key.keysym.sym]);
                 }
                 break;
             default:

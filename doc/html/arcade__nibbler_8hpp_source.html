@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arcade:  Fichier source de lib/games/src/nibbler/arcade_nibbler.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Arcade
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_3b63af8e273129fc2eeaa7fbf895b18f.html">games</a></li><li class="navelem"><a class="el" href="dir_d5bbffdb660a0c94c85ed31174e8d249.html">src</a></li><li class="navelem"><a class="el" href="dir_ce801794f03a75e93c765dcac31708a7.html">nibbler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">arcade_nibbler.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** EPITECH PROJECT, 2025</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** File description:</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** arcade_nibbler</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef ARCADE_Nibbler_HPP_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor"># define ARCADE_Nibbler_HPP_</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AGameModule_8hpp.html">AGameModule.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">enum</span> Move {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    NONE = -1,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    UP = 0,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    DOWN = 1,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    LEFT = 2,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    RIGHT = 3</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">enum</span> Type {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    VOID = 0,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    HEAD = 1,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    BODY = 2,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    APPLE = 3,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    WALL = 4</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classNibbler.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNibbler.html">Nibbler</a> : <span class="keyword">public</span> <a class="code" href="classAGameModule.html">AGameModule</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classNibbler.html">Nibbler</a>(std::string name = <span class="stringliteral">&quot;nibbler&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ~<a class="code" href="classNibbler.html">Nibbler</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        std::string <a class="code" href="classNibbler.html#acc3781e79d59bf860f225f908a7b65e4">getName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        std::vector&lt;Rect&gt; <a class="code" href="classNibbler.html#a9de39e245e4b014c68a67ba89a9ff217">getRects</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::vector&lt;Text&gt; <a class="code" href="classNibbler.html#a0acef5df054784b2dcd8c7ca9368498f">getTexts</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNibbler.html#a51edaebec14acaf05241c88b0dc280f1">update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNibbler.html#a286931643cc9d3cb89adab5222cbe5b8">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNibbler.html#ad1df2029c3e773c6bca8c433a0101db4">stop</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// std::string saveState() override {};</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// void loadState(const std::string &amp;state) override {};</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Event <a class="code" href="classNibbler.html#a8178d11ae093db837235557f5a8e4ad4">handleEvent</a>(Event event) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> HandleMovement();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> HandleActions(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> generateApple();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> updateBody();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> Reset();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> GameOver();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> DisplayMap();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> DisplayNibbler();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> DisplayInfos();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> Map(<span class="keywordtype">int</span> nb);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> _x;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">int</span> _y;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        Move _Direction;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">bool</span> _GameOver;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> _GameOverScreen;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> score;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">int</span> _NumMap;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// x, y, prev_x, prev_y</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        std::vector&lt;std::tuple&lt;int, int, int, int&gt;&gt; _Nibblerbody;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        std::vector&lt;std::vector&lt;Type&gt;&gt; _map;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_Nibbler_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aAGameModule_8hpp_html"><div class="ttname"><a href="AGameModule_8hpp.html">AGameModule.hpp</a></div><div class="ttdoc">Classe abstraite pour les modules des jeux.</div></div>
+<div class="ttc" id="aclassAGameModule_html"><div class="ttname"><a href="classAGameModule.html">AGameModule</a></div><div class="ttdoc">Classe abstraite pour les libraries de jeux.</div><div class="ttdef"><b>Definition:</b> AGameModule.hpp:21</div></div>
+<div class="ttc" id="aclassNibbler_html"><div class="ttname"><a href="classNibbler.html">Nibbler</a></div><div class="ttdef"><b>Definition:</b> arcade_nibbler.hpp:30</div></div>
+<div class="ttc" id="aclassNibbler_html_a0acef5df054784b2dcd8c7ca9368498f"><div class="ttname"><a href="classNibbler.html#a0acef5df054784b2dcd8c7ca9368498f">Nibbler::getTexts</a></div><div class="ttdeci">std::vector&lt; Text &gt; getTexts() const override</div><div class="ttdoc">Permet de récupérer tous les textes que le jeu veut render.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:34</div></div>
+<div class="ttc" id="aclassNibbler_html_a286931643cc9d3cb89adab5222cbe5b8"><div class="ttname"><a href="classNibbler.html#a286931643cc9d3cb89adab5222cbe5b8">Nibbler::init</a></div><div class="ttdeci">void init() override</div><div class="ttdoc">Permet d'initialiser tous les éléments nécessaires au jeu.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:191</div></div>
+<div class="ttc" id="aclassNibbler_html_a51edaebec14acaf05241c88b0dc280f1"><div class="ttname"><a href="classNibbler.html#a51edaebec14acaf05241c88b0dc280f1">Nibbler::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">Permet d'appeller l'action suivante après l'affichage.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:338</div></div>
+<div class="ttc" id="aclassNibbler_html_a8178d11ae093db837235557f5a8e4ad4"><div class="ttname"><a href="classNibbler.html#a8178d11ae093db837235557f5a8e4ad4">Nibbler::handleEvent</a></div><div class="ttdeci">Event handleEvent(Event event) override</div><div class="ttdoc">Permet de gérer les events capturés par la librarie graphique et d'appliquer une action sur le jeu.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:358</div></div>
+<div class="ttc" id="aclassNibbler_html_a9de39e245e4b014c68a67ba89a9ff217"><div class="ttname"><a href="classNibbler.html#a9de39e245e4b014c68a67ba89a9ff217">Nibbler::getRects</a></div><div class="ttdeci">std::vector&lt; Rect &gt; getRects() const override</div><div class="ttdoc">Permet de récupérer tous les rectangles que le jeu veut render.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:29</div></div>
+<div class="ttc" id="aclassNibbler_html_acc3781e79d59bf860f225f908a7b65e4"><div class="ttname"><a href="classNibbler.html#acc3781e79d59bf860f225f908a7b65e4">Nibbler::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">Permet de récupérer le nom du jeu.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:24</div></div>
+<div class="ttc" id="aclassNibbler_html_ad1df2029c3e773c6bca8c433a0101db4"><div class="ttname"><a href="classNibbler.html#ad1df2029c3e773c6bca8c433a0101db4">Nibbler::stop</a></div><div class="ttdeci">void stop() override</div><div class="ttdoc">Arrête le jeu.</div><div class="ttdef"><b>Definition:</b> arcade_nibbler.cpp:353</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

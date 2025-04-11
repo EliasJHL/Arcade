@@ -32,7 +32,7 @@ graphical:
 
 clean:
 	@$(RM) $(NAME)
-	@$(RM) ./libs/*.so
+	@$(RM) ./lib/*.so
 
 fclean: clean
 	@$(RM) $(NAME)

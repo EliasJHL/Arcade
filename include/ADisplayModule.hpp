@@ -1,21 +1,26 @@
-/*
-** ADisplayModule.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Wed Mar 26 10:08:50 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Apr 5 15:41:01 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file ADisplayModule.hpp
+ * @brief Classe abstraite pour les modules d'affichage
+ * @author Elias H. <elias-josue.hajjar-llauquen@epitech.eu> & Enzo C. <enzo.lobato-couthino@epitech.eu>
+ *
+ * Ce fichier définit la classe de base abstraite pour les modules d'affichage.
+ */
 
 #ifndef ADISPLAYMODULE_HPP_
 # define ADISPLAYMODULE_HPP_
 
 #include "./interfaces/IDisplay.hpp"
 
+/**
+ * @class ADisplayModule
+ * @brief Classe abstraite pour les libraries graphiques.
+ *
+ * Utilisé pour l'ouverture / utilisation des libraries graphiques.
+ * Elle hérite de IDisplayModule
+ */
 class ADisplayModule : public IDisplayModule {
     public:
-        ADisplayModule(std::string name = "") : _name(name) {};
+        ADisplayModule(std::string name = "");
         virtual ~ADisplayModule() = default;
         void createWindow() override = 0;
         void destroyWindow() override = 0;
@@ -24,7 +29,7 @@ class ADisplayModule : public IDisplayModule {
         void drawText(const Text &text) override = 0;
         void drawRect(const Rect &rect) override = 0;
         std::vector<Event> getEvents() override = 0;
-        std::string getName() const override { return _name; };
+        std::string getName() const override;
     protected:
         std::string _name;
 };

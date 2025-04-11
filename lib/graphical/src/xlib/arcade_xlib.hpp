@@ -15,6 +15,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
+#include <X11/keysym.h>
 
 class Xlib : public ADisplayModule {
     public:
@@ -37,6 +38,7 @@ class Xlib : public ADisplayModule {
         XEvent mEvent;
         GC mGC;
         XFontStruct *mFont;
+        std::unordered_map<KeySym, Event> mEvents;
 };
 
 #endif /* !ARCADE_Xlib_HPP_ */

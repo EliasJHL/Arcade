@@ -1,0 +1,4 @@
+<map id="AGameModule" name="AGameModule">
+<area shape="rect" id="node1" title="Classe abstraite pour les libraries de jeux." alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node2" href="$classIGameModule.html" title="Interface pour AGameModule." alt="" coords="8,5,121,32"/>
+</map>

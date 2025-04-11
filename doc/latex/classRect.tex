@@ -1,0 +1,148 @@
+\hypertarget{classRect}{}\doxysection{Référence de la classe Rect}
+\label{classRect}\index{Rect@{Rect}}
+
+
+Information pour créer un rectangle.  
+
+
+
+
+{\ttfamily \#include $<$Rect.\+hpp$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRect_a41cb892e84c51c0e45aaa6fec913ce84}{Rect}} (int x, int y, int width, int height, \mbox{\hyperlink{classColor}{Color}} color, std\+::string path)
+\begin{DoxyCompactList}\small\item\em Constructeur de la class \mbox{\hyperlink{classRect}{Rect}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRect_a08941639cf98b48ef3fc0115bdb56af2}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la position X. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRect_ae36640a9cdbac0715d7117bf286b7917}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la position Y. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRect_ad12569d169de8d8f092b435a762b74de}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la position longeur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRect_ac8278ffb9cbca4ed57de08cd6bbdb044}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la position largeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classColor}{Color}} \mbox{\hyperlink{classRect_a36520e75afddce47aae80f1e745d5aeb}{get\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la couleur. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classRect_a2592eb5f2162268cd52b52866bf2838d}{get\+Sprite\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie le chemin vers le sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Information pour créer un rectangle. 
+
+Utilisé pour la création de rectangles dans les libraries graphiques 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classRect_a41cb892e84c51c0e45aaa6fec913ce84}\label{classRect_a41cb892e84c51c0e45aaa6fec913ce84}} 
+\index{Rect@{Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{Rect()}{Rect()}}
+{\footnotesize\ttfamily Rect\+::\+Rect (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{classColor}{Color}}}]{color,  }\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la class \mbox{\hyperlink{classRect}{Rect}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Position x sur la fenêtre de la librarie graphique \\
+\hline
+{\em y} & Position y sur la fenêtre de la librarie graphique \\
+\hline
+{\em width} & La longeur du rectangle \\
+\hline
+{\em height} & La largeur du rectangle \\
+\hline
+{\em color} & Contient la couleur \& opacité souhaité \\
+\hline
+{\em path} & Chemin vers un sprite -\/ Optionnel -\/ Par défaut \+: \char`\"{}\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classRect_a36520e75afddce47aae80f1e745d5aeb}\label{classRect_a36520e75afddce47aae80f1e745d5aeb}} 
+\index{Rect@{Rect}!getColor@{getColor}}
+\index{getColor@{getColor}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColor}{Color}} Rect\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la couleur. 
+
+\begin{DoxyReturn}{Renvoie}
+Class \mbox{\hyperlink{classColor}{Color}} -\/ Renvoie la couleur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_ac8278ffb9cbca4ed57de08cd6bbdb044}\label{classRect_ac8278ffb9cbca4ed57de08cd6bbdb044}} 
+\index{Rect@{Rect}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Rect\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la position largeur. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie position largeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_a2592eb5f2162268cd52b52866bf2838d}\label{classRect_a2592eb5f2162268cd52b52866bf2838d}} 
+\index{Rect@{Rect}!getSpritePath@{getSpritePath}}
+\index{getSpritePath@{getSpritePath}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getSpritePath()}{getSpritePath()}}
+{\footnotesize\ttfamily const std\+::string \& Rect\+::get\+Sprite\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie le chemin vers le sprite. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie le chemin du sprite Optionnel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_ad12569d169de8d8f092b435a762b74de}\label{classRect_ad12569d169de8d8f092b435a762b74de}} 
+\index{Rect@{Rect}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Rect\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la position longeur. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie position longeur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_a08941639cf98b48ef3fc0115bdb56af2}\label{classRect_a08941639cf98b48ef3fc0115bdb56af2}} 
+\index{Rect@{Rect}!getX@{getX}}
+\index{getX@{getX}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily int Rect\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la position X. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie position X 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRect_ae36640a9cdbac0715d7117bf286b7917}\label{classRect_ae36640a9cdbac0715d7117bf286b7917}} 
+\index{Rect@{Rect}!getY@{getY}}
+\index{getY@{getY}!Rect@{Rect}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily int Rect\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la position Y. 
+
+\begin{DoxyReturn}{Renvoie}
+renvoie position Y 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Rect_8hpp}{Rect.\+hpp}}\item 
+include/Rect.\+cpp\end{DoxyCompactItemize}

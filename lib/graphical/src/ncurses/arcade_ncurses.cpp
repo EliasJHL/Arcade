@@ -10,11 +10,53 @@
 
 #include "arcade_ncurses.hpp"
 
-static const char ascii_chars[] = " .`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$";
-
 Ncurses::Ncurses()
 {
     mName = "ncurses";
+    mEvents = {
+        {'t', Event::NEXT_LIB},
+        {KEY_UP, Event::K_UP},
+        {KEY_DOWN, Event::K_DOWN},
+        {KEY_LEFT, Event::K_LEFT},
+        {KEY_RIGHT, Event::K_RIGHT},
+        {KEY_F(1), Event::K_F1},
+        {'y', Event::NEXT_GAME},
+        {'Y', Event::NEXT_GAME},
+        {'a', Event::KEY_A},
+        {'b', Event::KEY_B},
+        {'c', Event::KEY_C},
+        {'d', Event::KEY_D},
+        {'e', Event::KEY_E},
+        {'f', Event::KEY_F},
+        {'g', Event::KEY_G},
+        {'h', Event::KEY_H},
+        {'i', Event::KEY_I},
+        {'j', Event::KEY_J},
+        {'k', Event::KEY_K},
+        {'l', Event::KEY_L},
+        {'m', Event::KEY_M},
+        {'n', Event::KEY_N},
+        {'o', Event::KEY_O},
+        {'p', Event::KEY_P},
+        {'q', Event::KEY_Q},
+        {'r', Event::KEY_R},
+        {'s', Event::KEY_S},
+        {'u', Event::KEY_U},
+        {'v', Event::KEY_V},
+        {'w', Event::KEY_W},
+        {'x', Event::KEY_X},
+        {'z', Event::KEY_Z},
+        {'1', Event::KEY_1},
+        {'2', Event::KEY_2},
+        {'3', Event::KEY_3},
+        {'4', Event::KEY_4},
+        {'5', Event::KEY_5},
+        {'6', Event::KEY_6},
+        {'7', Event::KEY_7},
+        {'8', Event::KEY_8},
+        {'9', Event::KEY_9},
+        {'0', Event::KEY_0}
+    };
 }
 
 Ncurses::~Ncurses()
@@ -31,6 +73,10 @@ void Ncurses::createWindow()
     noecho();
     cbreak();
     keypad(stdscr, TRUE);
+    init_pair(1, COLOR_RED, COLOR_BLACK);
+    init_pair(2, COLOR_GREEN, COLOR_BLACK);
+    init_pair(3, COLOR_BLUE, COLOR_BLACK);
+    init_pair(4, COLOR_WHITE, COLOR_BLACK);
 }
 
 void Ncurses::destroyWindow()
@@ -54,11 +100,17 @@ void Ncurses::drawText(const Text &text)
     int g = (text.getColor().getG() * 1000) / 255;
     int b = (text.getColor().getB() * 1000) / 255;
     
-    init_color(8, r, g, b);
-    init_pair(1, 8, COLOR_BLACK);
-    attron(COLOR_PAIR(1));
-    mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, text.getText().c_str());
-    attroff(COLOR_PAIR(1));
+    if (r > 500 && g < 200 && b < 200) {
+        attron(COLOR_PAIR(1));
+    } else if (g > 500 && r < 200 && b < 200) {
+        attron(COLOR_PAIR(2));
+    } else if (b > 500 && r < 200 && g < 200) {
+        attron(COLOR_PAIR(3));
+    } else {
+        attron(COLOR_PAIR(4));
+    }
+    mvprintw(text.getY() / 20 + 1, text.getX() / 10 + 1, "%s", text.getText().c_str());
+    attroff(COLOR_PAIR(1) | COLOR_PAIR(2) | COLOR_PAIR(3) | COLOR_PAIR(4));
 }
 
 // TO ASK demander couleur
@@ -68,9 +120,15 @@ void Ncurses::drawRect(const Rect &rect)
     int g = (rect.getColor().getG() * 1000) / 255;
     int b = (rect.getColor().getB() * 1000) / 255;
     
-    init_color(8, r, g, b);
-    init_pair(1, 8, COLOR_BLACK);
-    attron(COLOR_PAIR(1));
+    if (r > 500 && g < 200 && b < 200) {
+        attron(COLOR_PAIR(1));
+    } else if (g > 500 && r < 200 && b < 200) {
+        attron(COLOR_PAIR(2));
+    } else if (b > 500 && r < 200 && g < 200) {
+        attron(COLOR_PAIR(3));
+    } else {
+        attron(COLOR_PAIR(4));
+    }
     int x1 = rect.getX() / 10;
     int x2 = rect.getX() / 10 + rect.getWidth() / 10;
     int y1 = rect.getY() / 20;
@@ -90,7 +148,7 @@ void Ncurses::drawRect(const Rect &rect)
     mvaddch(y1, x2, ACS_URCORNER);
     mvaddch(y2, x2, ACS_LRCORNER);
     mvaddch(y2, x1, ACS_LLCORNER);
-    attroff(COLOR_PAIR(1));
+    attroff(COLOR_PAIR(1) | COLOR_PAIR(2) | COLOR_PAIR(3) | COLOR_PAIR(4));
 }
 
 std::vector<Event> Ncurses::getEvents()
@@ -98,27 +156,8 @@ std::vector<Event> Ncurses::getEvents()
     std::vector<Event> events;
     int ch = getch();
 
-    switch (ch) {
-        case 't':
-        case 'T':
-            events.push_back(Event::NEXT_LIB);
-            break;
-        case KEY_UP:
-            events.push_back(Event::K_UP);
-            break;
-        case KEY_DOWN:
-            events.push_back(Event::K_DOWN);
-            break;
-        case KEY_LEFT:
-            events.push_back(Event::K_LEFT);
-            break;
-        case KEY_RIGHT:
-            events.push_back(Event::K_RIGHT);
-            break;
-        case 'y':
-        case 'Y':
-            events.push_back(Event::NEXT_GAME);
-            break;
+    if (mEvents.find(ch) != mEvents.end()) {
+        events.push_back(mEvents[ch]);
     }
     return events;
 }

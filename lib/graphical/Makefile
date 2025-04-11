@@ -11,17 +11,20 @@
 NCURSES_SRC	=	./src/ncurses/arcade_ncurses.cpp
 SDL2_SRC	=	./src/sdl2/arcade_sdl2.cpp
 XLIB_SRC	=	./src/xlib/arcade_xlib.cpp
+SFML_SRC	=	./src/sfml/arcade_sfml.cpp
 
-REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp
+REQUIRED_LIBS	=	../../include/Rect.cpp ../../include/Text.cpp ../../include/Color.cpp ../../include/ADisplayModule.cpp
 
 XLIB_FLAGS	=	-L/usr/X11R6/lib -lX11
 SDL2_FLAGS	=	-lSDL2 -lSDL2_ttf -lSDL2_image
 NCURSES_FLAGS	=	-lncurses
+SFML_FLAGS	=	-L/usr/local/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 all:	$(GRAPHICAL_LIBS)
 	g++ -shared -fPIC $(NCURSES_SRC) $(REQUIRED_LIBS) -o arcade_ncurses.so $(NCURSES_FLAGS) -I ../../include
 	g++ -shared -fPIC $(SDL2_SRC) $(REQUIRED_LIBS) -o arcade_sdl2.so $(SDL2_FLAGS) -I ../../include
 	g++ -shared -fPIC $(XLIB_SRC) $(REQUIRED_LIBS) -o arcade_xlib.so $(XLIB_FLAGS) -I ../../include
+	g++ -shared -fPIC $(SFML_SRC) $(REQUIRED_LIBS) -o arcade_sfml.so $(SFML_FLAGS) -I ../../include
 	mv *.so ../
 
 clean:

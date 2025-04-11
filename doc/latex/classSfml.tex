@@ -1,0 +1,99 @@
+\hypertarget{classSfml}{}\doxysection{Référence de la classe Sfml}
+\label{classSfml}\index{Sfml@{Sfml}}
+
+
+Graphe d\textquotesingle{}héritage de Sfml\+:
+% FIG 0
+
+
+Graphe de collaboration de Sfml\+:
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}\label{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}} 
+void \mbox{\hyperlink{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}{create\+Window}} () override
+\begin{DoxyCompactList}\small\item\em Appelle la création de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}\label{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}} 
+void \mbox{\hyperlink{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}{destroy\+Window}} () override
+\begin{DoxyCompactList}\small\item\em Appelle la destruction de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}\label{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}} 
+void \mbox{\hyperlink{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}{display}} () override
+\begin{DoxyCompactList}\small\item\em Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}\label{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}} 
+void \mbox{\hyperlink{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}{clear}} () override
+\begin{DoxyCompactList}\small\item\em Appelle le clear de la librarie graphique en question. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}{draw\+Text}} (const \mbox{\hyperlink{classText}{Text}} \&text) override
+\begin{DoxyCompactList}\small\item\em Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}{draw\+Rect}} (const \mbox{\hyperlink{classRect}{Rect}} \&rect) override
+\begin{DoxyCompactList}\small\item\em Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
+std\+::vector$<$ Event $>$ \mbox{\hyperlink{classSfml_a277dc74d2be77f077d37d9519869d01c}{get\+Events}} () override
+\begin{DoxyCompactList}\small\item\em Permet de récupérer tous les events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSfml_ab860a72d8642deef55f4d8f1013a770c}\label{classSfml_ab860a72d8642deef55f4d8f1013a770c}} 
+std\+::string \mbox{\hyperlink{classSfml_ab860a72d8642deef55f4d8f1013a770c}{get\+Name}} () const override
+\begin{DoxyCompactList}\small\item\em Permet de récupérer le nom de la librarie graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}\label{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}} 
+\index{Sfml@{Sfml}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
+{\footnotesize\ttfamily void Sfml\+::draw\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRect}{Rect}} \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle{}afficher. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em text} & Class \mbox{\hyperlink{classRect}{Rect}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}{ADisplay\+Module}}.
+
+\mbox{\Hypertarget{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}\label{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}} 
+\index{Sfml@{Sfml}!drawText@{drawText}}
+\index{drawText@{drawText}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily void Sfml\+::draw\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classText}{Text}} \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}afficher. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em text} & Class \mbox{\hyperlink{classText}{Text}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}{ADisplay\+Module}}.
+
+\mbox{\Hypertarget{classSfml_a277dc74d2be77f077d37d9519869d01c}\label{classSfml_a277dc74d2be77f077d37d9519869d01c}} 
+\index{Sfml@{Sfml}!getEvents@{getEvents}}
+\index{getEvents@{getEvents}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
+{\footnotesize\ttfamily std\+::vector$<$ Event $>$ Sfml\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de récupérer tous les events. 
+
+\begin{DoxyReturn}{Renvoie}
+Renvoie un vector contenant toutes les actions que la librarie graphique a capturé 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}{ADisplay\+Module}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+lib/graphical/src/sfml/arcade\+\_\+sfml.\+hpp\item 
+lib/graphical/src/sfml/arcade\+\_\+sfml.\+cpp\end{DoxyCompactItemize}
