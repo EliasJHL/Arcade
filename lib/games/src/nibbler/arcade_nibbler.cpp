@@ -36,15 +36,6 @@ std::vector<Text> Nibbler::getTexts() const
     return _texts;
 }
 
-void Nibbler::addWall(int sX, int eX, int sY, int eY)
-{
-    for (int y = sY; y < eY; y++) {
-        for (int x = sX; x < eX; x++) {
-            _map[y][x] = Type::WALL;
-        }
-    }
-}
-
 void Nibbler::parseMap(const std::string &filename)
 {
     std::ifstream file(filename);
@@ -160,9 +151,36 @@ void Nibbler::updateBody()
     }
 }
 
+void Nibbler::checkIntersection(int x, int y)
+{
+    int nbDirections = 0;
+    Move newDirection = _Direction;
+
+    if (_map[_y - 1][_x] != Type::WALL && _map[_y - 1][_x] != Type::BODY) {
+        nbDirections++;
+        newDirection = Move::UP;
+    }
+    if (_map[_y + 1][_x] != Type::WALL && _map[_y + 1][_x] != Type::BODY) {
+        nbDirections++;
+        newDirection = Move::DOWN;
+    }
+    if (_map[_y][_x - 1] != Type::WALL && _map[_y][_x - 1] != Type::BODY) {
+        nbDirections++;
+        newDirection = Move::LEFT;
+    }
+    if (_map[_y][_x + 1] != Type::WALL && _map[_y][_x + 1] != Type::BODY) {
+        nbDirections++;
+        newDirection = Move::RIGHT;
+    }
+    if (nbDirections == 1) {
+        _Direction = newDirection;
+    }
+}
+
 void Nibbler::HandleActions(int new_x, int new_y)
 {
     if (_map[new_y][new_x] == Type::WALL) {
+        checkIntersection(new_x, new_y);
         return;
     }
     if (_map[new_y][new_x] == Type::APPLE) {

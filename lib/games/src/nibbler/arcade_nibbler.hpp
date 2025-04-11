@@ -56,8 +56,8 @@ class Nibbler : public AGameModule {
         void DisplayNibbler();
         void DisplayInfos();
         void Map(int nb);
-        void addWall(int startX, int endX, int startY, int endY);
         void parseMap(const std::string &filename);
+        void checkIntersection(int x, int y);
         int _x;
         int _y;
         Move _Direction;
