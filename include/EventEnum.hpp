@@ -1,16 +1,22 @@
-/*
-** EventEnum.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Wed Mar 26 13:19:51 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 21:23:33 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file EventEnum.hpp
+ * @brief Enumération des événements pour le système d'entrée
+ * @author Elias H.
+ *
+ * Ce fichier définit une énumération des différents événements pouvant être utilisés
+ * dans le système d'entrée de l'Arcade.
+ */
 
 #ifndef EVENTENUM_HPP_
 # define EVENTENUM_HPP_
 
+/**
+ * @enum Event
+ * @brief Enumération des événements pour le système d'entrée
+ *
+ * Cette énumération définit les différents types d'événements qui peuvent être
+ * capturés et traités par le système d'entrée de l'Arcade.
+ */
 enum class Event {
     NONE,
     QUIT,

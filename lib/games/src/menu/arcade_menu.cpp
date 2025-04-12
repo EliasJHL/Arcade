@@ -50,7 +50,6 @@ Menu::Menu(std::string name)
 
 Menu::~Menu()
 {
-
 }
 
 std::string Menu::getName() const

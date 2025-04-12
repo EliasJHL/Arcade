@@ -39,7 +39,7 @@ std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ \mbox{\hyperlink{classAG
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les rectangles que le jeu veut render. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ \mbox{\hyperlink{classAGameModule_a5b5caf83fad27f8574ef744e6b275d27}{get\+Texts}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les textes que le jeu veut render. \end{DoxyCompactList}\item 
-Event \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b346419}{handle\+Event}} (Event event) override=0
+\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b346419}{handle\+Event}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event) override=0
 \begin{DoxyCompactList}\small\item\em Permet de gérer les events capturés par la librarie graphique et d\textquotesingle{}appliquer une action sur le jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAGameModule_a47b86a1e1fe74c50e3dc34d098b81ac4}{set\+Game\+Switch\+Callback}} (std\+::function$<$ void(std\+::string)$>$ callback) override
 \begin{DoxyCompactList}\small\item\em Permet de selectionner un jeu précis dans le menu. \end{DoxyCompactList}\item 
@@ -47,13 +47,13 @@ void \mbox{\hyperlink{classAGameModule_a86cc637ca6ca3c38b377923a9467b720}{set\+G
 \begin{DoxyCompactList}\small\item\em Permet de selectionner une librarie graphique précise dans le menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classAGameModule_ae06892fec67d6725a2c37db907e9215b}{set\+Lib\+Switch\+Callback}} (std\+::function$<$ void()$>$ callback) override
 \begin{DoxyCompactList}\small\item\em Permet de selectionner . . . \end{DoxyCompactList}\item 
-Event \mbox{\hyperlink{classAGameModule_ab1f4a7f5a4df216ac5ebf09d82ebc692}{handle\+Event\+Generic}} (Event event) override
+\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classAGameModule_ab1f4a7f5a4df216ac5ebf09d82ebc692}{handle\+Event\+Generic}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event) override
 \begin{DoxyCompactList}\small\item\em Permet de gérer les events génériques comme le changement de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Fonctions membres protégées}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAGameModule_a39903ce50746efa691b18415482590ff}\label{classAGameModule_a39903ce50746efa691b18415482590ff}} 
-void {\bfseries switch\+To\+Next\+Game} (const std\+::string \&game\+Name)
+\mbox{\Hypertarget{classAGameModule_ab4e38274f765cd3f75cd9033e2d20ff8}\label{classAGameModule_ab4e38274f765cd3f75cd9033e2d20ff8}} 
+void {\bfseries switch\+To\+Next\+Game} (const std\+::string \&game\+Name=\char`\"{}\char`\"{})
 \item 
 \mbox{\Hypertarget{classAGameModule_a01c0a88b5a3bf3c13540186c38ae742c}\label{classAGameModule_a01c0a88b5a3bf3c13540186c38ae742c}} 
 void {\bfseries switch\+To\+Next\+Lib} ()
@@ -133,7 +133,7 @@ Réimplémentée dans \mbox{\hyperlink{classSnake_a40408dc380ef481a0330b7cee84ce
 \index{AGameModule@{AGameModule}!handleEvent@{handleEvent}}
 \index{handleEvent@{handleEvent}!AGameModule@{AGameModule}}
 \doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
-{\footnotesize\ttfamily Event AGame\+Module\+::handle\+Event (\begin{DoxyParamCaption}\item[{Event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} AGame\+Module\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -156,7 +156,7 @@ Implémenté dans \mbox{\hyperlink{classSnake_a0aa57ee90cf1e69a321e6dd4a4670c49}
 \index{AGameModule@{AGameModule}!handleEventGeneric@{handleEventGeneric}}
 \index{handleEventGeneric@{handleEventGeneric}!AGameModule@{AGameModule}}
 \doxysubsubsection{\texorpdfstring{handleEventGeneric()}{handleEventGeneric()}}
-{\footnotesize\ttfamily Event AGame\+Module\+::handle\+Event\+Generic (\begin{DoxyParamCaption}\item[{Event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} AGame\+Module\+::handle\+Event\+Generic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 

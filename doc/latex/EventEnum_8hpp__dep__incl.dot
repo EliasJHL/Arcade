@@ -1,0 +1,34 @@
+digraph "include/EventEnum.hpp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="include/EventEnum.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Enumération des événements pour le système d'entrée."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="include/interfaces\l/IDisplay.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$IDisplay_8hpp.html",tooltip="Interface pour la classe abstraite ADisplayModule."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="include/ADisplayModule.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ADisplayModule_8hpp.html",tooltip="Classe abstraite pour les modules d'affichage."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="include/Core.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Core_8hpp_source.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="lib/graphical/src/ncurses\l/arcade_ncurses.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__ncurses_8hpp_source.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="lib/graphical/src/sdl2\l/arcade_sdl2.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__sdl2_8hpp_source.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="lib/graphical/src/sfml\l/arcade_sfml.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__sfml_8hpp_source.html",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="lib/graphical/src/xlib\l/arcade_xlib.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__xlib_8hpp_source.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="include/interfaces\l/IGame.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$IGame_8hpp.html",tooltip="Interface pour la classe abstraite AGameModule."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="include/AGameModule.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$AGameModule_8hpp.html",tooltip="Classe abstraite pour les modules des jeux."];
+  Node10 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="lib/games/src/menu\l/arcade_menu.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__menu_8hpp_source.html",tooltip=" "];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="lib/games/src/nibbler\l/arcade_nibbler.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__nibbler_8hpp_source.html",tooltip=" "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="lib/games/src/snake\l/arcade_snake.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$arcade__snake_8hpp_source.html",tooltip=" "];
+  Node9 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}
