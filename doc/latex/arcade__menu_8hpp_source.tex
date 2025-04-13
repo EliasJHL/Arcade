@@ -1,0 +1,44 @@
+\doxysection{arcade\+\_\+menu.\+hpp}
+\hypertarget{arcade__menu_8hpp_source}{}\label{arcade__menu_8hpp_source}\index{lib/games/src/menu/arcade\_menu.hpp@{lib/games/src/menu/arcade\_menu.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ arcade\_menu.hpp\ for\ B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen\ in\ /home/elias/Documents/Epitech/Arcade/B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen/libs/games/src/menu}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Made\ by\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Login\ \ \ <elias-\/josue.hajjar-\/llauquen@epitech.eu>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**}}
+\DoxyCodeLine{00007\ \textcolor{comment}{**\ Started\ on\ \ Sat\ Mar\ 29\ 00:29:54\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00008\ \textcolor{comment}{**\ Last\ update\ Sun\ Mar\ 29\ 01:18:43\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00009\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ ARCADE\_MENU\_HPP\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ define\ ARCADE\_MENU\_HPP\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AGameModule_8hpp}{AGameModule.hpp}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMenu}{Menu}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classAGameModule}{AGameModule}}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu}{Menu}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}menu"{}});}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMenu}{\string~Menu}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMenu_af5eca82331072f4cbff0cd716be0d260}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::vector<Rect>\ \mbox{\hyperlink{classMenu_a66cbb17a1b0236294002514d3264cc71}{getRects}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<Text>\ \mbox{\hyperlink{classMenu_a653650800a139e3183e2caba9c2c7ecd}{getTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenu_a0878f621aa4501fe0e8f388c2222ead6}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenu_a316256d45db2dc6891b21ad30c8187bc}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMenu_a19ec5cba0f5a49a730bf88fa09447244}{stop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ \mbox{\hyperlink{classMenu_a478a7dbb51a022157ae622554c490388}{handleEvent}}(\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::vector<std::string>\ mGames;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<std::string>\ mGraphic;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::string\ selected\_game;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::string\ selected\_graph;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isGameSelected;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ARCADE\_MENU\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

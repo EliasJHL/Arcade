@@ -64,6 +64,9 @@ void Nibbler::Map(int nb)
     if (nb == 1) {
         parseMap("lib/games/src/nibbler/map_1");
     }
+    if (nb == 2) {
+        parseMap("lib/games/src/nibbler/map_2");
+    }
 }
 
 void Nibbler::init()
@@ -213,7 +216,7 @@ void Nibbler::DisplayMap()
     for (int y = 0; y < 30; y++) {
         for (int x = 0; x < 40; x++) {
             if (_map[y][x] == Type::APPLE) {
-                _rects.push_back(Rect{x * 20 + 5, y * 20 + 5, 10, 10, Color{255, 105, 180, 255}, ""});
+                _rects.push_back(Rect{x * 20 + 5, y * 20 + 5, 10, 10, Color{255, 0, 0, 255}, ""});
             } else if (_map[y][x] == Type::HEAD) {
                 _rects.push_back(Rect{x * 20, y * 20, 20, 20, Color{255, 0, 0, 255}, ""});
             } else if (_map[y][x] == Type::WALL) {
@@ -239,6 +242,14 @@ void Nibbler::DisplayInfos()
     _texts.push_back(Text{730, 580, 25, "assets/basic.ttf", "Arcade", false, false, Color{255, 255, 255, 255}});
 }
 
+void Nibbler::checkLVL()
+{
+    if (score == 24) {
+        _NumMap = 2;
+        Reset();
+    }
+}
+
 void Nibbler::update()
 {
     _rects.clear();
@@ -248,6 +259,7 @@ void Nibbler::update()
         DisplayMap();
         DisplayNibbler();
         DisplayInfos();
+        checkLVL();
     } else {
         _texts.push_back(Text{300, 250, 50, "assets/basic.ttf", "GAME OVER", false, false, Color{255,0,0,255}});
         _texts.push_back(Text{250, 300, 30, "assets/basic.ttf", "Press any key to restart", false, false, Color{255,255,255,255}});

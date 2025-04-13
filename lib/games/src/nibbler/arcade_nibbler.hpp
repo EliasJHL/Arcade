@@ -58,6 +58,7 @@ class Nibbler : public AGameModule {
         void Map(int nb);
         void parseMap(const std::string &filename);
         void checkIntersection(int x, int y);
+        void checkLVL();
         int _x;
         int _y;
         Move _Direction;

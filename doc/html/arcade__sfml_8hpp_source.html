@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Arcade:  Fichier source de lib/graphical/src/sfml/arcade_sfml.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">Arcade
    </div>
   </td>
@@ -29,22 +29,28 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.1 -->
+<!-- Généré par Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -54,9 +60,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -65,62 +78,63 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle">
-<div class="title">arcade_sfml.hpp</div>  </div>
+  <div class="headertitle"><div class="title">arcade_sfml.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** EPITECH PROJECT, 2025</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** File description:</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** arcade_sfml</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef ARCADE_SFML_HPP_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARCADE_SFML_HPP_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;SFML/System.hpp&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classSfml.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSfml.html">Sfml</a> : <span class="keyword">public</span> <a class="code" href="classADisplayModule.html">ADisplayModule</a>{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classSfml.html">Sfml</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        ~<a class="code" href="classSfml.html">Sfml</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#a94a853f67fa9a8662e55d331f0c2fd4f">createWindow</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#ab8dd4770f9194af0b4903426dc99cd2d">destroyWindow</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#a2de000fce0f9f7b0dfde58aab5ab7998">display</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0">clear</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#aca28315dde5d90cd8b84aa36ec378cc8">drawText</a>(<span class="keyword">const</span> <a class="code" href="classText.html">Text</a> &amp;text) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0">drawRect</a>(<span class="keyword">const</span> <a class="code" href="classRect.html">Rect</a> &amp;rect) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::vector&lt;Event&gt; <a class="code" href="classSfml.html#a277dc74d2be77f077d37d9519869d01c">getEvents</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string <a class="code" href="classSfml.html#ab860a72d8642deef55f4d8f1013a770c">getName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::string mName;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        sf::RenderWindow mWindow;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        sf::Font mFont;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::unordered_map&lt;sf::Keyboard::Key, Event&gt; mEvents;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_SFML_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** EPITECH PROJECT, 2025</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">** B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** File description:</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** arcade_sfml</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">*/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef ARCADE_SFML_HPP_</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define ARCADE_SFML_HPP_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;SFML/System.hpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classSfml.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classSfml.html">Sfml</a> : <span class="keyword">public</span> <a class="code hl_class" href="classADisplayModule.html">ADisplayModule</a>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <a class="code hl_class" href="classSfml.html">Sfml</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_class" href="classSfml.html">~Sfml</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#a94a853f67fa9a8662e55d331f0c2fd4f">createWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#ab8dd4770f9194af0b4903426dc99cd2d">destroyWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#a2de000fce0f9f7b0dfde58aab5ab7998">display</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0">clear</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#aca28315dde5d90cd8b84aa36ec378cc8">drawText</a>(<span class="keyword">const</span> <a class="code hl_class" href="classText.html">Text</a> &amp;text) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0">drawRect</a>(<span class="keyword">const</span> <a class="code hl_class" href="classRect.html">Rect</a> &amp;rect) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        std::vector&lt;Event&gt; <a class="code hl_function" href="classSfml.html#a277dc74d2be77f077d37d9519869d01c">getEvents</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::string <a class="code hl_function" href="classSfml.html#ab860a72d8642deef55f4d8f1013a770c">getName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        std::string mName;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        sf::RenderWindow mWindow;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        sf::Font mFont;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::unordered_map&lt;sf::Keyboard::Key, Event&gt; mEvents;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_SFML_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aADisplayModule_8hpp_html"><div class="ttname"><a href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a></div><div class="ttdoc">Classe abstraite pour les modules d'affichage.</div></div>
-<div class="ttc" id="aclassADisplayModule_html"><div class="ttname"><a href="classADisplayModule.html">ADisplayModule</a></div><div class="ttdoc">Classe abstraite pour les libraries graphiques.</div><div class="ttdef"><b>Definition:</b> ADisplayModule.hpp:21</div></div>
-<div class="ttc" id="aclassRect_html"><div class="ttname"><a href="classRect.html">Rect</a></div><div class="ttdoc">Information pour créer un rectangle.</div><div class="ttdef"><b>Definition:</b> Rect.hpp:22</div></div>
-<div class="ttc" id="aclassSfml_html"><div class="ttname"><a href="classSfml.html">Sfml</a></div><div class="ttdef"><b>Definition:</b> arcade_sfml.hpp:16</div></div>
-<div class="ttc" id="aclassSfml_html_a277dc74d2be77f077d37d9519869d01c"><div class="ttname"><a href="classSfml.html#a277dc74d2be77f077d37d9519869d01c">Sfml::getEvents</a></div><div class="ttdeci">std::vector&lt; Event &gt; getEvents() override</div><div class="ttdoc">Permet de récupérer tous les events.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:84</div></div>
-<div class="ttc" id="aclassSfml_html_a2de000fce0f9f7b0dfde58aab5ab7998"><div class="ttname"><a href="classSfml.html#a2de000fce0f9f7b0dfde58aab5ab7998">Sfml::display</a></div><div class="ttdeci">void display() override</div><div class="ttdoc">Appelle l'affichage de tous les éléments dessinés auparavant.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:47</div></div>
-<div class="ttc" id="aclassSfml_html_a54d0113db38db6db6fe41713f8f1e2c0"><div class="ttname"><a href="classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0">Sfml::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Appelle le clear de la librarie graphique en question.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:52</div></div>
-<div class="ttc" id="aclassSfml_html_a8c7d733ab12e35c08bdcf499f45c08e0"><div class="ttname"><a href="classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0">Sfml::drawRect</a></div><div class="ttdeci">void drawRect(const Rect &amp;rect) override</div><div class="ttdoc">Permet de dessiner un rectangle sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:73</div></div>
-<div class="ttc" id="aclassSfml_html_a94a853f67fa9a8662e55d331f0c2fd4f"><div class="ttname"><a href="classSfml.html#a94a853f67fa9a8662e55d331f0c2fd4f">Sfml::createWindow</a></div><div class="ttdeci">void createWindow() override</div><div class="ttdoc">Appelle la création de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:37</div></div>
-<div class="ttc" id="aclassSfml_html_ab860a72d8642deef55f4d8f1013a770c"><div class="ttname"><a href="classSfml.html#ab860a72d8642deef55f4d8f1013a770c">Sfml::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">Permet de récupérer le nom de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:105</div></div>
-<div class="ttc" id="aclassSfml_html_ab8dd4770f9194af0b4903426dc99cd2d"><div class="ttname"><a href="classSfml.html#ab8dd4770f9194af0b4903426dc99cd2d">Sfml::destroyWindow</a></div><div class="ttdeci">void destroyWindow() override</div><div class="ttdoc">Appelle la destruction de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:43</div></div>
-<div class="ttc" id="aclassSfml_html_aca28315dde5d90cd8b84aa36ec378cc8"><div class="ttname"><a href="classSfml.html#aca28315dde5d90cd8b84aa36ec378cc8">Sfml::drawText</a></div><div class="ttdeci">void drawText(const Text &amp;text) override</div><div class="ttdoc">Permet de dessiner un texte sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition:</b> arcade_sfml.cpp:57</div></div>
-<div class="ttc" id="aclassText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition:</b> Text.hpp:17</div></div>
+<div class="ttc" id="aclassADisplayModule_html"><div class="ttname"><a href="classADisplayModule.html">ADisplayModule</a></div><div class="ttdoc">Classe abstraite pour les libraries graphiques.</div><div class="ttdef"><b>Definition</b> ADisplayModule.hpp:21</div></div>
+<div class="ttc" id="aclassRect_html"><div class="ttname"><a href="classRect.html">Rect</a></div><div class="ttdoc">Information pour créer un rectangle.</div><div class="ttdef"><b>Definition</b> Rect.hpp:22</div></div>
+<div class="ttc" id="aclassSfml_html"><div class="ttname"><a href="classSfml.html">Sfml</a></div><div class="ttdef"><b>Definition</b> arcade_sfml.hpp:16</div></div>
+<div class="ttc" id="aclassSfml_html_a277dc74d2be77f077d37d9519869d01c"><div class="ttname"><a href="classSfml.html#a277dc74d2be77f077d37d9519869d01c">Sfml::getEvents</a></div><div class="ttdeci">std::vector&lt; Event &gt; getEvents() override</div><div class="ttdoc">Permet de récupérer tous les events.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:84</div></div>
+<div class="ttc" id="aclassSfml_html_a2de000fce0f9f7b0dfde58aab5ab7998"><div class="ttname"><a href="classSfml.html#a2de000fce0f9f7b0dfde58aab5ab7998">Sfml::display</a></div><div class="ttdeci">void display() override</div><div class="ttdoc">Appelle l'affichage de tous les éléments dessinés auparavant.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:47</div></div>
+<div class="ttc" id="aclassSfml_html_a54d0113db38db6db6fe41713f8f1e2c0"><div class="ttname"><a href="classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0">Sfml::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Appelle le clear de la librarie graphique en question.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:52</div></div>
+<div class="ttc" id="aclassSfml_html_a8c7d733ab12e35c08bdcf499f45c08e0"><div class="ttname"><a href="classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0">Sfml::drawRect</a></div><div class="ttdeci">void drawRect(const Rect &amp;rect) override</div><div class="ttdoc">Permet de dessiner un rectangle sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:73</div></div>
+<div class="ttc" id="aclassSfml_html_a94a853f67fa9a8662e55d331f0c2fd4f"><div class="ttname"><a href="classSfml.html#a94a853f67fa9a8662e55d331f0c2fd4f">Sfml::createWindow</a></div><div class="ttdeci">void createWindow() override</div><div class="ttdoc">Appelle la création de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:37</div></div>
+<div class="ttc" id="aclassSfml_html_ab860a72d8642deef55f4d8f1013a770c"><div class="ttname"><a href="classSfml.html#ab860a72d8642deef55f4d8f1013a770c">Sfml::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">Permet de récupérer le nom de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:105</div></div>
+<div class="ttc" id="aclassSfml_html_ab8dd4770f9194af0b4903426dc99cd2d"><div class="ttname"><a href="classSfml.html#ab8dd4770f9194af0b4903426dc99cd2d">Sfml::destroyWindow</a></div><div class="ttdeci">void destroyWindow() override</div><div class="ttdoc">Appelle la destruction de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:43</div></div>
+<div class="ttc" id="aclassSfml_html_aca28315dde5d90cd8b84aa36ec378cc8"><div class="ttname"><a href="classSfml.html#aca28315dde5d90cd8b84aa36ec378cc8">Sfml::drawText</a></div><div class="ttdeci">void drawText(const Text &amp;text) override</div><div class="ttdoc">Permet de dessiner un texte sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition</b> arcade_sfml.cpp:57</div></div>
+<div class="ttc" id="aclassText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition</b> Text.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

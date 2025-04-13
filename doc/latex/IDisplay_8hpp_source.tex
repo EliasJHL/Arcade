@@ -1,0 +1,39 @@
+\doxysection{IDisplay.\+hpp}
+\hypertarget{IDisplay_8hpp_source}{}\label{IDisplay_8hpp_source}\index{include/interfaces/IDisplay.hpp@{include/interfaces/IDisplay.hpp}}
+\mbox{\hyperlink{IDisplay_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ IDISPLAY\_HPP\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ define\ IDISPLAY\_HPP\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Rect_8hpp}{Rect.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}Text.hpp"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../EventEnum.hpp"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIDisplayModule}{IDisplayModule}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classIDisplayModule}{\string~IDisplayModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_acc5d8ec34b1b608f9815469c9ca602f2}{createWindow}}()\ =\ 0;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_ac2f1ec4c02f77d03e50eb509d591e1b8}{destroyWindow}}()\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classIDisplayModule_af4c0d72526501b47da4f67f3fbf981f7}{getName}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_a7707c8ac49e4d16364184691ee4a345b}{display}}()\ =\ 0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_afee10797c154123ed5f98895f92fee62}{clear}}()\ =\ 0;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_a34726f297b89ff5105969b8638ed3cce}{drawText}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classText}{Text}}\ \&text)\ =\ 0;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIDisplayModule_a73cf0db74666669d654b77fc09fb3c8e}{drawRect}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRect}{Rect}}\ \&rect)\ =\ 0;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Event>\ \mbox{\hyperlink{classIDisplayModule_adc3885b7fc070b9b964626acd32059da}{getEvents}}()\ =\ 0;}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !IDISPLAY\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

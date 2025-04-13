@@ -1,48 +1,55 @@
-\hypertarget{classCore}{}\doxysection{Référence de la classe Core}
-\label{classCore}\index{Core@{Core}}
+\doxysection{Référence de la classe Core}
+\hypertarget{classCore}{}\label{classCore}\index{Core@{Core}}
 
 
 Graphe d\textquotesingle{}héritage de Core\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{classCore__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Graphe de collaboration de Core\+:
-% FIG 1
-\doxysubsection*{Fonctions membres publiques}
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{classCore__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCore_a8139304d99d1059c77e336c8f097a006}\label{classCore_a8139304d99d1059c77e336c8f097a006}} 
 void \mbox{\hyperlink{classCore_a8139304d99d1059c77e336c8f097a006}{Run\+Core}} () override
 \begin{DoxyCompactList}\small\item\em Lance les modules graphiques et le menu lorsque tout a été correctement initialisé \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classCore_acd5d06d7cb010985a4f299791bbd72cf}{Load\+Libraries}} (int ac, char $\ast$$\ast$av) override
+void \mbox{\hyperlink{classCore_acd5d06d7cb010985a4f299791bbd72cf}{Load\+Libraries}} (int ac, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av) override
 \begin{DoxyCompactList}\small\item\em Initialise les libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Fonctions membres protégées}
+\doxysubsubsection*{Fonctions membres protégées}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}{Change\+Display\+Module}} (const std\+::string \&name) override
 \begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCore_ab4912c34f74a2bd61e21101300607af8}{Change\+Game\+Module}} (const std\+::string \&name) override
 \begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCore_ada9fb5b3b243912488e79ee722221336}\label{classCore_ada9fb5b3b243912488e79ee722221336}} 
 void \mbox{\hyperlink{classCore_ada9fb5b3b243912488e79ee722221336}{Handle\+Events}} () override
 \begin{DoxyCompactList}\small\item\em Gestion \& Envoi des events récuperés du module graphique au jeu. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}\label{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}} 
 void \mbox{\hyperlink{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}{Draw\+Elements}} () override
 \begin{DoxyCompactList}\small\item\em Affichage des elements graphiques sur le module graphique. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCore_a3e50fc8e86dd463870e5d20b033a7347}{Next\+Graphical\+Module}} () override
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCore_a475b433f04f55b52e31e92b315e97deb}{Next\+Game\+Module}} () override
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCore_a500b6ea23a0586bd487c305455b41f5a}\label{classCore_a500b6ea23a0586bd487c305455b41f5a}} 
 void \mbox{\hyperlink{classCore_a500b6ea23a0586bd487c305455b41f5a}{Load\+First\+Library}} (const std\+::string \&input) override
 \begin{DoxyCompactList}\small\item\em Permet de charger la librarie graphique donnée en argument lors du lancement de l\textquotesingle{}Arcade. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}\label{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}} 
 void \mbox{\hyperlink{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}{Load\+All\+Libraries}} (const std\+::string \&input) override
 \begin{DoxyCompactList}\small\item\em Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}\label{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}} 
+\Hypertarget{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}\label{classCore_a030d0cf495f0a40fcdc5e9df495ce52e} 
 \index{Core@{Core}!ChangeDisplayModule@{ChangeDisplayModule}}
 \index{ChangeDisplayModule@{ChangeDisplayModule}!Core@{Core}}
 \doxysubsubsection{\texorpdfstring{ChangeDisplayModule()}{ChangeDisplayModule()}}
@@ -61,7 +68,7 @@ Initialise le module de jeu.
 
 Implémente \mbox{\hyperlink{classICore_aa853495e36e491e147013e37a2bcc70a}{ICore}}.
 
-\mbox{\Hypertarget{classCore_ab4912c34f74a2bd61e21101300607af8}\label{classCore_ab4912c34f74a2bd61e21101300607af8}} 
+\Hypertarget{classCore_ab4912c34f74a2bd61e21101300607af8}\label{classCore_ab4912c34f74a2bd61e21101300607af8} 
 \index{Core@{Core}!ChangeGameModule@{ChangeGameModule}}
 \index{ChangeGameModule@{ChangeGameModule}!Core@{Core}}
 \doxysubsubsection{\texorpdfstring{ChangeGameModule()}{ChangeGameModule()}}
@@ -80,11 +87,67 @@ Initialise le module de jeu.
 
 Implémente \mbox{\hyperlink{classICore_ae2bcb3a1be2f376fe69963e046f9962e}{ICore}}.
 
-\mbox{\Hypertarget{classCore_acd5d06d7cb010985a4f299791bbd72cf}\label{classCore_acd5d06d7cb010985a4f299791bbd72cf}} 
+\Hypertarget{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}\label{classCore_a4cdd1676a2ed42597d4fe7cade6fa393} 
+\index{Core@{Core}!DrawElements@{DrawElements}}
+\index{DrawElements@{DrawElements}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{DrawElements()}{DrawElements()}}
+{\footnotesize\ttfamily void Core\+::\+Draw\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Affichage des elements graphiques sur le module graphique. 
+
+
+
+Implémente \mbox{\hyperlink{classICore_a78c01b6949c99589a935a97bc8e41678}{ICore}}.
+
+\Hypertarget{classCore_ada9fb5b3b243912488e79ee722221336}\label{classCore_ada9fb5b3b243912488e79ee722221336} 
+\index{Core@{Core}!HandleEvents@{HandleEvents}}
+\index{HandleEvents@{HandleEvents}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{HandleEvents()}{HandleEvents()}}
+{\footnotesize\ttfamily void Core\+::\+Handle\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Gestion \& Envoi des events récuperés du module graphique au jeu. 
+
+
+
+Implémente \mbox{\hyperlink{classICore_af3c7a7606c17c124e5108943ab39a4c2}{ICore}}.
+
+\Hypertarget{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}\label{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc} 
+\index{Core@{Core}!LoadAllLibraries@{LoadAllLibraries}}
+\index{LoadAllLibraries@{LoadAllLibraries}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{LoadAllLibraries()}{LoadAllLibraries()}}
+{\footnotesize\ttfamily void Core\+::\+Load\+All\+Libraries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/. 
+
+
+
+Implémente \mbox{\hyperlink{classICore_a3ea545c70d4add029bad7625860f1be0}{ICore}}.
+
+\Hypertarget{classCore_a500b6ea23a0586bd487c305455b41f5a}\label{classCore_a500b6ea23a0586bd487c305455b41f5a} 
+\index{Core@{Core}!LoadFirstLibrary@{LoadFirstLibrary}}
+\index{LoadFirstLibrary@{LoadFirstLibrary}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{LoadFirstLibrary()}{LoadFirstLibrary()}}
+{\footnotesize\ttfamily void Core\+::\+Load\+First\+Library (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Permet de charger la librarie graphique donnée en argument lors du lancement de l\textquotesingle{}Arcade. 
+
+
+
+Implémente \mbox{\hyperlink{classICore_af9380036b075f4d523bb880a637403e0}{ICore}}.
+
+\Hypertarget{classCore_acd5d06d7cb010985a4f299791bbd72cf}\label{classCore_acd5d06d7cb010985a4f299791bbd72cf} 
 \index{Core@{Core}!LoadLibraries@{LoadLibraries}}
 \index{LoadLibraries@{LoadLibraries}!Core@{Core}}
 \doxysubsubsection{\texorpdfstring{LoadLibraries()}{LoadLibraries()}}
-{\footnotesize\ttfamily void Core\+::\+Load\+Libraries (\begin{DoxyParamCaption}\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Core\+::\+Load\+Libraries (\begin{DoxyParamCaption}\item[{int}]{ac,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{av }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -101,7 +164,7 @@ Initialise les libraries.
 
 Implémente \mbox{\hyperlink{classICore_a0e08b19686e745d4e1877fe6c6235a6c}{ICore}}.
 
-\mbox{\Hypertarget{classCore_a475b433f04f55b52e31e92b315e97deb}\label{classCore_a475b433f04f55b52e31e92b315e97deb}} 
+\Hypertarget{classCore_a475b433f04f55b52e31e92b315e97deb}\label{classCore_a475b433f04f55b52e31e92b315e97deb} 
 \index{Core@{Core}!NextGameModule@{NextGameModule}}
 \index{NextGameModule@{NextGameModule}!Core@{Core}}
 \doxysubsubsection{\texorpdfstring{NextGameModule()}{NextGameModule()}}
@@ -118,7 +181,7 @@ Renvoie le nom du prochain jeu de la liste des jeux disponibles
 
 Implémente \mbox{\hyperlink{classICore_a7105b0bf40a572ece256a9a902d3a917}{ICore}}.
 
-\mbox{\Hypertarget{classCore_a3e50fc8e86dd463870e5d20b033a7347}\label{classCore_a3e50fc8e86dd463870e5d20b033a7347}} 
+\Hypertarget{classCore_a3e50fc8e86dd463870e5d20b033a7347}\label{classCore_a3e50fc8e86dd463870e5d20b033a7347} 
 \index{Core@{Core}!NextGraphicalModule@{NextGraphicalModule}}
 \index{NextGraphicalModule@{NextGraphicalModule}!Core@{Core}}
 \doxysubsubsection{\texorpdfstring{NextGraphicalModule()}{NextGraphicalModule()}}
@@ -135,9 +198,23 @@ Renvoie le nom du prochain module graphique de la liste des modules graphiques d
 
 Implémente \mbox{\hyperlink{classICore_ab80d172ca80481b5f599f5f4a916948b}{ICore}}.
 
+\Hypertarget{classCore_a8139304d99d1059c77e336c8f097a006}\label{classCore_a8139304d99d1059c77e336c8f097a006} 
+\index{Core@{Core}!RunCore@{RunCore}}
+\index{RunCore@{RunCore}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{RunCore()}{RunCore()}}
+{\footnotesize\ttfamily void Core\+::\+Run\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+
+Lance les modules graphiques et le menu lorsque tout a été correctement initialisé 
+
+
+
+Implémente \mbox{\hyperlink{classICore_af2b718dc69a68ff960c49fb32e5b9831}{ICore}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 include/Core.\+hpp\item 
 include/Core.\+cpp\end{DoxyCompactItemize}

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Arcade: Référence de la classe Core</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,8 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+ <tr id="projectrow">
+  <td id="projectalign">
    <div id="projectname">Arcade
    </div>
   </td>
@@ -29,21 +29,22 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.1 -->
+<!-- Généré par Doxygen 1.9.8 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */</script>
+/* @license-end */
+</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -54,9 +55,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 </div><!-- top -->
@@ -65,8 +73,7 @@ $(function() {
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pro-methods">Fonctions membres protégées</a> &#124;
 <a href="classCore-members.html">Liste de tous les membres</a>  </div>
-  <div class="headertitle">
-<div class="title">Référence de la classe Core</div>  </div>
+  <div class="headertitle"><div class="title">Référence de la classe Core</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -88,50 +95,45 @@ Graphe de collaboration de Core:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a8139304d99d1059c77e336c8f097a006"><td class="memItemLeft" align="right" valign="top"><a id="a8139304d99d1059c77e336c8f097a006"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8139304d99d1059c77e336c8f097a006">RunCore</a> () override</td></tr>
-<tr class="memdesc:a8139304d99d1059c77e336c8f097a006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance les modules graphiques et le menu lorsque tout a été correctement initialisé <br /></td></tr>
+<tr class="memitem:a8139304d99d1059c77e336c8f097a006" id="r_a8139304d99d1059c77e336c8f097a006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8139304d99d1059c77e336c8f097a006">RunCore</a> () override</td></tr>
+<tr class="memdesc:a8139304d99d1059c77e336c8f097a006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lance les modules graphiques et le menu lorsque tout a été correctement initialisé  <br /></td></tr>
 <tr class="separator:a8139304d99d1059c77e336c8f097a006"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd5d06d7cb010985a4f299791bbd72cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#acd5d06d7cb010985a4f299791bbd72cf">LoadLibraries</a> (int ac, char **av) override</td></tr>
-<tr class="memdesc:acd5d06d7cb010985a4f299791bbd72cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise les libraries.  <a href="classCore.html#acd5d06d7cb010985a4f299791bbd72cf">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:acd5d06d7cb010985a4f299791bbd72cf" id="r_acd5d06d7cb010985a4f299791bbd72cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#acd5d06d7cb010985a4f299791bbd72cf">LoadLibraries</a> (int ac, char **av) override</td></tr>
+<tr class="memdesc:acd5d06d7cb010985a4f299791bbd72cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise les libraries.  <br /></td></tr>
 <tr class="separator:acd5d06d7cb010985a4f299791bbd72cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
-<tr class="memitem:a030d0cf495f0a40fcdc5e9df495ce52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a030d0cf495f0a40fcdc5e9df495ce52e">ChangeDisplayModule</a> (const std::string &amp;name) override</td></tr>
-<tr class="memdesc:a030d0cf495f0a40fcdc5e9df495ce52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le module de jeu.  <a href="classCore.html#a030d0cf495f0a40fcdc5e9df495ce52e">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a030d0cf495f0a40fcdc5e9df495ce52e" id="r_a030d0cf495f0a40fcdc5e9df495ce52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a030d0cf495f0a40fcdc5e9df495ce52e">ChangeDisplayModule</a> (const std::string &amp;name) override</td></tr>
+<tr class="memdesc:a030d0cf495f0a40fcdc5e9df495ce52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le module de jeu.  <br /></td></tr>
 <tr class="separator:a030d0cf495f0a40fcdc5e9df495ce52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4912c34f74a2bd61e21101300607af8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ab4912c34f74a2bd61e21101300607af8">ChangeGameModule</a> (const std::string &amp;name) override</td></tr>
-<tr class="memdesc:ab4912c34f74a2bd61e21101300607af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le module de jeu.  <a href="classCore.html#ab4912c34f74a2bd61e21101300607af8">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ab4912c34f74a2bd61e21101300607af8" id="r_ab4912c34f74a2bd61e21101300607af8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ab4912c34f74a2bd61e21101300607af8">ChangeGameModule</a> (const std::string &amp;name) override</td></tr>
+<tr class="memdesc:ab4912c34f74a2bd61e21101300607af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le module de jeu.  <br /></td></tr>
 <tr class="separator:ab4912c34f74a2bd61e21101300607af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada9fb5b3b243912488e79ee722221336"><td class="memItemLeft" align="right" valign="top"><a id="ada9fb5b3b243912488e79ee722221336"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ada9fb5b3b243912488e79ee722221336">HandleEvents</a> () override</td></tr>
-<tr class="memdesc:ada9fb5b3b243912488e79ee722221336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion &amp; Envoi des events récuperés du module graphique au jeu. <br /></td></tr>
+<tr class="memitem:ada9fb5b3b243912488e79ee722221336" id="r_ada9fb5b3b243912488e79ee722221336"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#ada9fb5b3b243912488e79ee722221336">HandleEvents</a> () override</td></tr>
+<tr class="memdesc:ada9fb5b3b243912488e79ee722221336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion &amp; Envoi des events récuperés du module graphique au jeu.  <br /></td></tr>
 <tr class="separator:ada9fb5b3b243912488e79ee722221336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cdd1676a2ed42597d4fe7cade6fa393"><td class="memItemLeft" align="right" valign="top"><a id="a4cdd1676a2ed42597d4fe7cade6fa393"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a4cdd1676a2ed42597d4fe7cade6fa393">DrawElements</a> () override</td></tr>
-<tr class="memdesc:a4cdd1676a2ed42597d4fe7cade6fa393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage des elements graphiques sur le module graphique. <br /></td></tr>
+<tr class="memitem:a4cdd1676a2ed42597d4fe7cade6fa393" id="r_a4cdd1676a2ed42597d4fe7cade6fa393"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a4cdd1676a2ed42597d4fe7cade6fa393">DrawElements</a> () override</td></tr>
+<tr class="memdesc:a4cdd1676a2ed42597d4fe7cade6fa393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage des elements graphiques sur le module graphique.  <br /></td></tr>
 <tr class="separator:a4cdd1676a2ed42597d4fe7cade6fa393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e50fc8e86dd463870e5d20b033a7347"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a3e50fc8e86dd463870e5d20b033a7347">NextGraphicalModule</a> () override</td></tr>
-<tr class="memdesc:a3e50fc8e86dd463870e5d20b033a7347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'ouvrir le prochain module graphique.  <a href="classCore.html#a3e50fc8e86dd463870e5d20b033a7347">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a3e50fc8e86dd463870e5d20b033a7347" id="r_a3e50fc8e86dd463870e5d20b033a7347"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a3e50fc8e86dd463870e5d20b033a7347">NextGraphicalModule</a> () override</td></tr>
+<tr class="memdesc:a3e50fc8e86dd463870e5d20b033a7347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'ouvrir le prochain module graphique.  <br /></td></tr>
 <tr class="separator:a3e50fc8e86dd463870e5d20b033a7347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a475b433f04f55b52e31e92b315e97deb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a475b433f04f55b52e31e92b315e97deb">NextGameModule</a> () override</td></tr>
-<tr class="memdesc:a475b433f04f55b52e31e92b315e97deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'ouvrir le prochain module graphique.  <a href="classCore.html#a475b433f04f55b52e31e92b315e97deb">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a475b433f04f55b52e31e92b315e97deb" id="r_a475b433f04f55b52e31e92b315e97deb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a475b433f04f55b52e31e92b315e97deb">NextGameModule</a> () override</td></tr>
+<tr class="memdesc:a475b433f04f55b52e31e92b315e97deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'ouvrir le prochain module graphique.  <br /></td></tr>
 <tr class="separator:a475b433f04f55b52e31e92b315e97deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500b6ea23a0586bd487c305455b41f5a"><td class="memItemLeft" align="right" valign="top"><a id="a500b6ea23a0586bd487c305455b41f5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a500b6ea23a0586bd487c305455b41f5a">LoadFirstLibrary</a> (const std::string &amp;input) override</td></tr>
-<tr class="memdesc:a500b6ea23a0586bd487c305455b41f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de charger la librarie graphique donnée en argument lors du lancement de l'Arcade. <br /></td></tr>
+<tr class="memitem:a500b6ea23a0586bd487c305455b41f5a" id="r_a500b6ea23a0586bd487c305455b41f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a500b6ea23a0586bd487c305455b41f5a">LoadFirstLibrary</a> (const std::string &amp;input) override</td></tr>
+<tr class="memdesc:a500b6ea23a0586bd487c305455b41f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de charger la librarie graphique donnée en argument lors du lancement de l'Arcade.  <br /></td></tr>
 <tr class="separator:a500b6ea23a0586bd487c305455b41f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ff1bc263b7c553bb2b19c73850bcfbc"><td class="memItemLeft" align="right" valign="top"><a id="a8ff1bc263b7c553bb2b19c73850bcfbc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8ff1bc263b7c553bb2b19c73850bcfbc">LoadAllLibraries</a> (const std::string &amp;input) override</td></tr>
-<tr class="memdesc:a8ff1bc263b7c553bb2b19c73850bcfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/. <br /></td></tr>
+<tr class="memitem:a8ff1bc263b7c553bb2b19c73850bcfbc" id="r_a8ff1bc263b7c553bb2b19c73850bcfbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCore.html#a8ff1bc263b7c553bb2b19c73850bcfbc">LoadAllLibraries</a> (const std::string &amp;input) override</td></tr>
+<tr class="memdesc:a8ff1bc263b7c553bb2b19c73850bcfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/.  <br /></td></tr>
 <tr class="separator:a8ff1bc263b7c553bb2b19c73850bcfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="a030d0cf495f0a40fcdc5e9df495ce52e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a030d0cf495f0a40fcdc5e9df495ce52e">&#9670;&nbsp;</a></span>ChangeDisplayModule()</h2>
+<a id="a030d0cf495f0a40fcdc5e9df495ce52e" name="a030d0cf495f0a40fcdc5e9df495ce52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a030d0cf495f0a40fcdc5e9df495ce52e">&#9670;&#160;</a></span>ChangeDisplayModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,8 +168,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="ab4912c34f74a2bd61e21101300607af8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4912c34f74a2bd61e21101300607af8">&#9670;&nbsp;</a></span>ChangeGameModule()</h2>
+<a id="ab4912c34f74a2bd61e21101300607af8" name="ab4912c34f74a2bd61e21101300607af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4912c34f74a2bd61e21101300607af8">&#9670;&#160;</a></span>ChangeGameModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,8 +204,126 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="acd5d06d7cb010985a4f299791bbd72cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd5d06d7cb010985a4f299791bbd72cf">&#9670;&nbsp;</a></span>LoadLibraries()</h2>
+<a id="a4cdd1676a2ed42597d4fe7cade6fa393" name="a4cdd1676a2ed42597d4fe7cade6fa393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cdd1676a2ed42597d4fe7cade6fa393">&#9670;&#160;</a></span>DrawElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::DrawElements </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affichage des elements graphiques sur le module graphique. </p>
+
+<p>Implémente <a class="el" href="classICore.html#a78c01b6949c99589a935a97bc8e41678">ICore</a>.</p>
+
+</div>
+</div>
+<a id="ada9fb5b3b243912488e79ee722221336" name="ada9fb5b3b243912488e79ee722221336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada9fb5b3b243912488e79ee722221336">&#9670;&#160;</a></span>HandleEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::HandleEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gestion &amp; Envoi des events récuperés du module graphique au jeu. </p>
+
+<p>Implémente <a class="el" href="classICore.html#af3c7a7606c17c124e5108943ab39a4c2">ICore</a>.</p>
+
+</div>
+</div>
+<a id="a8ff1bc263b7c553bb2b19c73850bcfbc" name="a8ff1bc263b7c553bb2b19c73850bcfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff1bc263b7c553bb2b19c73850bcfbc">&#9670;&#160;</a></span>LoadAllLibraries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::LoadAllLibraries </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet de récuperer la liste des libraries disponibles dans le dossier ./lib/. </p>
+
+<p>Implémente <a class="el" href="classICore.html#a3ea545c70d4add029bad7625860f1be0">ICore</a>.</p>
+
+</div>
+</div>
+<a id="a500b6ea23a0586bd487c305455b41f5a" name="a500b6ea23a0586bd487c305455b41f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500b6ea23a0586bd487c305455b41f5a">&#9670;&#160;</a></span>LoadFirstLibrary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::LoadFirstLibrary </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet de charger la librarie graphique donnée en argument lors du lancement de l'Arcade. </p>
+
+<p>Implémente <a class="el" href="classICore.html#af9380036b075f4d523bb880a637403e0">ICore</a>.</p>
+
+</div>
+</div>
+<a id="acd5d06d7cb010985a4f299791bbd72cf" name="acd5d06d7cb010985a4f299791bbd72cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd5d06d7cb010985a4f299791bbd72cf">&#9670;&#160;</a></span>LoadLibraries()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,8 +369,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a475b433f04f55b52e31e92b315e97deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a475b433f04f55b52e31e92b315e97deb">&#9670;&nbsp;</a></span>NextGameModule()</h2>
+<a id="a475b433f04f55b52e31e92b315e97deb" name="a475b433f04f55b52e31e92b315e97deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475b433f04f55b52e31e92b315e97deb">&#9670;&#160;</a></span>NextGameModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,8 +399,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a3e50fc8e86dd463870e5d20b033a7347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e50fc8e86dd463870e5d20b033a7347">&#9670;&nbsp;</a></span>NextGraphicalModule()</h2>
+<a id="a3e50fc8e86dd463870e5d20b033a7347" name="a3e50fc8e86dd463870e5d20b033a7347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e50fc8e86dd463870e5d20b033a7347">&#9670;&#160;</a></span>NextGraphicalModule()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,14 +429,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
+<a id="a8139304d99d1059c77e336c8f097a006" name="a8139304d99d1059c77e336c8f097a006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8139304d99d1059c77e336c8f097a006">&#9670;&#160;</a></span>RunCore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Core::RunCore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lance les modules graphiques et le menu lorsque tout a été correctement initialisé </p>
+
+<p>Implémente <a class="el" href="classICore.html#af2b718dc69a68ff960c49fb32e5b9831">ICore</a>.</p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>include/<a class="el" href="Core_8hpp_source.html">Core.hpp</a></li>
-<li>include/Core.cpp</li>
+<li>include/<b>Core.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

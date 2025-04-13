@@ -1,26 +1,34 @@
-\hypertarget{classSfml}{}\doxysection{Référence de la classe Sfml}
-\label{classSfml}\index{Sfml@{Sfml}}
+\doxysection{Référence de la classe Sfml}
+\hypertarget{classSfml}{}\label{classSfml}\index{Sfml@{Sfml}}
 
 
 Graphe d\textquotesingle{}héritage de Sfml\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classSfml__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Graphe de collaboration de Sfml\+:
-% FIG 1
-\doxysubsection*{Fonctions membres publiques}
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classSfml__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}\label{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}} 
 void \mbox{\hyperlink{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}{create\+Window}} () override
 \begin{DoxyCompactList}\small\item\em Appelle la création de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}\label{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}} 
 void \mbox{\hyperlink{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}{destroy\+Window}} () override
 \begin{DoxyCompactList}\small\item\em Appelle la destruction de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}\label{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}} 
 void \mbox{\hyperlink{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}{display}} () override
 \begin{DoxyCompactList}\small\item\em Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}\label{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}} 
 void \mbox{\hyperlink{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}{clear}} () override
 \begin{DoxyCompactList}\small\item\em Appelle le clear de la librarie graphique en question. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}{draw\+Text}} (const \mbox{\hyperlink{classText}{Text}} \&text) override
@@ -29,14 +37,79 @@ void \mbox{\hyperlink{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}{draw\+Rect}} 
 \begin{DoxyCompactList}\small\item\em Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} $>$ \mbox{\hyperlink{classSfml_a277dc74d2be77f077d37d9519869d01c}{get\+Events}} () override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les events. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSfml_ab860a72d8642deef55f4d8f1013a770c}\label{classSfml_ab860a72d8642deef55f4d8f1013a770c}} 
 std\+::string \mbox{\hyperlink{classSfml_ab860a72d8642deef55f4d8f1013a770c}{get\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le nom de la librarie graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membres hérités additionnels}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{classADisplayModule}{ADisplay\+Module}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries ADisplay\+Module} (std\+::string name="{}"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{classADisplayModule}{ADisplay\+Module}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries \+\_\+name}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Documentation des fonctions membres}
-\mbox{\Hypertarget{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}\label{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}} 
+\Hypertarget{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}\label{classSfml_a54d0113db38db6db6fe41713f8f1e2c0} 
+\index{Sfml@{Sfml}!clear@{clear}}
+\index{clear@{clear}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Sfml\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Appelle le clear de la librarie graphique en question. 
+
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}{ADisplay\+Module}}.
+
+\Hypertarget{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}\label{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f} 
+\index{Sfml@{Sfml}!createWindow@{createWindow}}
+\index{createWindow@{createWindow}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
+{\footnotesize\ttfamily void Sfml\+::create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Appelle la création de la fenêtre de la librarie graphique. 
+
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}{ADisplay\+Module}}.
+
+\Hypertarget{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}\label{classSfml_ab8dd4770f9194af0b4903426dc99cd2d} 
+\index{Sfml@{Sfml}!destroyWindow@{destroyWindow}}
+\index{destroyWindow@{destroyWindow}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{destroyWindow()}{destroyWindow()}}
+{\footnotesize\ttfamily void Sfml\+::destroy\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Appelle la destruction de la fenêtre de la librarie graphique. 
+
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_ac890715c87fe2e386796571a0140e77f}{ADisplay\+Module}}.
+
+\Hypertarget{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}\label{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998} 
+\index{Sfml@{Sfml}!display@{display}}
+\index{display@{display}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Sfml\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. 
+
+
+
+Implémente \mbox{\hyperlink{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}{ADisplay\+Module}}.
+
+\Hypertarget{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}\label{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0} 
 \index{Sfml@{Sfml}!drawRect@{drawRect}}
 \index{drawRect@{drawRect}!Sfml@{Sfml}}
 \doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
@@ -48,14 +121,14 @@ Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \mbox{\hyperlink{classRect}{Rect}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
+{\em text} & Class \doxylink{classRect}{Rect} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
 \hline
 \end{DoxyParams}
 
 
 Implémente \mbox{\hyperlink{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}{ADisplay\+Module}}.
 
-\mbox{\Hypertarget{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}\label{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}} 
+\Hypertarget{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}\label{classSfml_aca28315dde5d90cd8b84aa36ec378cc8} 
 \index{Sfml@{Sfml}!drawText@{drawText}}
 \index{drawText@{drawText}!Sfml@{Sfml}}
 \doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
@@ -67,14 +140,14 @@ Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}af
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \mbox{\hyperlink{classText}{Text}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
+{\em text} & Class \doxylink{classText}{Text} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
 \hline
 \end{DoxyParams}
 
 
 Implémente \mbox{\hyperlink{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}{ADisplay\+Module}}.
 
-\mbox{\Hypertarget{classSfml_a277dc74d2be77f077d37d9519869d01c}\label{classSfml_a277dc74d2be77f077d37d9519869d01c}} 
+\Hypertarget{classSfml_a277dc74d2be77f077d37d9519869d01c}\label{classSfml_a277dc74d2be77f077d37d9519869d01c} 
 \index{Sfml@{Sfml}!getEvents@{getEvents}}
 \index{getEvents@{getEvents}!Sfml@{Sfml}}
 \doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
@@ -89,11 +162,25 @@ Renvoie un vector contenant toutes les actions que la librarie graphique a captu
 \end{DoxyReturn}
 
 
-Implémente \mbox{\hyperlink{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}{ADisplay\+Module}}.
+Implémente \mbox{\hyperlink{classADisplayModule_af8b2de9e996237932d80be8a3591e07f}{ADisplay\+Module}}.
+
+\Hypertarget{classSfml_ab860a72d8642deef55f4d8f1013a770c}\label{classSfml_ab860a72d8642deef55f4d8f1013a770c} 
+\index{Sfml@{Sfml}!getName@{getName}}
+\index{getName@{getName}!Sfml@{Sfml}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Sfml\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+Permet de récupérer le nom de la librarie graphique. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}{ADisplay\+Module}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 lib/graphical/src/sfml/arcade\+\_\+sfml.\+hpp\item 
 lib/graphical/src/sfml/arcade\+\_\+sfml.\+cpp\end{DoxyCompactItemize}

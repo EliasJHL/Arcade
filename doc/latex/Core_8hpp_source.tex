@@ -1,0 +1,59 @@
+\doxysection{Core.\+hpp}
+\hypertarget{Core_8hpp_source}{}\label{Core_8hpp_source}\index{include/Core.hpp@{include/Core.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ Core.hpp\ for\ B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen\ in\ /home/elias/Documents/Epitech/Arcade/B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen/include}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Made\ by\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Login\ \ \ <elias-\/josue.hajjar-\/llauquen@epitech.eu>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**}}
+\DoxyCodeLine{00007\ \textcolor{comment}{**\ Started\ on\ \ Fri\ Mar\ 21\ 16:31:39\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00008\ \textcolor{comment}{**\ Last\ update\ Mon\ Mar\ 30\ 19:17:49\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00009\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ CORE\_HPP\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#\ define\ CORE\_HPP\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IDisplay_8hpp}{interfaces/IDisplay.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ICore_8hpp}{interfaces/ICore.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGame_8hpp}{interfaces/IGame.hpp}}"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ADisplayModule_8hpp}{ADisplayModule.hpp}}"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AGameModule_8hpp}{AGameModule.hpp}}"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DLLoader_8hpp}{DLLoader.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCore}{Core}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classICore}{ICore}}\{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCore}{Core}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCore}{\string~Core}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_a8139304d99d1059c77e336c8f097a006}{RunCore}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_acd5d06d7cb010985a4f299791bbd72cf}{LoadLibraries}}(\textcolor{keywordtype}{int}\ ac,\ \textcolor{keywordtype}{char}\ **av)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}{ChangeDisplayModule}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_ab4912c34f74a2bd61e21101300607af8}{ChangeGameModule}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_ada9fb5b3b243912488e79ee722221336}{HandleEvents}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}{DrawElements}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classCore_a3e50fc8e86dd463870e5d20b033a7347}{NextGraphicalModule}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classCore_a475b433f04f55b52e31e92b315e97deb}{NextGameModule}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_a500b6ea23a0586bd487c305455b41f5a}{LoadFirstLibrary}}(\textcolor{keyword}{const}\ std::string\ \&input)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}{LoadAllLibraries}}(\textcolor{keyword}{const}\ std::string\ \&input)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<std::string>\ mAvailablesGames;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::vector<std::string>\ mAvailablesGraphics;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::set<std::string>\ mLoadedLibraries;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::unique\_ptr<DLLoader<ADisplayModule>>>\ mGraphicLoader;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::map<std::string,\ std::unique\_ptr<DLLoader<AGameModule>>>\ mGamesLoader;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::unique\_ptr<ADisplayModule>\ mActiveGraphic;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::unique\_ptr<AGameModule>\ mActiveGame;}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !CORE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

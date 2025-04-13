@@ -1,0 +1,40 @@
+\doxysection{DLLoader.\+cpp}
+\hypertarget{DLLoader_8cpp_source}{}\label{DLLoader_8cpp_source}\index{src/DLLoader.cpp@{src/DLLoader.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ DLLoader.cpp\ for\ B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen\ in\ /home/elias/Documents/Epitech/Arcade/B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen/src}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ Made\ by\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Login\ \ \ <elias-\/josue.hajjar-\/llauquen@epitech.eu>}}
+\DoxyCodeLine{00006\ \textcolor{comment}{**}}
+\DoxyCodeLine{00007\ \textcolor{comment}{**\ Started\ on\ \ Fri\ Mar\ 21\ 15:30:02\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00008\ \textcolor{comment}{**\ Last\ update\ Thu\ Mar\ 26\ 20:16:29\ 2025\ Elias\ Josué\ HAJJAR\ LLAUQUEN}}
+\DoxyCodeLine{00009\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DLLoader_8hpp}{DLLoader.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00014\ \mbox{\hyperlink{classDLLoader_a6af0dc3d5e22dc8e5bd0c5bec7b36f88}{DLLoader<T>::DLLoader}}(\textcolor{keyword}{const}\ std::string\ \&path)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ handler\ =\ dlopen(path.c\_str(),\ RTLD\_LAZY);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (handler\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(dlerror());}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00021\ \mbox{\hyperlink{classDLLoader_aea867b497cf92c50f85ad7e1d37962ae}{DLLoader<T>::\string~DLLoader}}()\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (handler)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ dlclose(handler);}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00027\ T\ *\mbox{\hyperlink{classDLLoader_a396da7ee604a1ddf0341b08032434335}{DLLoader<T>::getInstance}}(\textcolor{keyword}{const}\ std::string\ \&symbol)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ *ptr\ =\ dlsym(handler,\ symbol.c\_str());}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (ptr\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(dlerror());}
+\DoxyCodeLine{00032\ \ \ \ \ std::function<T\ *(void)>\ symFcn\ =\ \textcolor{keyword}{reinterpret\_cast<}T\ *(*)()\textcolor{keyword}{>}(ptr);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ symFcn();}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

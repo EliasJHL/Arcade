@@ -1,0 +1,80 @@
+\doxysection{arcade\+\_\+nibbler.\+hpp}
+\hypertarget{arcade__nibbler_8hpp_source}{}\label{arcade__nibbler_8hpp_source}\index{lib/games/src/nibbler/arcade\_nibbler.hpp@{lib/games/src/nibbler/arcade\_nibbler.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2025}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/OOP-\/400-\/MPL-\/4-\/1-\/arcade-\/elias-\/josue.hajjar-\/llauquen}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ arcade\_nibbler}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ ARCADE\_Nibbler\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#\ define\ ARCADE\_Nibbler\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AGameModule_8hpp}{AGameModule.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ Move\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ NONE\ =\ -\/1,}
+\DoxyCodeLine{00017\ \ \ \ \ UP\ =\ 0,}
+\DoxyCodeLine{00018\ \ \ \ \ DOWN\ =\ 1,}
+\DoxyCodeLine{00019\ \ \ \ \ LEFT\ =\ 2,}
+\DoxyCodeLine{00020\ \ \ \ \ RIGHT\ =\ 3}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{enum}\ Type\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ VOID\ =\ 0,}
+\DoxyCodeLine{00025\ \ \ \ \ HEAD\ =\ 1,}
+\DoxyCodeLine{00026\ \ \ \ \ BODY\ =\ 2,}
+\DoxyCodeLine{00027\ \ \ \ \ APPLE\ =\ 3,}
+\DoxyCodeLine{00028\ \ \ \ \ WALL\ =\ 4}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classNibbler}{Nibbler}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classAGameModule}{AGameModule}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNibbler}{Nibbler}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}nibbler"{}});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classNibbler}{\string~Nibbler}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classNibbler_acc3781e79d59bf860f225f908a7b65e4}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::vector<Rect>\ \mbox{\hyperlink{classNibbler_a9de39e245e4b014c68a67ba89a9ff217}{getRects}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<Text>\ \mbox{\hyperlink{classNibbler_a0acef5df054784b2dcd8c7ca9368498f}{getTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNibbler_a51edaebec14acaf05241c88b0dc280f1}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNibbler_a286931643cc9d3cb89adab5222cbe5b8}{init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classNibbler_ad1df2029c3e773c6bca8c433a0101db4}{stop}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ std::string\ saveState()\ override\ \{\};}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ loadState(const\ std::string\ \&state)\ override\ \{\};}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ \mbox{\hyperlink{classNibbler_a8178d11ae093db837235557f5a8e4ad4}{handleEvent}}(\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ HandleMovement();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ HandleActions(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ generateApple();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateBody();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ GameOver();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisplayMap();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisplayNibbler();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DisplayInfos();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Map(\textcolor{keywordtype}{int}\ nb);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ parseMap(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ checkIntersection(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_x;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_y;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ Move\ \_Direction;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_GameOver;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_GameOverScreen;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_NumMap;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ x,\ y,\ prev\_x,\ prev\_y}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::vector<std::tuple<int,\ int,\ int,\ int>>\ \_Nibblerbody;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<std::vector<Type>>\ \_map;}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ARCADE\_Nibbler\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{ICore.\+hpp}
+\hypertarget{ICore_8hpp_source}{}\label{ICore_8hpp_source}\index{include/interfaces/ICore.hpp@{include/interfaces/ICore.hpp}}
+\mbox{\hyperlink{ICore_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ ICORE\_HPP\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#\ define\ ICORE\_HPP\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classICore}{ICore}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classICore}{\string~ICore}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_a0e08b19686e745d4e1877fe6c6235a6c}{LoadLibraries}}(\textcolor{keywordtype}{int}\ ac,\ \textcolor{keywordtype}{char}\ **av)\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_af2b718dc69a68ff960c49fb32e5b9831}{RunCore}}()\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_aa853495e36e491e147013e37a2bcc70a}{ChangeDisplayModule}}(\textcolor{keyword}{const}\ std::string\ \&name)\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_ae2bcb3a1be2f376fe69963e046f9962e}{ChangeGameModule}}(\textcolor{keyword}{const}\ std::string\ \&name)\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_af3c7a7606c17c124e5108943ab39a4c2}{HandleEvents}}()\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_a78c01b6949c99589a935a97bc8e41678}{DrawElements}}()\ =\ 0;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classICore_ab80d172ca80481b5f599f5f4a916948b}{NextGraphicalModule}}()\ =\ 0;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classICore_a7105b0bf40a572ece256a9a902d3a917}{NextGameModule}}()\ =\ 0;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_af9380036b075f4d523bb880a637403e0}{LoadFirstLibrary}}(\textcolor{keyword}{const}\ std::string\ \&input)\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classICore_a3ea545c70d4add029bad7625860f1be0}{LoadAllLibraries}}(\textcolor{keyword}{const}\ std::string\ \&input)\ =\ 0;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !ICORE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

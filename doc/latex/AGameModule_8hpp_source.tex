@@ -1,0 +1,43 @@
+\doxysection{AGame\+Module.\+hpp}
+\hypertarget{AGameModule_8hpp_source}{}\label{AGameModule_8hpp_source}\index{include/AGameModule.hpp@{include/AGameModule.hpp}}
+\mbox{\hyperlink{AGameModule_8hpp}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ AGAMEMODULE\_HPP\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#\ define\ AGAMEMODULE\_HPP\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{IGame_8hpp}{./interfaces/IGame.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAGameModule}{AGameModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIGameModule}{IGameModule}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classAGameModule}{AGameModule}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classAGameModule}{\string~AGameModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classAGameModule_af1688989c41d6b15a109a08006f61283}{getName}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_a9bdaf5e9d88528707fa25a18130255a8}{update}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_a57c7615e20f9ab57a877f0decf5f4ede}{init}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_adf1c981c6130bf79ca008ea15a26cc83}{stop}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::vector<Rect>\ \mbox{\hyperlink{classAGameModule_a78e2b2cebbed49c870322614025b7b9d}{getRects}}()\ \textcolor{keyword}{const\ override};;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::vector<Text>\ \mbox{\hyperlink{classAGameModule_a5b5caf83fad27f8574ef744e6b275d27}{getTexts}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b346419}{handleEvent}}(\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ event)\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_a47b86a1e1fe74c50e3dc34d098b81ac4}{setGameSwitchCallback}}(std::function<\textcolor{keywordtype}{void}(std::string)>\ callback)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_a86cc637ca6ca3c38b377923a9467b720}{setGraphicSwitchCallback}}(std::function<\textcolor{keywordtype}{void}(std::string)>\ callback)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAGameModule_ae06892fec67d6725a2c37db907e9215b}{setLibSwitchCallback}}(std::function<\textcolor{keywordtype}{void}()>\ callback)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ \mbox{\hyperlink{classAGameModule_ab1f4a7f5a4df216ac5ebf09d82ebc692}{handleEventGeneric}}(\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ std::string\ \_name;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::vector<Rect>\ \_rects;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::vector<Text>\ \_texts;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::function<void(std::string)>\ \_gameSwitchCallback;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::function<void()>\ \_libSwitchCallback;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::function<void(std::string)>\ \_graphicSwitchCallback;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ switchToNextGame(\textcolor{keyword}{const}\ std::string\ \&gameName\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ switchToNextLib();}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !AGAMEMODULE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
