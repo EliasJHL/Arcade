@@ -68,6 +68,7 @@ var NAVTREEINDEX0 =
 "IGame_8hpp_source.html":[2,0,0,0,2],
 "Rect_8hpp.html":[2,0,0,7],
 "Rect_8hpp_source.html":[2,0,0,7],
+"Text_8hpp.html":[2,0,0,8],
 "Text_8hpp_source.html":[2,0,0,8],
 "annotated.html":[1,0],
 "arcade__menu_8hpp_source.html":[2,0,1,0,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classSfml.html#a018333133510ebfbae9cf872d0fe15d8":[1,0,13,1],
 "classSfml.html#a277dc74d2be77f077d37d9519869d01c":[1,0,13,8],
 "classSfml.html#a2de000fce0f9f7b0dfde58aab5ab7998":[1,0,13,5],
-"classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0":[1,0,13,2],
-"classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0":[1,0,13,6]
+"classSfml.html#a54d0113db38db6db6fe41713f8f1e2c0":[1,0,13,2]
 };

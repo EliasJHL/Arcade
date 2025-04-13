@@ -1,12 +1,10 @@
-/*
-** Core.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Fri Mar 21 16:31:39 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Mon Mar 30 19:17:49 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file DLLoader.hpp
+ * @brief Template pour le DLLoader
+ * @author Elias H. <elias-josue.hajjar-llauquen@epitech.eu> & Enzo C. <enzo.lobato-couthino@epitech.eu>
+ *
+ * Ce fichier définit le template pour le DLLoader.
+ */
 
 #ifndef CORE_HPP_
 # define CORE_HPP_
@@ -27,15 +25,49 @@ class Core : public ICore{
     public:
         Core();
         ~Core();
+
+        /**
+        * @brief Lance la boucle entre le jeu et le graphique
+        */ 
         void RunCore() override;
+
+        /**
+        * @brief Load les libraries
+        */ 
         void LoadLibraries(int ac, char **av) override;
     protected:
+        /**
+        * @brief Charge une nouvelle lib graphique
+        * @param name nom du module graphique
+        */ 
         void ChangeDisplayModule(const std::string &name) override;
+
+        /**
+        * @brief Charge un nouveau jeu
+        * @param name nom du jeu
+        */
         void ChangeGameModule(const std::string &name) override;
         
+        /**
+        * @brief Géstion des events
+        */
         void HandleEvents() override;
+
+        /**
+        * @brief Appelle l'affichage de tout au graphique
+        */
         void DrawElements() override;
+
+        /**
+        * @brief renvoie le module graphique suivant
+        * @return renvoie le nom du prochain module graphique
+        */
         std::string NextGraphicalModule() override;
+
+        /**
+        * @brief renvoie le module jeu
+        * @return renvoie le nom du prochain jeu
+        */
         std::string NextGameModule() override;
 
         void LoadFirstLibrary(const std::string &input) override;

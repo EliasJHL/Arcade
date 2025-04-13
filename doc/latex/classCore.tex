@@ -13,26 +13,27 @@ Graphe de collaboration de Core\+:
 \item 
 \mbox{\Hypertarget{classCore_a8139304d99d1059c77e336c8f097a006}\label{classCore_a8139304d99d1059c77e336c8f097a006}} 
 void \mbox{\hyperlink{classCore_a8139304d99d1059c77e336c8f097a006}{Run\+Core}} () override
-\begin{DoxyCompactList}\small\item\em Lance les modules graphiques et le menu lorsque tout a été correctement initialisé \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Lance la boucle entre le jeu et le graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCore_acd5d06d7cb010985a4f299791bbd72cf}\label{classCore_acd5d06d7cb010985a4f299791bbd72cf}} 
 void \mbox{\hyperlink{classCore_acd5d06d7cb010985a4f299791bbd72cf}{Load\+Libraries}} (int ac, char $\ast$$\ast$av) override
-\begin{DoxyCompactList}\small\item\em Initialise les libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Load les libraries. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Fonctions membres protégées}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classCore_a030d0cf495f0a40fcdc5e9df495ce52e}{Change\+Display\+Module}} (const std\+::string \&name) override
-\begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Charge une nouvelle lib graphique. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCore_ab4912c34f74a2bd61e21101300607af8}{Change\+Game\+Module}} (const std\+::string \&name) override
-\begin{DoxyCompactList}\small\item\em Initialise le module de jeu. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Charge un nouveau jeu. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCore_ada9fb5b3b243912488e79ee722221336}\label{classCore_ada9fb5b3b243912488e79ee722221336}} 
 void \mbox{\hyperlink{classCore_ada9fb5b3b243912488e79ee722221336}{Handle\+Events}} () override
-\begin{DoxyCompactList}\small\item\em Gestion \& Envoi des events récuperés du module graphique au jeu. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Géstion des events. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}\label{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}} 
 void \mbox{\hyperlink{classCore_a4cdd1676a2ed42597d4fe7cade6fa393}{Draw\+Elements}} () override
-\begin{DoxyCompactList}\small\item\em Affichage des elements graphiques sur le module graphique. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Appelle l\textquotesingle{}affichage de tout au graphique. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCore_a3e50fc8e86dd463870e5d20b033a7347}{Next\+Graphical\+Module}} () override
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em renvoie le module graphique suivant \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classCore_a475b433f04f55b52e31e92b315e97deb}{Next\+Game\+Module}} () override
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}ouvrir le prochain module graphique. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em renvoie le module jeu \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCore_a500b6ea23a0586bd487c305455b41f5a}\label{classCore_a500b6ea23a0586bd487c305455b41f5a}} 
 void \mbox{\hyperlink{classCore_a500b6ea23a0586bd487c305455b41f5a}{Load\+First\+Library}} (const std\+::string \&input) override
 \begin{DoxyCompactList}\small\item\em Permet de charger la librarie graphique donnée en argument lors du lancement de l\textquotesingle{}Arcade. \end{DoxyCompactList}\item 
@@ -50,11 +51,11 @@ void \mbox{\hyperlink{classCore_a8ff1bc263b7c553bb2b19c73850bcfbc}{Load\+All\+Li
 
 
 
-Initialise le module de jeu. 
+Charge une nouvelle lib graphique. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em name} & Nom du module graphique souhaité \\
+{\em name} & nom du module graphique \\
 \hline
 \end{DoxyParams}
 
@@ -69,37 +70,16 @@ Implémente \mbox{\hyperlink{classICore_aa853495e36e491e147013e37a2bcc70a}{ICore
 
 
 
-Initialise le module de jeu. 
+Charge un nouveau jeu. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em name} & Nom du jeu souhaité \\
+{\em name} & nom du jeu \\
 \hline
 \end{DoxyParams}
 
 
 Implémente \mbox{\hyperlink{classICore_ae2bcb3a1be2f376fe69963e046f9962e}{ICore}}.
-
-\mbox{\Hypertarget{classCore_acd5d06d7cb010985a4f299791bbd72cf}\label{classCore_acd5d06d7cb010985a4f299791bbd72cf}} 
-\index{Core@{Core}!LoadLibraries@{LoadLibraries}}
-\index{LoadLibraries@{LoadLibraries}!Core@{Core}}
-\doxysubsubsection{\texorpdfstring{LoadLibraries()}{LoadLibraries()}}
-{\footnotesize\ttfamily void Core\+::\+Load\+Libraries (\begin{DoxyParamCaption}\item[{int}]{ac,  }\item[{char $\ast$$\ast$}]{av }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Initialise les libraries. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em ac} & Nombre d\textquotesingle{}arguments \\
-\hline
-{\em av} & Tableau des arguments \\
-\hline
-\end{DoxyParams}
-
-
-Implémente \mbox{\hyperlink{classICore_a0e08b19686e745d4e1877fe6c6235a6c}{ICore}}.
 
 \mbox{\Hypertarget{classCore_a475b433f04f55b52e31e92b315e97deb}\label{classCore_a475b433f04f55b52e31e92b315e97deb}} 
 \index{Core@{Core}!NextGameModule@{NextGameModule}}
@@ -109,10 +89,10 @@ Implémente \mbox{\hyperlink{classICore_a0e08b19686e745d4e1877fe6c6235a6c}{ICore
 
 
 
-Permet d\textquotesingle{}ouvrir le prochain module graphique. 
+renvoie le module jeu 
 
 \begin{DoxyReturn}{Renvoie}
-Renvoie le nom du prochain jeu de la liste des jeux disponibles 
+renvoie le nom du prochain jeu 
 \end{DoxyReturn}
 
 
@@ -126,10 +106,10 @@ Implémente \mbox{\hyperlink{classICore_a7105b0bf40a572ece256a9a902d3a917}{ICore
 
 
 
-Permet d\textquotesingle{}ouvrir le prochain module graphique. 
+renvoie le module graphique suivant 
 
 \begin{DoxyReturn}{Renvoie}
-Renvoie le nom du prochain module graphique de la liste des modules graphiques disponibles 
+renvoie le nom du prochain module graphique 
 \end{DoxyReturn}
 
 

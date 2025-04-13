@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"classSfml.html#a8c7d733ab12e35c08bdcf499f45c08e0":[1,0,13,6],
 "classSfml.html#a94a853f67fa9a8662e55d331f0c2fd4f":[1,0,13,3],
 "classSfml.html#ab860a72d8642deef55f4d8f1013a770c":[1,0,13,9],
 "classSfml.html#ab8dd4770f9194af0b4903426dc99cd2d":[1,0,13,4],

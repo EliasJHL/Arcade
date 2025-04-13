@@ -1,7 +1,7 @@
 <map id="include/Color.hpp" name="include/Color.hpp">
 <area shape="rect" id="node1" title="Classe pour contenir une couleur." alt="" coords="456,5,591,32"/>
 <area shape="rect" id="node2" href="$Rect_8hpp.html" title="Classe pour contenir les informations d&#39;un rectangle." alt="" coords="535,80,666,107"/>
-<area shape="rect" id="node15" href="$Text_8hpp_source.html" title=" " alt="" coords="383,80,511,107"/>
+<area shape="rect" id="node15" href="$Text_8hpp.html" title="Fichier d&#39;en&#45;tête pour la classe Text." alt="" coords="383,80,511,107"/>
 <area shape="rect" id="node3" href="$IDisplay_8hpp.html" title="Interface pour la classe abstraite ADisplayModule." alt="" coords="534,155,673,196"/>
 <area shape="rect" id="node10" href="$IGame_8hpp.html" title="Interface pour la classe abstraite AGameModule." alt="" coords="427,244,566,285"/>
 <area shape="rect" id="node4" href="$ADisplayModule_8hpp.html" title="Classe abstraite pour les modules d&#39;affichage." alt="" coords="892,251,1099,278"/>
