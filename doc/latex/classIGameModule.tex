@@ -32,7 +32,7 @@ virtual std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ \mbox{\hyperlink
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les rectangles que le jeu veut render. \end{DoxyCompactList}\item 
 virtual std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ \mbox{\hyperlink{classIGameModule_a7f9e33989ca5bef24de714b646e87ecc}{get\+Texts}} () const =0
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les textes que le jeu veut render. \end{DoxyCompactList}\item 
-virtual Event \mbox{\hyperlink{classIGameModule_a612cfe7f0a1a34d800169ee3b4971c48}{handle\+Event}} (Event event)=0
+virtual \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classIGameModule_a612cfe7f0a1a34d800169ee3b4971c48}{handle\+Event}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event)=0
 \begin{DoxyCompactList}\small\item\em Permet de gérer les events capturés par la librarie graphique et d\textquotesingle{}appliquer une action sur le jeu. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIGameModule_a3067fd1334d5eadf104d9c3ee1af7651}{set\+Game\+Switch\+Callback}} (std\+::function$<$ void(std\+::string)$>$ callback)=0
 \begin{DoxyCompactList}\small\item\em Permet de selectionner un jeu précis dans le menu. \end{DoxyCompactList}\item 
@@ -40,7 +40,7 @@ virtual void \mbox{\hyperlink{classIGameModule_aa81db978f5e5f13e8b98bdf75f8bfb7f
 \begin{DoxyCompactList}\small\item\em Permet de selectionner une librarie graphique précise dans le menu. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classIGameModule_ab390d7115ae4d756d5c3bd397ef5d360}{set\+Lib\+Switch\+Callback}} (std\+::function$<$ void()$>$ callback)=0
 \begin{DoxyCompactList}\small\item\em Permet de selectionner . . . \end{DoxyCompactList}\item 
-virtual Event \mbox{\hyperlink{classIGameModule_ac2963a674b3278fd2b7192fd68a6be98}{handle\+Event\+Generic}} (Event event)=0
+virtual \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classIGameModule_ac2963a674b3278fd2b7192fd68a6be98}{handle\+Event\+Generic}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event)=0
 \begin{DoxyCompactList}\small\item\em Permet de gérer les events génériques comme le changement de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -88,7 +88,7 @@ Implémenté dans \mbox{\hyperlink{classSnake_a40408dc380ef481a0330b7cee84ced88}
 \index{IGameModule@{IGameModule}!handleEvent@{handleEvent}}
 \index{handleEvent@{handleEvent}!IGameModule@{IGameModule}}
 \doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
-{\footnotesize\ttfamily virtual Event IGame\+Module\+::handle\+Event (\begin{DoxyParamCaption}\item[{Event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} IGame\+Module\+::handle\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -107,7 +107,7 @@ Implémenté dans \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b3
 \index{IGameModule@{IGameModule}!handleEventGeneric@{handleEventGeneric}}
 \index{handleEventGeneric@{handleEventGeneric}!IGameModule@{IGameModule}}
 \doxysubsubsection{\texorpdfstring{handleEventGeneric()}{handleEventGeneric()}}
-{\footnotesize\ttfamily virtual Event IGame\+Module\+::handle\+Event\+Generic (\begin{DoxyParamCaption}\item[{Event}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} IGame\+Module\+::handle\+Event\+Generic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

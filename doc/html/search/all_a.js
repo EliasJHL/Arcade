@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['sdl2_52',['Sdl2',['../classSdl2.html',1,'']]],
-  ['setgameswitchcallback_53',['setGameSwitchCallback',['../classAGameModule.html#a47b86a1e1fe74c50e3dc34d098b81ac4',1,'AGameModule::setGameSwitchCallback()'],['../classIGameModule.html#a3067fd1334d5eadf104d9c3ee1af7651',1,'IGameModule::setGameSwitchCallback()']]],
-  ['setgraphicswitchcallback_54',['setGraphicSwitchCallback',['../classAGameModule.html#a86cc637ca6ca3c38b377923a9467b720',1,'AGameModule::setGraphicSwitchCallback()'],['../classIGameModule.html#aa81db978f5e5f13e8b98bdf75f8bfb7f',1,'IGameModule::setGraphicSwitchCallback()']]],
-  ['setlibswitchcallback_55',['setLibSwitchCallback',['../classAGameModule.html#ae06892fec67d6725a2c37db907e9215b',1,'AGameModule::setLibSwitchCallback()'],['../classIGameModule.html#ab390d7115ae4d756d5c3bd397ef5d360',1,'IGameModule::setLibSwitchCallback()']]],
-  ['sfml_56',['Sfml',['../classSfml.html',1,'']]],
-  ['snake_57',['Snake',['../classSnake.html',1,'']]],
-  ['spritecache_58',['SpriteCache',['../structSpriteCache.html',1,'']]],
-  ['stop_59',['stop',['../classAGameModule.html#adf1c981c6130bf79ca008ea15a26cc83',1,'AGameModule::stop()'],['../classIGameModule.html#a0cd402c728effe51c4be7e2617ea9503',1,'IGameModule::stop()'],['../classMenu.html#a19ec5cba0f5a49a730bf88fa09447244',1,'Menu::stop()'],['../classNibbler.html#ad1df2029c3e773c6bca8c433a0101db4',1,'Nibbler::stop()'],['../classSnake.html#a35a7a4894f467c275be6310ecdac1cb4',1,'Snake::stop()']]]
+  ['rect_53',['Rect',['../classRect.html',1,'Rect'],['../classRect.html#a41cb892e84c51c0e45aaa6fec913ce84',1,'Rect::Rect()']]],
+  ['rect_2ehpp_54',['Rect.hpp',['../Rect_8hpp.html',1,'']]],
+  ['runcore_55',['RunCore',['../classCore.html#a8139304d99d1059c77e336c8f097a006',1,'Core::RunCore()'],['../classICore.html#af2b718dc69a68ff960c49fb32e5b9831',1,'ICore::RunCore()']]]
 ];

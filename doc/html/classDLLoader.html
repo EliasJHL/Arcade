@@ -68,16 +68,89 @@ $(function() {
 <div class="title">Référence du modèle de la classe DLLoader&lt; T &gt;</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe template pour le chargement dynamique de bibliothèques.  
+ <a href="classDLLoader.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="DLLoader_8hpp_source.html">DLLoader.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a6af0dc3d5e22dc8e5bd0c5bec7b36f88"><td class="memItemLeft" align="right" valign="top"><a id="a6af0dc3d5e22dc8e5bd0c5bec7b36f88"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DLLoader</b> (const std::string &amp;path)</td></tr>
+<tr class="memitem:a6af0dc3d5e22dc8e5bd0c5bec7b36f88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDLLoader.html#a6af0dc3d5e22dc8e5bd0c5bec7b36f88">DLLoader</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:a6af0dc3d5e22dc8e5bd0c5bec7b36f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la class : Permet d'ouvrir une librarie partagé  <a href="classDLLoader.html#a6af0dc3d5e22dc8e5bd0c5bec7b36f88">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6af0dc3d5e22dc8e5bd0c5bec7b36f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a396da7ee604a1ddf0341b08032434335"><td class="memItemLeft" align="right" valign="top"><a id="a396da7ee604a1ddf0341b08032434335"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> (const std::string &amp;symbol) const</td></tr>
+<tr class="memitem:aea867b497cf92c50f85ad7e1d37962ae"><td class="memItemLeft" align="right" valign="top"><a id="aea867b497cf92c50f85ad7e1d37962ae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDLLoader.html#aea867b497cf92c50f85ad7e1d37962ae">~DLLoader</a> ()</td></tr>
+<tr class="memdesc:aea867b497cf92c50f85ad7e1d37962ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la class : Permet de fermer la librarie partagé ouverte. <br /></td></tr>
+<tr class="separator:aea867b497cf92c50f85ad7e1d37962ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396da7ee604a1ddf0341b08032434335"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDLLoader.html#a396da7ee604a1ddf0341b08032434335">getInstance</a> (const std::string &amp;symbol) const</td></tr>
+<tr class="memdesc:a396da7ee604a1ddf0341b08032434335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de recupérer un poiteur sur le symbol souhaité dans la librarie partagé  <a href="classDLLoader.html#a396da7ee604a1ddf0341b08032434335">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a396da7ee604a1ddf0341b08032434335"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class DLLoader&lt; T &gt;</h3>
+
+<p>Classe template pour le chargement dynamique de bibliothèques. </p>
+<p>Cette classe permet de charger dynamiquement des bibliothèques partagées et d'obtenir des instances de symboles spécifiques. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a6af0dc3d5e22dc8e5bd0c5bec7b36f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af0dc3d5e22dc8e5bd0c5bec7b36f88">&#9670;&nbsp;</a></span>DLLoader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDLLoader.html">DLLoader</a>&lt; T &gt;::<a class="el" href="classDLLoader.html">DLLoader</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur de la class : Permet d'ouvrir une librarie partagé </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>: Le chemin vers la librarie partagé </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a396da7ee604a1ddf0341b08032434335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396da7ee604a1ddf0341b08032434335">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T * <a class="el" href="classDLLoader.html">DLLoader</a>&lt; T &gt;::getInstance </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de recupérer un poiteur sur le symbol souhaité dans la librarie partagé </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>: Nom du symbol à récupérer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
 <li>include/<a class="el" href="DLLoader_8hpp_source.html">DLLoader.hpp</a></li>
 <li>src/DLLoader.cpp</li>

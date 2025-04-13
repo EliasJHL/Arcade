@@ -1,12 +1,10 @@
-/*
-** DLLoader.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Fri Mar 21 15:19:23 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Thu Mar 26 21:15:46 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file DLLoader.hpp
+ * @brief Template pour la DLLoader
+ * @author Elias H. <elias-josue.hajjar-llauquen@epitech.eu> & Enzo C. <enzo.lobato-couthino@epitech.eu>
+ *
+ * Ce fichier définit le template pour le DLLoader
+ */
 
 #ifndef DLLOADER_HPP_
 # define DLLOADER_HPP_
@@ -17,11 +15,31 @@
 #include <functional>
 #include <iostream>
 
+/**
+ * @class DLLoader
+ * @brief Classe template pour le chargement dynamique de bibliothèques.
+ *
+ * Cette classe permet de charger dynamiquement des bibliothèques partagées
+ * et d'obtenir des instances de symboles spécifiques.
+ */
 template <typename T>
 class DLLoader {
     public:
+        /**
+        * @brief Constructeur de la class : Permet d'ouvrir une librarie partagé
+        * @param path : Le chemin vers la librarie partagé
+        */ 
         DLLoader(const std::string &path);
+
+        /**
+        * @brief Destructeur de la class : Permet de fermer la librarie partagé ouverte
+        */ 
         ~DLLoader();
+
+        /**
+        * @brief Permet de recupérer un poiteur sur le symbol souhaité dans la librarie partagé
+        * @param symbol : Nom du symbol à récupérer
+        */ 
         T *getInstance (const std::string &symbol) const;
     private:
         void *handler;
