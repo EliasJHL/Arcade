@@ -1,14 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Arcade:  Fichier source de lib/graphical/src/ncurses/arcade_ncurses.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -19,38 +23,50 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Arcade
    </div>
+   <div id="projectbrief">Projet Arcade - Réalisé dans le cadre du cursus Epitech</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.8 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('arcade__ncurses_8hpp_source.html',''); initResizable(); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,97 +76,86 @@ $(document).ready(function() { init_codefold(0); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Chargement...</div>
-<div class="SRStatus" id="Searching">Recherche...</div>
-<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_3dd5c4aca2e5b47784899101a77f70fb.html">graphical</a></li><li class="navelem"><a class="el" href="dir_10a8a91aef9f6a8a7732dd970b255ecb.html">src</a></li><li class="navelem"><a class="el" href="dir_1145c123a03e5d8585db39e00dade2cf.html">ncurses</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">arcade_ncurses.hpp</div></div>
+  <div class="headertitle">
+<div class="title">arcade_ncurses.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">** arcade_ncurses.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/libs/graphical/src/ncurses</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">**</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">** Made by Elias Josué HAJJAR LLAUQUEN</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">** Login   &lt;elias-josue.hajjar-llauquen@epitech.eu&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">**</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">** Started on  Fri Mar 21 15:04:30 2025 Elias Josué HAJJAR LLAUQUEN</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">** Last update Sun Apr 5 15:41:31 2025 Elias Josué HAJJAR LLAUQUEN</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef ARCADE_NCURSES_HPP_</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor"># define ARCADE_NCURSES_HPP_</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;ncurses.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;curses.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structSpriteCache.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structSpriteCache.html">SpriteCache</a> {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> size_x;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> size_y;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">int</span> center_x;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> center_y;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::vector&lt;char&gt; pixels;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
-</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classNcurses.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classNcurses.html">Ncurses</a> : <span class="keyword">public</span> <a class="code hl_class" href="classADisplayModule.html">ADisplayModule</a>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_class" href="classNcurses.html">Ncurses</a>();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_class" href="classNcurses.html">~Ncurses</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#a098121fee71f44541a0061599222c1fb">createWindow</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#aa416cff07b2357cec513357ff194955d">destroyWindow</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#a53125b8d360a64b40e5aa7cdd86bb143">display</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#a90181ed1bc87c685f0662f2cd2314429">clear</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#a56fb97f1dbae73fbb5fbfaf549885d3c">drawText</a>(<span class="keyword">const</span> <a class="code hl_class" href="classText.html">Text</a> &amp;text) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classNcurses.html#ad59c590377475145fd77449fb5cc05c8">drawRect</a>(<span class="keyword">const</span> <a class="code hl_class" href="classRect.html">Rect</a> &amp;rect) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::vector&lt;Event&gt; <a class="code hl_function" href="classNcurses.html#a408f26506e7b98d439c55fbc5bb2ca2e">getEvents</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::string <a class="code hl_function" href="classNcurses.html#af5d7cf1684739adb1bd30a52d2e7cac7">getName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> LoadNewSprite(<span class="keyword">const</span> std::string &amp;path);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::string mName;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        WINDOW *mWindow;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::map&lt;std::string, SpriteCache&gt; mSpriteCache;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        std::unordered_map&lt;int, Event&gt; mEvents;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
-</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_NCURSES_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">** arcade_ncurses.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/libs/graphical/src/ncurses</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** Made by Elias Josué HAJJAR LLAUQUEN</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** Login   &lt;elias-josue.hajjar-llauquen@epitech.eu&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">** Started on  Fri Mar 21 15:04:30 2025 Elias Josué HAJJAR LLAUQUEN</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">** Last update Sun Apr 5 15:41:31 2025 Elias Josué HAJJAR LLAUQUEN</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ARCADE_NCURSES_HPP_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor"># define ARCADE_NCURSES_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;ncurses.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;curses.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structSpriteCache.html">   20</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structSpriteCache.html">SpriteCache</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> size_x;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> size_y;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> center_x;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> center_y;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::vector&lt;char&gt; pixels;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classNcurses.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNcurses.html">Ncurses</a> : <span class="keyword">public</span> <a class="code" href="classADisplayModule.html">ADisplayModule</a>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classNcurses.html">Ncurses</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ~<a class="code" href="classNcurses.html">Ncurses</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#a098121fee71f44541a0061599222c1fb">createWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#aa416cff07b2357cec513357ff194955d">destroyWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#a53125b8d360a64b40e5aa7cdd86bb143">display</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#a90181ed1bc87c685f0662f2cd2314429">clear</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#a56fb97f1dbae73fbb5fbfaf549885d3c">drawText</a>(<span class="keyword">const</span> <a class="code" href="classText.html">Text</a> &amp;text) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classNcurses.html#ad59c590377475145fd77449fb5cc05c8">drawRect</a>(<span class="keyword">const</span> <a class="code" href="classRect.html">Rect</a> &amp;rect) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::vector&lt;Event&gt; <a class="code" href="classNcurses.html#a408f26506e7b98d439c55fbc5bb2ca2e">getEvents</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::string <a class="code" href="classNcurses.html#af5d7cf1684739adb1bd30a52d2e7cac7">getName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> LoadNewSprite(<span class="keyword">const</span> std::string &amp;path);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string mName;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        WINDOW *mWindow;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::map&lt;std::string, SpriteCache&gt; mSpriteCache;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::unordered_map&lt;int, Event&gt; mEvents;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ARCADE_NCURSES_HPP_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aADisplayModule_8hpp_html"><div class="ttname"><a href="ADisplayModule_8hpp.html">ADisplayModule.hpp</a></div><div class="ttdoc">Classe abstraite pour les modules d'affichage.</div></div>
-<div class="ttc" id="aclassADisplayModule_html"><div class="ttname"><a href="classADisplayModule.html">ADisplayModule</a></div><div class="ttdoc">Classe abstraite pour les libraries graphiques.</div><div class="ttdef"><b>Definition</b> ADisplayModule.hpp:21</div></div>
-<div class="ttc" id="aclassNcurses_html"><div class="ttname"><a href="classNcurses.html">Ncurses</a></div><div class="ttdef"><b>Definition</b> arcade_ncurses.hpp:28</div></div>
-<div class="ttc" id="aclassNcurses_html_a098121fee71f44541a0061599222c1fb"><div class="ttname"><a href="classNcurses.html#a098121fee71f44541a0061599222c1fb">Ncurses::createWindow</a></div><div class="ttdeci">void createWindow() override</div><div class="ttdoc">Appelle la création de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:39</div></div>
-<div class="ttc" id="aclassNcurses_html_a408f26506e7b98d439c55fbc5bb2ca2e"><div class="ttname"><a href="classNcurses.html#a408f26506e7b98d439c55fbc5bb2ca2e">Ncurses::getEvents</a></div><div class="ttdeci">std::vector&lt; Event &gt; getEvents() override</div><div class="ttdoc">Permet de récupérer tous les events.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:126</div></div>
-<div class="ttc" id="aclassNcurses_html_a53125b8d360a64b40e5aa7cdd86bb143"><div class="ttname"><a href="classNcurses.html#a53125b8d360a64b40e5aa7cdd86bb143">Ncurses::display</a></div><div class="ttdeci">void display() override</div><div class="ttdoc">Appelle l'affichage de tous les éléments dessinés auparavant.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:59</div></div>
-<div class="ttc" id="aclassNcurses_html_a56fb97f1dbae73fbb5fbfaf549885d3c"><div class="ttname"><a href="classNcurses.html#a56fb97f1dbae73fbb5fbfaf549885d3c">Ncurses::drawText</a></div><div class="ttdeci">void drawText(const Text &amp;text) override</div><div class="ttdoc">Permet de dessiner un texte sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:69</div></div>
-<div class="ttc" id="aclassNcurses_html_a90181ed1bc87c685f0662f2cd2314429"><div class="ttname"><a href="classNcurses.html#a90181ed1bc87c685f0662f2cd2314429">Ncurses::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Appelle le clear de la librarie graphique en question.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:64</div></div>
-<div class="ttc" id="aclassNcurses_html_aa416cff07b2357cec513357ff194955d"><div class="ttname"><a href="classNcurses.html#aa416cff07b2357cec513357ff194955d">Ncurses::destroyWindow</a></div><div class="ttdeci">void destroyWindow() override</div><div class="ttdoc">Appelle la destruction de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:54</div></div>
-<div class="ttc" id="aclassNcurses_html_ad59c590377475145fd77449fb5cc05c8"><div class="ttname"><a href="classNcurses.html#ad59c590377475145fd77449fb5cc05c8">Ncurses::drawRect</a></div><div class="ttdeci">void drawRect(const Rect &amp;rect) override</div><div class="ttdoc">Permet de dessiner un rectangle sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:89</div></div>
-<div class="ttc" id="aclassNcurses_html_af5d7cf1684739adb1bd30a52d2e7cac7"><div class="ttname"><a href="classNcurses.html#af5d7cf1684739adb1bd30a52d2e7cac7">Ncurses::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">Permet de récupérer le nom de la librarie graphique.</div><div class="ttdef"><b>Definition</b> arcade_ncurses.cpp:137</div></div>
-<div class="ttc" id="aclassRect_html"><div class="ttname"><a href="classRect.html">Rect</a></div><div class="ttdoc">Information pour créer un rectangle.</div><div class="ttdef"><b>Definition</b> Rect.hpp:22</div></div>
-<div class="ttc" id="aclassText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition</b> Text.hpp:17</div></div>
-<div class="ttc" id="astructSpriteCache_html"><div class="ttname"><a href="structSpriteCache.html">SpriteCache</a></div><div class="ttdef"><b>Definition</b> arcade_ncurses.hpp:20</div></div>
+<div class="ttc" id="aclassADisplayModule_html"><div class="ttname"><a href="classADisplayModule.html">ADisplayModule</a></div><div class="ttdoc">Classe abstraite pour les libraries graphiques.</div><div class="ttdef"><b>Definition:</b> ADisplayModule.hpp:21</div></div>
+<div class="ttc" id="aclassNcurses_html"><div class="ttname"><a href="classNcurses.html">Ncurses</a></div><div class="ttdef"><b>Definition:</b> arcade_ncurses.hpp:28</div></div>
+<div class="ttc" id="aclassNcurses_html_a098121fee71f44541a0061599222c1fb"><div class="ttname"><a href="classNcurses.html#a098121fee71f44541a0061599222c1fb">Ncurses::createWindow</a></div><div class="ttdeci">void createWindow() override</div><div class="ttdoc">Appelle la création de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:39</div></div>
+<div class="ttc" id="aclassNcurses_html_a408f26506e7b98d439c55fbc5bb2ca2e"><div class="ttname"><a href="classNcurses.html#a408f26506e7b98d439c55fbc5bb2ca2e">Ncurses::getEvents</a></div><div class="ttdeci">std::vector&lt; Event &gt; getEvents() override</div><div class="ttdoc">Permet de récupérer tous les events.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:126</div></div>
+<div class="ttc" id="aclassNcurses_html_a53125b8d360a64b40e5aa7cdd86bb143"><div class="ttname"><a href="classNcurses.html#a53125b8d360a64b40e5aa7cdd86bb143">Ncurses::display</a></div><div class="ttdeci">void display() override</div><div class="ttdoc">Appelle l'affichage de tous les éléments dessinés auparavant.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:59</div></div>
+<div class="ttc" id="aclassNcurses_html_a56fb97f1dbae73fbb5fbfaf549885d3c"><div class="ttname"><a href="classNcurses.html#a56fb97f1dbae73fbb5fbfaf549885d3c">Ncurses::drawText</a></div><div class="ttdeci">void drawText(const Text &amp;text) override</div><div class="ttdoc">Permet de dessiner un texte sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:69</div></div>
+<div class="ttc" id="aclassNcurses_html_a90181ed1bc87c685f0662f2cd2314429"><div class="ttname"><a href="classNcurses.html#a90181ed1bc87c685f0662f2cd2314429">Ncurses::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Appelle le clear de la librarie graphique en question.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:64</div></div>
+<div class="ttc" id="aclassNcurses_html_aa416cff07b2357cec513357ff194955d"><div class="ttname"><a href="classNcurses.html#aa416cff07b2357cec513357ff194955d">Ncurses::destroyWindow</a></div><div class="ttdeci">void destroyWindow() override</div><div class="ttdoc">Appelle la destruction de la fenêtre de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:54</div></div>
+<div class="ttc" id="aclassNcurses_html_ad59c590377475145fd77449fb5cc05c8"><div class="ttname"><a href="classNcurses.html#ad59c590377475145fd77449fb5cc05c8">Ncurses::drawRect</a></div><div class="ttdeci">void drawRect(const Rect &amp;rect) override</div><div class="ttdoc">Permet de dessiner un rectangle sur le librarie graphique pour l'afficher.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:89</div></div>
+<div class="ttc" id="aclassNcurses_html_af5d7cf1684739adb1bd30a52d2e7cac7"><div class="ttname"><a href="classNcurses.html#af5d7cf1684739adb1bd30a52d2e7cac7">Ncurses::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">Permet de récupérer le nom de la librarie graphique.</div><div class="ttdef"><b>Definition:</b> arcade_ncurses.cpp:137</div></div>
+<div class="ttc" id="aclassRect_html"><div class="ttname"><a href="classRect.html">Rect</a></div><div class="ttdoc">Information pour créer un rectangle.</div><div class="ttdef"><b>Definition:</b> Rect.hpp:22</div></div>
+<div class="ttc" id="aclassText_html"><div class="ttname"><a href="classText.html">Text</a></div><div class="ttdef"><b>Definition:</b> Text.hpp:17</div></div>
+<div class="ttc" id="astructSpriteCache_html"><div class="ttname"><a href="structSpriteCache.html">SpriteCache</a></div><div class="ttdef"><b>Definition:</b> arcade_ncurses.hpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_3dd5c4aca2e5b47784899101a77f70fb.html">graphical</a></li><li class="navelem"><a class="el" href="dir_10a8a91aef9f6a8a7732dd970b255ecb.html">src</a></li><li class="navelem"><a class="el" href="dir_1145c123a03e5d8585db39e00dade2cf.html">ncurses</a></li><li class="navelem"><b>arcade_ncurses.hpp</b></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

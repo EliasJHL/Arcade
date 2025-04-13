@@ -1,34 +1,26 @@
-\doxysection{Référence de la classe Ncurses}
-\hypertarget{classNcurses}{}\label{classNcurses}\index{Ncurses@{Ncurses}}
+\hypertarget{classNcurses}{}\doxysection{Référence de la classe Ncurses}
+\label{classNcurses}\index{Ncurses@{Ncurses}}
 
 
 Graphe d\textquotesingle{}héritage de Ncurses\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=176pt]{classNcurses__inherit__graph}
-\end{center}
-\end{figure}
+% FIG 0
 
 
 Graphe de collaboration de Ncurses\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=176pt]{classNcurses__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{Fonctions membres publiques}
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classNcurses_a098121fee71f44541a0061599222c1fb}\label{classNcurses_a098121fee71f44541a0061599222c1fb}} 
 void \mbox{\hyperlink{classNcurses_a098121fee71f44541a0061599222c1fb}{create\+Window}} () override
 \begin{DoxyCompactList}\small\item\em Appelle la création de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNcurses_aa416cff07b2357cec513357ff194955d}\label{classNcurses_aa416cff07b2357cec513357ff194955d}} 
 void \mbox{\hyperlink{classNcurses_aa416cff07b2357cec513357ff194955d}{destroy\+Window}} () override
 \begin{DoxyCompactList}\small\item\em Appelle la destruction de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143}\label{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143}} 
 void \mbox{\hyperlink{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143}{display}} () override
 \begin{DoxyCompactList}\small\item\em Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNcurses_a90181ed1bc87c685f0662f2cd2314429}\label{classNcurses_a90181ed1bc87c685f0662f2cd2314429}} 
 void \mbox{\hyperlink{classNcurses_a90181ed1bc87c685f0662f2cd2314429}{clear}} () override
 \begin{DoxyCompactList}\small\item\em Appelle le clear de la librarie graphique en question. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}{draw\+Text}} (const \mbox{\hyperlink{classText}{Text}} \&text) override
@@ -37,79 +29,14 @@ void \mbox{\hyperlink{classNcurses_ad59c590377475145fd77449fb5cc05c8}{draw\+Rect
 \begin{DoxyCompactList}\small\item\em Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} $>$ \mbox{\hyperlink{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}{get\+Events}} () override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7}\label{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7}} 
 std\+::string \mbox{\hyperlink{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7}{get\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le nom de la librarie graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{classADisplayModule}{ADisplay\+Module}}}
-\begin{DoxyCompactItemize}
-\item 
-{\bfseries ADisplay\+Module} (std\+::string name="{}"{})
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Membres hérités additionnels}
-\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{classADisplayModule}{ADisplay\+Module}}}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string {\bfseries \+\_\+name}
-\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
 
 
 \doxysubsection{Documentation des fonctions membres}
-\Hypertarget{classNcurses_a90181ed1bc87c685f0662f2cd2314429}\label{classNcurses_a90181ed1bc87c685f0662f2cd2314429} 
-\index{Ncurses@{Ncurses}!clear@{clear}}
-\index{clear@{clear}!Ncurses@{Ncurses}}
-\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily void Ncurses\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Appelle le clear de la librarie graphique en question. 
-
-
-
-Implémente \mbox{\hyperlink{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}{ADisplay\+Module}}.
-
-\Hypertarget{classNcurses_a098121fee71f44541a0061599222c1fb}\label{classNcurses_a098121fee71f44541a0061599222c1fb} 
-\index{Ncurses@{Ncurses}!createWindow@{createWindow}}
-\index{createWindow@{createWindow}!Ncurses@{Ncurses}}
-\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
-{\footnotesize\ttfamily void Ncurses\+::create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Appelle la création de la fenêtre de la librarie graphique. 
-
-
-
-Implémente \mbox{\hyperlink{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}{ADisplay\+Module}}.
-
-\Hypertarget{classNcurses_aa416cff07b2357cec513357ff194955d}\label{classNcurses_aa416cff07b2357cec513357ff194955d} 
-\index{Ncurses@{Ncurses}!destroyWindow@{destroyWindow}}
-\index{destroyWindow@{destroyWindow}!Ncurses@{Ncurses}}
-\doxysubsubsection{\texorpdfstring{destroyWindow()}{destroyWindow()}}
-{\footnotesize\ttfamily void Ncurses\+::destroy\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Appelle la destruction de la fenêtre de la librarie graphique. 
-
-
-
-Implémente \mbox{\hyperlink{classADisplayModule_ac890715c87fe2e386796571a0140e77f}{ADisplay\+Module}}.
-
-\Hypertarget{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143}\label{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143} 
-\index{Ncurses@{Ncurses}!display@{display}}
-\index{display@{display}!Ncurses@{Ncurses}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}}
-{\footnotesize\ttfamily void Ncurses\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. 
-
-
-
-Implémente \mbox{\hyperlink{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}{ADisplay\+Module}}.
-
-\Hypertarget{classNcurses_ad59c590377475145fd77449fb5cc05c8}\label{classNcurses_ad59c590377475145fd77449fb5cc05c8} 
+\mbox{\Hypertarget{classNcurses_ad59c590377475145fd77449fb5cc05c8}\label{classNcurses_ad59c590377475145fd77449fb5cc05c8}} 
 \index{Ncurses@{Ncurses}!drawRect@{drawRect}}
 \index{drawRect@{drawRect}!Ncurses@{Ncurses}}
 \doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
@@ -121,14 +48,14 @@ Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \doxylink{classRect}{Rect} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
+{\em text} & Class \mbox{\hyperlink{classRect}{Rect}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
 \hline
 \end{DoxyParams}
 
 
 Implémente \mbox{\hyperlink{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}{ADisplay\+Module}}.
 
-\Hypertarget{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}\label{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c} 
+\mbox{\Hypertarget{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}\label{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}} 
 \index{Ncurses@{Ncurses}!drawText@{drawText}}
 \index{drawText@{drawText}!Ncurses@{Ncurses}}
 \doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
@@ -140,14 +67,14 @@ Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}af
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \doxylink{classText}{Text} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
+{\em text} & Class \mbox{\hyperlink{classText}{Text}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
 \hline
 \end{DoxyParams}
 
 
 Implémente \mbox{\hyperlink{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}{ADisplay\+Module}}.
 
-\Hypertarget{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}\label{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e} 
+\mbox{\Hypertarget{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}\label{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}} 
 \index{Ncurses@{Ncurses}!getEvents@{getEvents}}
 \index{getEvents@{getEvents}!Ncurses@{Ncurses}}
 \doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
@@ -162,25 +89,11 @@ Renvoie un vector contenant toutes les actions que la librarie graphique a captu
 \end{DoxyReturn}
 
 
-Implémente \mbox{\hyperlink{classADisplayModule_af8b2de9e996237932d80be8a3591e07f}{ADisplay\+Module}}.
-
-\Hypertarget{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7}\label{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7} 
-\index{Ncurses@{Ncurses}!getName@{getName}}
-\index{getName@{getName}!Ncurses@{Ncurses}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Ncurses\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+Implémente \mbox{\hyperlink{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}{ADisplay\+Module}}.
 
 
 
-Permet de récupérer le nom de la librarie graphique. 
-
-
-
-Réimplémentée à partir de \mbox{\hyperlink{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}{ADisplay\+Module}}.
-
-
-
-La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 lib/graphical/src/ncurses/arcade\+\_\+ncurses.\+hpp\item 
 lib/graphical/src/ncurses/arcade\+\_\+ncurses.\+cpp\end{DoxyCompactItemize}

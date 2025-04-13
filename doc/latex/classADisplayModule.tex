@@ -1,5 +1,5 @@
-\doxysection{Référence de la classe ADisplay\+Module}
-\hypertarget{classADisplayModule}{}\label{classADisplayModule}\index{ADisplayModule@{ADisplayModule}}
+\hypertarget{classADisplayModule}{}\doxysection{Référence de la classe ADisplay\+Module}
+\label{classADisplayModule}\index{ADisplayModule@{ADisplayModule}}
 
 
 Classe abstraite pour les libraries graphiques.  
@@ -12,49 +12,42 @@ Classe abstraite pour les libraries graphiques.
 
 
 Graphe d\textquotesingle{}héritage de ADisplay\+Module\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=303pt]{classADisplayModule__inherit__graph}
-\end{center}
-\end{figure}
+% FIG 0
 
 
 Graphe de collaboration de ADisplay\+Module\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=176pt]{classADisplayModule__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{Fonctions membres publiques}
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classADisplayModule_a3149832edf3d0a80ee7b0cf7650a406a}\label{classADisplayModule_a3149832edf3d0a80ee7b0cf7650a406a} 
-{\bfseries ADisplay\+Module} (std\+::string name="{}"{})
+\mbox{\Hypertarget{classADisplayModule_a3149832edf3d0a80ee7b0cf7650a406a}\label{classADisplayModule_a3149832edf3d0a80ee7b0cf7650a406a}} 
+{\bfseries ADisplay\+Module} (std\+::string name=\char`\"{}\char`\"{})
 \item 
+\mbox{\Hypertarget{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}\label{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}} 
 void \mbox{\hyperlink{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}{create\+Window}} () override=0
 \begin{DoxyCompactList}\small\item\em Appelle la création de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classADisplayModule_ac890715c87fe2e386796571a0140e77f}\label{classADisplayModule_ac890715c87fe2e386796571a0140e77f}} 
 void \mbox{\hyperlink{classADisplayModule_ac890715c87fe2e386796571a0140e77f}{destroy\+Window}} () override=0
 \begin{DoxyCompactList}\small\item\em Appelle la destruction de la fenêtre de la librarie graphique. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}\label{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}} 
 void \mbox{\hyperlink{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}{display}} () override=0
 \begin{DoxyCompactList}\small\item\em Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}\label{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}} 
 void \mbox{\hyperlink{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}{clear}} () override=0
 \begin{DoxyCompactList}\small\item\em Appelle le clear de la librarie graphique en question. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}{draw\+Text}} (const \mbox{\hyperlink{classText}{Text}} \&text) override=0
 \begin{DoxyCompactList}\small\item\em Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}{draw\+Rect}} (const \mbox{\hyperlink{classRect}{Rect}} \&rect) override=0
 \begin{DoxyCompactList}\small\item\em Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle{}afficher. \end{DoxyCompactList}\item 
-std\+::vector$<$ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} $>$ \mbox{\hyperlink{classADisplayModule_af8b2de9e996237932d80be8a3591e07f}{get\+Events}} () override=0
+std\+::vector$<$ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} $>$ \mbox{\hyperlink{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}{get\+Events}} () override=0
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}\label{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}} 
 std\+::string \mbox{\hyperlink{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}{get\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le nom de la librarie graphique. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Attributs protégés}
+\doxysubsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classADisplayModule_a18e14f0241c4eff68fc0340b2fa7c79d}\label{classADisplayModule_a18e14f0241c4eff68fc0340b2fa7c79d} 
+\mbox{\Hypertarget{classADisplayModule_a18e14f0241c4eff68fc0340b2fa7c79d}\label{classADisplayModule_a18e14f0241c4eff68fc0340b2fa7c79d}} 
 std\+::string {\bfseries \+\_\+name}
 \end{DoxyCompactItemize}
 
@@ -62,82 +55,10 @@ std\+::string {\bfseries \+\_\+name}
 \doxysubsection{Description détaillée}
 Classe abstraite pour les libraries graphiques. 
 
-Utilisé pour l\textquotesingle{}ouverture / utilisation des libraries graphiques. Elle hérite de \doxylink{classIDisplayModule}{IDisplay\+Module} 
+Utilisé pour l\textquotesingle{}ouverture / utilisation des libraries graphiques. Elle hérite de \mbox{\hyperlink{classIDisplayModule}{IDisplay\+Module}} 
 
 \doxysubsection{Documentation des fonctions membres}
-\Hypertarget{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a}\label{classADisplayModule_a91f0099ffd8d307faaaba98d1ff1e43a} 
-\index{ADisplayModule@{ADisplayModule}!clear@{clear}}
-\index{clear@{clear}!ADisplayModule@{ADisplayModule}}
-\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
-{\footnotesize\ttfamily void ADisplay\+Module\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
-
-
-
-Appelle le clear de la librarie graphique en question. 
-
-
-
-Implémente \mbox{\hyperlink{classIDisplayModule_afee10797c154123ed5f98895f92fee62}{IDisplay\+Module}}.
-
-
-
-Implémenté dans \mbox{\hyperlink{classNcurses_a90181ed1bc87c685f0662f2cd2314429}{Ncurses}}, \mbox{\hyperlink{classSdl2_ad0335880515415de0435740114fa8482}{Sdl2}}, \mbox{\hyperlink{classSfml_a54d0113db38db6db6fe41713f8f1e2c0}{Sfml}}, et \mbox{\hyperlink{classXlib_a626af7fe13f2bd9b47fbb0e693db63d5}{Xlib}}.
-
-\Hypertarget{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15}\label{classADisplayModule_a8012e9b5d83f14ca5540383d749a4c15} 
-\index{ADisplayModule@{ADisplayModule}!createWindow@{createWindow}}
-\index{createWindow@{createWindow}!ADisplayModule@{ADisplayModule}}
-\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
-{\footnotesize\ttfamily void ADisplay\+Module\+::create\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
-
-
-
-Appelle la création de la fenêtre de la librarie graphique. 
-
-
-
-Implémente \mbox{\hyperlink{classIDisplayModule_acc5d8ec34b1b608f9815469c9ca602f2}{IDisplay\+Module}}.
-
-
-
-Implémenté dans \mbox{\hyperlink{classNcurses_a098121fee71f44541a0061599222c1fb}{Ncurses}}, \mbox{\hyperlink{classSdl2_a1a051cbbbe7466d5ecdef2059def4a6c}{Sdl2}}, \mbox{\hyperlink{classSfml_a94a853f67fa9a8662e55d331f0c2fd4f}{Sfml}}, et \mbox{\hyperlink{classXlib_a553c47278a4847a47fcb40cbca29799e}{Xlib}}.
-
-\Hypertarget{classADisplayModule_ac890715c87fe2e386796571a0140e77f}\label{classADisplayModule_ac890715c87fe2e386796571a0140e77f} 
-\index{ADisplayModule@{ADisplayModule}!destroyWindow@{destroyWindow}}
-\index{destroyWindow@{destroyWindow}!ADisplayModule@{ADisplayModule}}
-\doxysubsubsection{\texorpdfstring{destroyWindow()}{destroyWindow()}}
-{\footnotesize\ttfamily void ADisplay\+Module\+::destroy\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
-
-
-
-Appelle la destruction de la fenêtre de la librarie graphique. 
-
-
-
-Implémente \mbox{\hyperlink{classIDisplayModule_ac2f1ec4c02f77d03e50eb509d591e1b8}{IDisplay\+Module}}.
-
-
-
-Implémenté dans \mbox{\hyperlink{classNcurses_aa416cff07b2357cec513357ff194955d}{Ncurses}}, \mbox{\hyperlink{classSdl2_a7340d7e048ede618a28a4594778fe030}{Sdl2}}, \mbox{\hyperlink{classSfml_ab8dd4770f9194af0b4903426dc99cd2d}{Sfml}}, et \mbox{\hyperlink{classXlib_a98d3263c97c4347ccd3885366df4b86f}{Xlib}}.
-
-\Hypertarget{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314}\label{classADisplayModule_a3a5b0a92f6b3f996470d9991104f5314} 
-\index{ADisplayModule@{ADisplayModule}!display@{display}}
-\index{display@{display}!ADisplayModule@{ADisplayModule}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}}
-{\footnotesize\ttfamily void ADisplay\+Module\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
-
-
-
-Appelle l\textquotesingle{}affichage de tous les éléments dessinés auparavant. 
-
-
-
-Implémente \mbox{\hyperlink{classIDisplayModule_a7707c8ac49e4d16364184691ee4a345b}{IDisplay\+Module}}.
-
-
-
-Implémenté dans \mbox{\hyperlink{classNcurses_a53125b8d360a64b40e5aa7cdd86bb143}{Ncurses}}, \mbox{\hyperlink{classSdl2_a58718e1cd45a008bc7b00fdcc7d94687}{Sdl2}}, \mbox{\hyperlink{classSfml_a2de000fce0f9f7b0dfde58aab5ab7998}{Sfml}}, et \mbox{\hyperlink{classXlib_acd03a904cf18ac6a3f8feb01a1436c18}{Xlib}}.
-
-\Hypertarget{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}\label{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f} 
+\mbox{\Hypertarget{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}\label{classADisplayModule_ad19189a1ff7e9c1b09ce9e58f844316f}} 
 \index{ADisplayModule@{ADisplayModule}!drawRect@{drawRect}}
 \index{drawRect@{drawRect}!ADisplayModule@{ADisplayModule}}
 \doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
@@ -149,7 +70,7 @@ Permet de dessiner un rectangle sur le librarie graphique pour l\textquotesingle
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \doxylink{classRect}{Rect} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
+{\em text} & Class \mbox{\hyperlink{classRect}{Rect}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un rectangle \\
 \hline
 \end{DoxyParams}
 
@@ -158,9 +79,9 @@ Implémente \mbox{\hyperlink{classIDisplayModule_a73cf0db74666669d654b77fc09fb3c
 
 
 
-Implémenté dans \mbox{\hyperlink{classNcurses_ad59c590377475145fd77449fb5cc05c8}{Ncurses}}, \mbox{\hyperlink{classSdl2_ab70e8cc1ac3d6bb6e2d7457c9d612d6d}{Sdl2}}, \mbox{\hyperlink{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}{Sfml}}, et \mbox{\hyperlink{classXlib_a1191c44953b3e548e87f37033feac34f}{Xlib}}.
+Implémenté dans \mbox{\hyperlink{classXlib_a1191c44953b3e548e87f37033feac34f}{Xlib}}, \mbox{\hyperlink{classSfml_a8c7d733ab12e35c08bdcf499f45c08e0}{Sfml}}, \mbox{\hyperlink{classSdl2_ab70e8cc1ac3d6bb6e2d7457c9d612d6d}{Sdl2}}, et \mbox{\hyperlink{classNcurses_ad59c590377475145fd77449fb5cc05c8}{Ncurses}}.
 
-\Hypertarget{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}\label{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523} 
+\mbox{\Hypertarget{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}\label{classADisplayModule_a2697b79746b0c35cb6c1e11b61126523}} 
 \index{ADisplayModule@{ADisplayModule}!drawText@{drawText}}
 \index{drawText@{drawText}!ADisplayModule@{ADisplayModule}}
 \doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
@@ -172,7 +93,7 @@ Permet de dessiner un texte sur le librarie graphique pour l\textquotesingle{}af
 
 
 \begin{DoxyParams}{Paramètres}
-{\em text} & Class \doxylink{classText}{Text} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
+{\em text} & Class \mbox{\hyperlink{classText}{Text}} contenant tous les éléments nécessaire à l\textquotesingle{}affichage d\textquotesingle{}un texte \\
 \hline
 \end{DoxyParams}
 
@@ -181,13 +102,13 @@ Implémente \mbox{\hyperlink{classIDisplayModule_a34726f297b89ff5105969b8638ed3c
 
 
 
-Implémenté dans \mbox{\hyperlink{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}{Ncurses}}, \mbox{\hyperlink{classSdl2_a4853c9182b27c6cd14e2e1540ef869a5}{Sdl2}}, \mbox{\hyperlink{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}{Sfml}}, et \mbox{\hyperlink{classXlib_a1a2d9362fcd4515ba9fe97c5a26e7330}{Xlib}}.
+Implémenté dans \mbox{\hyperlink{classXlib_a1a2d9362fcd4515ba9fe97c5a26e7330}{Xlib}}, \mbox{\hyperlink{classSfml_aca28315dde5d90cd8b84aa36ec378cc8}{Sfml}}, \mbox{\hyperlink{classSdl2_a4853c9182b27c6cd14e2e1540ef869a5}{Sdl2}}, et \mbox{\hyperlink{classNcurses_a56fb97f1dbae73fbb5fbfaf549885d3c}{Ncurses}}.
 
-\Hypertarget{classADisplayModule_af8b2de9e996237932d80be8a3591e07f}\label{classADisplayModule_af8b2de9e996237932d80be8a3591e07f} 
+\mbox{\Hypertarget{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}\label{classADisplayModule_a82daacf51d4c2910578cb67ea85e9e7c}} 
 \index{ADisplayModule@{ADisplayModule}!getEvents@{getEvents}}
 \index{getEvents@{getEvents}!ADisplayModule@{ADisplayModule}}
 \doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
-{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} $>$ ADisplay\+Module\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}}$>$ ADisplay\+Module\+::get\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
 
 
 
@@ -198,33 +119,15 @@ Renvoie un vector contenant toutes les actions que la librarie graphique a captu
 \end{DoxyReturn}
 
 
-Implémente \mbox{\hyperlink{classIDisplayModule_adc3885b7fc070b9b964626acd32059da}{IDisplay\+Module}}.
+Implémente \mbox{\hyperlink{classIDisplayModule_a5c89457d9e19fcffc6ef1a8b6c618236}{IDisplay\+Module}}.
 
 
 
-Implémenté dans \mbox{\hyperlink{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}{Ncurses}}, \mbox{\hyperlink{classSdl2_a93514453e07ad331575ce823b6bb5a4c}{Sdl2}}, \mbox{\hyperlink{classSfml_a277dc74d2be77f077d37d9519869d01c}{Sfml}}, et \mbox{\hyperlink{classXlib_a0aca25a9ededdbdb2559428a572d8c0d}{Xlib}}.
-
-\Hypertarget{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4}\label{classADisplayModule_a817488e1c8f5ef3db1eccfb19e1abae4} 
-\index{ADisplayModule@{ADisplayModule}!getName@{getName}}
-\index{getName@{getName}!ADisplayModule@{ADisplayModule}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string ADisplay\+Module\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+Implémenté dans \mbox{\hyperlink{classXlib_a0aca25a9ededdbdb2559428a572d8c0d}{Xlib}}, \mbox{\hyperlink{classSfml_a277dc74d2be77f077d37d9519869d01c}{Sfml}}, \mbox{\hyperlink{classSdl2_a93514453e07ad331575ce823b6bb5a4c}{Sdl2}}, et \mbox{\hyperlink{classNcurses_a408f26506e7b98d439c55fbc5bb2ca2e}{Ncurses}}.
 
 
 
-Permet de récupérer le nom de la librarie graphique. 
-
-
-
-Implémente \mbox{\hyperlink{classIDisplayModule_af4c0d72526501b47da4f67f3fbf981f7}{IDisplay\+Module}}.
-
-
-
-Réimplémentée dans \mbox{\hyperlink{classNcurses_af5d7cf1684739adb1bd30a52d2e7cac7}{Ncurses}}, \mbox{\hyperlink{classSdl2_a98da05e0f04ea8033760c1a9e7d54d39}{Sdl2}}, \mbox{\hyperlink{classSfml_ab860a72d8642deef55f4d8f1013a770c}{Sfml}}, et \mbox{\hyperlink{classXlib_aee92badea07159815cc57747188c157d}{Xlib}}.
-
-
-
-La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 include/\mbox{\hyperlink{ADisplayModule_8hpp}{ADisplay\+Module.\+hpp}}\item 
 include/ADisplay\+Module.\+cpp\end{DoxyCompactItemize}

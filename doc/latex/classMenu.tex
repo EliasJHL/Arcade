@@ -1,99 +1,42 @@
-\doxysection{Référence de la classe Menu}
-\hypertarget{classMenu}{}\label{classMenu}\index{Menu@{Menu}}
+\hypertarget{classMenu}{}\doxysection{Référence de la classe Menu}
+\label{classMenu}\index{Menu@{Menu}}
 
 
 Graphe d\textquotesingle{}héritage de Menu\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=169pt]{classMenu__inherit__graph}
-\end{center}
-\end{figure}
+% FIG 0
 
 
 Graphe de collaboration de Menu\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=169pt]{classMenu__coll__graph}
-\end{center}
-\end{figure}
-\doxysubsubsection*{Fonctions membres publiques}
+% FIG 1
+\doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classMenu_ae2e5c4bdf39fb2bfa457b3fbca8132de}\label{classMenu_ae2e5c4bdf39fb2bfa457b3fbca8132de} 
-{\bfseries Menu} (std\+::string name="{}menu"{})
+\mbox{\Hypertarget{classMenu_ae2e5c4bdf39fb2bfa457b3fbca8132de}\label{classMenu_ae2e5c4bdf39fb2bfa457b3fbca8132de}} 
+{\bfseries Menu} (std\+::string name=\char`\"{}menu\char`\"{})
 \item 
+\mbox{\Hypertarget{classMenu_af5eca82331072f4cbff0cd716be0d260}\label{classMenu_af5eca82331072f4cbff0cd716be0d260}} 
 std\+::string \mbox{\hyperlink{classMenu_af5eca82331072f4cbff0cd716be0d260}{get\+Name}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer le nom du jeu. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ \mbox{\hyperlink{classMenu_a66cbb17a1b0236294002514d3264cc71}{get\+Rects}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les rectangles que le jeu veut render. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ \mbox{\hyperlink{classMenu_a653650800a139e3183e2caba9c2c7ecd}{get\+Texts}} () const override
 \begin{DoxyCompactList}\small\item\em Permet de récupérer tous les textes que le jeu veut render. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenu_a0878f621aa4501fe0e8f388c2222ead6}\label{classMenu_a0878f621aa4501fe0e8f388c2222ead6}} 
 void \mbox{\hyperlink{classMenu_a0878f621aa4501fe0e8f388c2222ead6}{update}} () override
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}appeller l\textquotesingle{}action suivante après l\textquotesingle{}affichage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenu_a316256d45db2dc6891b21ad30c8187bc}\label{classMenu_a316256d45db2dc6891b21ad30c8187bc}} 
 void \mbox{\hyperlink{classMenu_a316256d45db2dc6891b21ad30c8187bc}{init}} () override
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser tous les éléments nécessaires au jeu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMenu_a19ec5cba0f5a49a730bf88fa09447244}\label{classMenu_a19ec5cba0f5a49a730bf88fa09447244}} 
 void \mbox{\hyperlink{classMenu_a19ec5cba0f5a49a730bf88fa09447244}{stop}} () override
 \begin{DoxyCompactList}\small\item\em Arrête le jeu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classMenu_a478a7dbb51a022157ae622554c490388}{handle\+Event}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event) override
 \begin{DoxyCompactList}\small\item\em Permet de gérer les events capturés par la librarie graphique et d\textquotesingle{}appliquer une action sur le jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{classAGameModule}{AGame\+Module}}}
-\begin{DoxyCompactItemize}
-\item 
-{\bfseries AGame\+Module} (std\+::string name="{}"{})
-\item 
-void \mbox{\hyperlink{classAGameModule_a47b86a1e1fe74c50e3dc34d098b81ac4}{set\+Game\+Switch\+Callback}} (std\+::function$<$ void(std\+::string)$>$ callback) override
-\begin{DoxyCompactList}\small\item\em Permet de selectionner un jeu précis dans le menu. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classAGameModule_a86cc637ca6ca3c38b377923a9467b720}{set\+Graphic\+Switch\+Callback}} (std\+::function$<$ void(std\+::string)$>$ callback) override
-\begin{DoxyCompactList}\small\item\em Permet de selectionner une librarie graphique précise dans le menu. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classAGameModule_ae06892fec67d6725a2c37db907e9215b}{set\+Lib\+Switch\+Callback}} (std\+::function$<$ void()$>$ callback) override
-\begin{DoxyCompactList}\small\item\em Permet de selectionner . . . \end{DoxyCompactList}\item 
-\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} \mbox{\hyperlink{classAGameModule_ab1f4a7f5a4df216ac5ebf09d82ebc692}{handle\+Event\+Generic}} (\mbox{\hyperlink{EventEnum_8hpp_a5667b805d857c6d28f83f6038a0272d3}{Event}} event) override
-\begin{DoxyCompactList}\small\item\em Permet de gérer les events génériques comme le changement de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Membres hérités additionnels}
-\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{classAGameModule}{AGame\+Module}}}
-\begin{DoxyCompactItemize}
-\item 
-void {\bfseries switch\+To\+Next\+Game} (const std\+::string \&game\+Name="{}"{})
-\item 
-void {\bfseries switch\+To\+Next\+Lib} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{classAGameModule}{AGame\+Module}}}
-\begin{DoxyCompactItemize}
-\item 
-std\+::string {\bfseries \+\_\+name}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classRect}{Rect}} $>$ {\bfseries \+\_\+rects}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classText}{Text}} $>$ {\bfseries \+\_\+texts}
-\item 
-std\+::function$<$ void(std\+::string)$>$ {\bfseries \+\_\+game\+Switch\+Callback}
-\item 
-std\+::function$<$ void()$>$ {\bfseries \+\_\+lib\+Switch\+Callback}
-\item 
-std\+::function$<$ void(std\+::string)$>$ {\bfseries \+\_\+graphic\+Switch\+Callback}
-\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
 
 
 \doxysubsection{Documentation des fonctions membres}
-\Hypertarget{classMenu_af5eca82331072f4cbff0cd716be0d260}\label{classMenu_af5eca82331072f4cbff0cd716be0d260} 
-\index{Menu@{Menu}!getName@{getName}}
-\index{getName@{getName}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
-{\footnotesize\ttfamily std\+::string Menu\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Permet de récupérer le nom du jeu. 
-
-
-
-Réimplémentée à partir de \mbox{\hyperlink{classAGameModule_af1688989c41d6b15a109a08006f61283}{AGame\+Module}}.
-
-\Hypertarget{classMenu_a66cbb17a1b0236294002514d3264cc71}\label{classMenu_a66cbb17a1b0236294002514d3264cc71} 
+\mbox{\Hypertarget{classMenu_a66cbb17a1b0236294002514d3264cc71}\label{classMenu_a66cbb17a1b0236294002514d3264cc71}} 
 \index{Menu@{Menu}!getRects@{getRects}}
 \index{getRects@{getRects}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{getRects()}{getRects()}}
@@ -110,7 +53,7 @@ Un vector contenant tous les formes à afficher
 
 Réimplémentée à partir de \mbox{\hyperlink{classAGameModule_a78e2b2cebbed49c870322614025b7b9d}{AGame\+Module}}.
 
-\Hypertarget{classMenu_a653650800a139e3183e2caba9c2c7ecd}\label{classMenu_a653650800a139e3183e2caba9c2c7ecd} 
+\mbox{\Hypertarget{classMenu_a653650800a139e3183e2caba9c2c7ecd}\label{classMenu_a653650800a139e3183e2caba9c2c7ecd}} 
 \index{Menu@{Menu}!getTexts@{getTexts}}
 \index{getTexts@{getTexts}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{getTexts()}{getTexts()}}
@@ -127,7 +70,7 @@ Un vector contenant tous les textes à afficher
 
 Réimplémentée à partir de \mbox{\hyperlink{classAGameModule_a5b5caf83fad27f8574ef744e6b275d27}{AGame\+Module}}.
 
-\Hypertarget{classMenu_a478a7dbb51a022157ae622554c490388}\label{classMenu_a478a7dbb51a022157ae622554c490388} 
+\mbox{\Hypertarget{classMenu_a478a7dbb51a022157ae622554c490388}\label{classMenu_a478a7dbb51a022157ae622554c490388}} 
 \index{Menu@{Menu}!handleEvent@{handleEvent}}
 \index{handleEvent@{handleEvent}!Menu@{Menu}}
 \doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
@@ -146,51 +89,9 @@ Permet de gérer les events capturés par la librarie graphique et d\textquotesi
 
 Implémente \mbox{\hyperlink{classAGameModule_a1aa57ba7f714bdd1f9b61de85b346419}{AGame\+Module}}.
 
-\Hypertarget{classMenu_a316256d45db2dc6891b21ad30c8187bc}\label{classMenu_a316256d45db2dc6891b21ad30c8187bc} 
-\index{Menu@{Menu}!init@{init}}
-\index{init@{init}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{init()}{init()}}
-{\footnotesize\ttfamily void Menu\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-
-Permet d\textquotesingle{}initialiser tous les éléments nécessaires au jeu. 
-
-
-
-Implémente \mbox{\hyperlink{classAGameModule_a57c7615e20f9ab57a877f0decf5f4ede}{AGame\+Module}}.
-
-\Hypertarget{classMenu_a19ec5cba0f5a49a730bf88fa09447244}\label{classMenu_a19ec5cba0f5a49a730bf88fa09447244} 
-\index{Menu@{Menu}!stop@{stop}}
-\index{stop@{stop}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
-{\footnotesize\ttfamily void Menu\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Arrête le jeu. 
-
-
-
-Implémente \mbox{\hyperlink{classAGameModule_adf1c981c6130bf79ca008ea15a26cc83}{AGame\+Module}}.
-
-\Hypertarget{classMenu_a0878f621aa4501fe0e8f388c2222ead6}\label{classMenu_a0878f621aa4501fe0e8f388c2222ead6} 
-\index{Menu@{Menu}!update@{update}}
-\index{update@{update}!Menu@{Menu}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Menu\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Permet d\textquotesingle{}appeller l\textquotesingle{}action suivante après l\textquotesingle{}affichage. 
-
-
-
-Implémente \mbox{\hyperlink{classAGameModule_a9bdaf5e9d88528707fa25a18130255a8}{AGame\+Module}}.
-
-
-
-La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
 lib/games/src/menu/arcade\+\_\+menu.\+hpp\item 
 lib/games/src/menu/arcade\+\_\+menu.\+cpp\end{DoxyCompactItemize}

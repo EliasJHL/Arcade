@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['color_0',['Color',['../classColor.html',1,'']]],
-  ['core_1',['Core',['../classCore.html',1,'']]]
+  ['color_71',['Color',['../classColor.html',1,'']]],
+  ['core_72',['Core',['../classCore.html',1,'']]]
 ];
