@@ -1,12 +1,12 @@
-/*
-** Text.hpp for B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen in /home/elias/Documents/Epitech/Arcade/B-OOP-400-MPL-4-1-arcade-elias-josue.hajjar-llauquen/include
-**
-** Made by Elias Josué HAJJAR LLAUQUEN
-** Login   <elias-josue.hajjar-llauquen@epitech.eu>
-**
-** Started on  Wed Mar 26 10:02:41 2025 Elias Josué HAJJAR LLAUQUEN
-** Last update Sun Mar 29 18:20:10 2025 Elias Josué HAJJAR LLAUQUEN
-*/
+/**
+ * @file Text.hpp
+ * @brief Fichier d'en-tête pour la classe Text
+ * @author Elias H.
+ *
+ * Ce fichier définit la classe Text, qui représente un élément de texte avec
+ * des propriétés telles que la position, la taille, la police, le contenu,
+ * l'alignement et la couleur.
+ */
 
 #ifndef TEXT_HPP_
 # define TEXT_HPP_

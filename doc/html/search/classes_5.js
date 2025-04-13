@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ncurses_78',['Ncurses',['../classNcurses.html',1,'']]],
-  ['nibbler_79',['Nibbler',['../classNibbler.html',1,'']]]
+  ['ncurses_79',['Ncurses',['../classNcurses.html',1,'']]],
+  ['nibbler_80',['Nibbler',['../classNibbler.html',1,'']]]
 ];

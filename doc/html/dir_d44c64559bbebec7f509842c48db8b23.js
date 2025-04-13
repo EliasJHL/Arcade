@@ -18,5 +18,7 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "Rect.hpp", "Rect_8hpp.html", [
       [ "Rect", "classRect.html", "classRect" ]
     ] ],
-    [ "Text.hpp", "Text_8hpp_source.html", null ]
+    [ "Text.hpp", "Text_8hpp.html", [
+      [ "Text", "classText.html", "classText" ]
+    ] ]
 ];
