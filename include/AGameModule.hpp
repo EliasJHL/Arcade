@@ -26,7 +26,7 @@ class AGameModule : public IGameModule {
         void update() override = 0;
         void init() override = 0;
         void stop() override = 0;
-        std::vector<Rect> getRects() const override;;
+        std::vector<Rect> getRects() const override;
         std::vector<Text> getTexts() const override;
         Event handleEvent(Event event) override = 0;
 
