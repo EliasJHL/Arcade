@@ -1,8 +1,0 @@
-<map id="include/interfaces/IGame.hpp" name="include/interfaces/IGame.hpp">
-<area shape="rect" id="node1" title="Interface pour la classe abstraite AGameModule." alt="" coords="84,5,223,47"/>
-<area shape="rect" id="node2" href="$AGameModule_8hpp.html" title="Classe abstraite pour les modules des jeux." alt="" coords="137,95,335,121"/>
-<area shape="rect" id="node3" href="$Core_8hpp_source.html" title=" " alt="" coords="5,177,136,203"/>
-<area shape="rect" id="node4" href="$arcade__menu_8hpp_source.html" title=" " alt="" coords="161,169,311,211"/>
-<area shape="rect" id="node5" href="$arcade__nibbler_8hpp_source.html" title=" " alt="" coords="335,169,494,211"/>
-<area shape="rect" id="node6" href="$arcade__snake_8hpp_source.html" title=" " alt="" coords="518,169,669,211"/>
-</map>

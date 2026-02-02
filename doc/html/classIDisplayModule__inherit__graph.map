@@ -1,8 +1,0 @@
-<map id="IDisplayModule" name="IDisplayModule">
-<area shape="rect" id="node1" title="Interface pour ADisplayModule." alt="" coords="105,5,228,32"/>
-<area shape="rect" id="node2" href="$classADisplayModule.html" title="Classe abstraite pour les libraries graphiques." alt="" coords="103,80,231,107"/>
-<area shape="rect" id="node3" href="$classNcurses.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" id="node4" href="$classSdl2.html" title=" " alt="" coords="104,155,155,181"/>
-<area shape="rect" id="node5" href="$classSfml.html" title=" " alt="" coords="179,155,231,181"/>
-<area shape="rect" id="node6" href="$classXlib.html" title=" " alt="" coords="255,155,302,181"/>
-</map>
